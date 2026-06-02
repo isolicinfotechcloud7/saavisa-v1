@@ -1,0 +1,9 @@
+[Tue Jun 02 12:58:31.719826 2026] [ssl:warn] [pid 32807] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Jun 02 12:58:31.719859 2026] [ssl:warn] [pid 32807] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 12:58:31.759240 2026] [ssl:warn] [pid 32808] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Jun 02 12:58:31.759251 2026] [ssl:warn] [pid 32808] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 12:58:41.707510 2026] [include:warn] [pid 32828] [client 127.0.0.1:47390] AH01374: mod_include: Options +Includes (or IncludesNoExec) wasn't set, INCLUDES filter removed: /index.html, referer: https://demo.saavisa.com/
+[Tue Jun 02 12:59:28.024244 2026] [ssl:warn] [pid 33497] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Jun 02 12:59:28.024254 2026] [ssl:warn] [pid 33497] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 12:59:28.048891 2026] [ssl:warn] [pid 33507] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Jun 02 12:59:28.048910 2026] [ssl:warn] [pid 33507] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name
