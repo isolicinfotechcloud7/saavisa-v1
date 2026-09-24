@@ -305,7 +305,7 @@ a{text-decoration:none}
 
 /* Hero background override */
 .contact-hero{
-    background-image:url('images/contact-hero-bg.webp') !important;
+    background-image:url('../assets/contact/hero-bg.webp') !important;
     background-size:cover !important;
     background-position:center center !important;
     background-repeat:no-repeat !important;

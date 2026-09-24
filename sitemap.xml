@@ -119,4 +119,10 @@
     <priority>0.3</priority>
   </url>
 
+  <url><loc>https://saavisa.com/about/</loc></url>
+  <url><loc>https://saavisa.com/countries/canada/</loc></url>
+  <url><loc>https://saavisa.com/countries/usa/</loc></url>
+  <url><loc>https://saavisa.com/countries/uk/</loc></url>
+  <url><loc>https://saavisa.com/countries/australia/</loc></url>
+  <url><loc>https://saavisa.com/countries/europe/</loc></url>
 </urlset>

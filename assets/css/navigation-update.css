@@ -1,0 +1,37 @@
+/* Shared navigation enhancement — SA Associates, September 2026.
+   Limited to the requested primary/mobile Study Abroad navigation and floating WhatsApp CTA. */
+@media(min-width:1321px){.saa-primary-nav{gap:8px}.saa-primary-nav .navlink{font-size:13px;padding:10px 9px;white-space:nowrap}}
+.saa-study-menu{position:relative;display:flex;align-items:center}
+/* Bridge the 14px visual gap so moving the pointer from the toggle into the popover never triggers a leave. */
+.saa-study-menu.is-open::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);width:284px;height:18px;z-index:79;background:transparent;pointer-events:auto}
+.saa-study-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;font-family:inherit}
+.saa-study-toggle svg,.saa-mobile-study-toggle svg{transition:transform .2s ease}
+.saa-study-menu.is-open .saa-study-toggle svg,.saa-mobile-study-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.saa-study-popover{position:absolute;z-index:80;top:calc(100% + 14px);left:50%;transform:translate(-50%,-8px);width:284px;padding:8px;background:#fff;border:1px solid rgba(1,149,216,.18);border-radius:18px;box-shadow:0 22px 55px rgba(3,55,89,.22),0 5px 20px rgba(1,149,216,.08);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s}
+.saa-study-popover::before{content:"";position:absolute;top:-7px;left:calc(50% - 7px);width:14px;height:14px;background:#fff;border-left:1px solid rgba(1,149,216,.16);border-top:1px solid rgba(1,149,216,.16);transform:rotate(45deg)}
+.saa-study-menu.is-open .saa-study-popover{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.saa-study-links{padding:0}
+.saa-primary-nav .saa-study-links a{width:100%;display:flex;align-items:center;gap:12px;padding:11px 10px;color:#293e51;border-radius:11px;border:1px solid transparent;font-size:13px;font-weight:500;line-height:1.35;transition:background .18s,border-color .18s,transform .18s}
+.saa-primary-nav .saa-study-links a:hover,.saa-primary-nav .saa-study-links a:focus-visible{background:#eff9ff;border-color:#d2edfa;color:#077db7;transform:translateX(2px);outline:none}
+.saa-primary-nav .saa-study-links a img{flex:none;width:30px;height:22px;border-radius:4px;border:1px solid #e6edf4;object-fit:cover}
+.saa-primary-nav .saa-study-links a span{flex:1}.saa-primary-nav .saa-study-links a strong{font-weight:800}
+.saa-primary-nav .saa-study-links a svg{color:#0495d8}
+.saa-study-menu.is-current .saa-study-toggle,.saa-study-menu.is-open .saa-study-toggle{background:rgba(255,255,255,.20);border-color:rgba(255,255,255,.28)}
+.saa-mobile-study-toggle{font-weight:650!important}
+.saa-mobile-study-links{padding:3px 8px 6px 24px;border-left:2px solid #e4f4fc;margin:0 0 3px 18px;background:linear-gradient(90deg,#f4fbff,transparent);border-radius:0 10px 10px 0}
+.saa-mobile-study-links[hidden]{display:none!important}
+.saa-mobile-study-links a{display:flex;justify-content:flex-start;gap:12px;font-size:14px;padding:10px 12px;color:#28526b}
+.saa-mobile-study-links a img{width:25px;height:18px;object-fit:cover;border-radius:2px;border:1px solid #dbe5ee}
+.mobile-drawer .panel{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
+/* At tablet widths all original header buttons remain; only the expanded link set moves into the existing mobile drawer. */
+@media(max-width:1320px){.header .saa-primary-nav{display:none}.header .burger{display:inline-flex}.header .brand{min-width:auto}}
+@media(min-width:981px) and (max-width:1320px){.header .brand.logo-only .logo{width:220px}}
+.saa-floating-whatsapp{position:fixed;z-index:45;right:24px;bottom:24px;display:inline-flex;align-items:center;gap:9px;border-radius:999px;background:linear-gradient(135deg,#25d366,#16a94b);border:1px solid rgba(255,255,255,.32);box-shadow:0 9px 28px rgba(18,132,66,.33);padding:13px 17px;color:#fff!important;font:600 13px/1.15 var(--font,system-ui,sans-serif);text-decoration:none!important;transition:transform .2s,box-shadow .2s}
+.saa-floating-whatsapp span{display:block;white-space:nowrap}
+.saa-floating-whatsapp span strong{display:block;font-size:15px;margin-top:1px}
+.saa-floating-whatsapp:hover,.saa-floating-whatsapp:focus-visible{transform:translateY(-3px);box-shadow:0 12px 32px rgba(18,132,66,.42);outline:2px solid #c2f7d5;outline-offset:3px}
+.saa-floating-whatsapp svg{display:block;flex:none}
+@media(max-width:600px){.saa-floating-whatsapp{right:15px;bottom:16px;padding:13px}.saa-floating-whatsapp span{display:none}}
+@media(prefers-reduced-motion:reduce){.saa-study-popover,.saa-floating-whatsapp{transition:none}}
+/* Five homepage FAQ tabs remain one aligned row at desktop and wrap on small devices. */
+@media(max-width:750px){.sa-faq-tabs{flex-wrap:wrap;justify-content:center;border-radius:16px}}
