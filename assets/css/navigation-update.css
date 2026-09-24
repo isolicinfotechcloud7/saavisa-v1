@@ -35,3 +35,22 @@
 @media(prefers-reduced-motion:reduce){.saa-study-popover,.saa-floating-whatsapp{transition:none}}
 /* Five homepage FAQ tabs remain one aligned row at desktop and wrap on small devices. */
 @media(max-width:750px){.sa-faq-tabs{flex-wrap:wrap;justify-content:center;border-radius:16px}}
+
+/* NAV POPOVER FONT MATCH 2026-09-24 */
+@media (min-width:1321px) {
+  .saa-primary-nav .saa-study-links a,
+  .saa-primary-nav .saa-study-links a span,
+  .saa-primary-nav .saa-study-links a strong {
+    font-size:13px !important;
+  }
+
+  .saa-primary-nav .saa-study-links a {
+    font-weight:600;
+    line-height:1;
+  }
+
+  .saa-primary-nav .saa-study-links a strong {
+    font-weight:700;
+  }
+}
+/* END NAV POPOVER FONT MATCH 2026-09-24 */
