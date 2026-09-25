@@ -1,4 +1,0 @@
-[Thu Sep 24 23:15:23.067011 2026] [ssl:warn] [pid 1200] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
-[Thu Sep 24 23:15:23.067041 2026] [ssl:warn] [pid 1200] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name
-[Thu Sep 24 23:15:23.123749 2026] [ssl:warn] [pid 1205] AH01906: demo.saavisa.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
-[Thu Sep 24 23:15:23.123757 2026] [ssl:warn] [pid 1205] AH01909: demo.saavisa.com:443:0 server certificate does NOT include an ID which matches the server name

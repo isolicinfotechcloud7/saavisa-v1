@@ -1,0 +1,10 @@
+
+# Local SAAVISA backups and patch packages
+.*-backup-*/
+SAAVISA-*-LOCAL-PATCH-*.zip
+saavisa_*_patch_build/
+
+# Server/runtime logs
+access_log.log
+error_log.log
+*.log
