@@ -633,69 +633,900 @@ If you're looking for a reliable and efficient educational consultancy that offe
         if (typeof lenis !== 'undefined') lenis.start();
       }
     })();
-    </script>  <section class="home-success-showcase" id="success-stories">
-  <div class="container">
-    <div class="home-success-head">
-      <span class="home-success-kicker">REAL OUTCOMES</span>
-      <h2>Our <span class="accent">Success Stories</span></h2>
-      <p>Meet students and families who moved forward with SA Associates guidance across study, visitor and spouse/work permit journeys.</p>
-    </div>
-    <div class="home-success-grid">
-      <article class="home-success-card">
-  <div class="home-success-media"><img src="/assets/success/students/shahroza-nahrin-tanha.webp" alt="Shahroza Nahrin Tanha" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="home-success-placeholder" hidden><span>SN</span></div><span class="home-success-status">ADMITTED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Student Visa</div>
-    <h3>Shahroza Nahrin Tanha</h3>
-    <div class="home-success-meta"><span><strong>McGill University</strong></span><span>Ex - North South University</span><span>Canada</span></div>
-    <span class="home-success-score">IELTS: 8.5</span>
-  </div>
-</article><article class="home-success-card">
-  <div class="home-success-media"><img src="/assets/success/students/rishant-sharma.webp" alt="Rishant Sharma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="home-success-placeholder" hidden><span>RS</span></div><span class="home-success-status">ADMITTED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Student Visa</div>
-    <h3>Rishant Sharma</h3>
-    <div class="home-success-meta"><span><strong>University of Toronto</strong></span><span>Ex - The University of Melbourne</span><span>Canada</span></div>
-    <span class="home-success-score">IELTS: 8.0</span>
-  </div>
-</article><article class="home-success-card">
-  <div class="home-success-media"><img src="/assets/success/students/fahim-faisal.webp" alt="Fahim Faisal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="home-success-placeholder" hidden><span>FF</span></div><span class="home-success-status">ADMITTED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Student Visa</div>
-    <h3>Fahim Faisal</h3>
-    <div class="home-success-meta"><span><strong>University of New Brunswick (UNB)</strong></span><span>Ex - BRAC University</span><span>Canada</span></div>
-    <span class="home-success-score">IELTS: 8.0</span>
-  </div>
-</article><article class="home-success-card">
-  <div class="home-success-media"><div class="home-success-placeholder"><span>MI</span></div><span class="home-success-status">APPROVED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Spouse / Work Permit</div>
-    <h3>MD Imran Hosen</h3>
-    <div class="home-success-meta"><span>Canada</span></div>
-    
-  </div>
-</article><article class="home-success-card">
-  <div class="home-success-media"><div class="home-success-placeholder"><span>MS</span></div><span class="home-success-status">APPROVED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Visitor Visa</div>
-    <h3>Md Shafaet Azad</h3>
-    <div class="home-success-meta"><span>Canada</span></div>
-    
-  </div>
-</article><article class="home-success-card">
-  <div class="home-success-media"><div class="home-success-placeholder"><span>ST</span></div><span class="home-success-status">APPROVED</span></div>
-  <div class="home-success-body">
-    <div class="home-success-type">Visitor Visa</div>
-    <h3>Simon Tushar Gomes</h3>
-    <div class="home-success-meta"><span>Canada</span></div>
-    
-  </div>
-</article>
-    </div>
-    <div class="home-success-actions">
-      <a class="home-success-link" href="/success-stories/">Explore Success Stories <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
+    </script>  <style id="sa-home-success-legacy-css">
+/* Success Story Tab Section */
+.success-story-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+ /* Main card container */
+        .visa-card {
+            max-width: 1280px;
+            width: 100%;
+            /* background: #ffffff;
+            border-radius: 2rem; */
+           /*  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.02); */
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+         /* subtle header decoration */
+        .card-header {
+            background: #ffffff;
+            padding: 1.5rem 2rem 0 2rem;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.4);
+        }
+
+        .card-header h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #1e293b, #2c3e66);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-header h1 i {
+            background: none;
+            color: #3b82f6;
+            font-size: 1.8rem;
+            background-clip: unset;
+            -webkit-background-clip: unset;
+        }
+
+         .card-header p {
+            color: #475569;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+         /* Tabs navigation */
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0 2rem;
+            background: #ffffff;
+            border-bottom: 1px solid #e9edf2;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #5b6e8c;
+            transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+            background-color: transparent;
+            border-radius: 0;
+            letter-spacing: -0.2px;
+        }
+
+        .tab-btn i {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: #1e40af;
+            background: #f8fafc;
+            border-bottom-color: #b9d0f0;
+        }
+
+        .tab-btn.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+            background: #ffffff;
+        }
+
+        .tab-btn.active i {
+            transform: translateY(-1px);
+            color: #2563eb;
+        }
+
+        /* Tab Button Work Permit */
+
+        .tab-btn.work {
+            background: transparent;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #5b6e8c;
+            transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+            background-color: transparent;
+            border-radius: 0;
+            letter-spacing: -0.2px;
+        }
+
+        .tab-btn.work i {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .tab-btn.work:hover {
+            color: #34d399;
+            background: #f8fafc;
+            border-bottom-color: #34d399;
+        }
+
+        .tab-btn.work.active {
+            color: #059669;
+            border-bottom-color: #059669;
+            background: #ffffff;
+        }
+
+        .tab-btn.work.active i {
+            transform: translateY(-1px);
+            color: #059669;
+        }
+
+        /* Tab Button Travel */
+
+        .tab-btn.travel {
+            background: transparent;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #5b6e8c;
+            transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+            background-color: transparent;
+            border-radius: 0;
+            letter-spacing: -0.2px;
+        }
+
+        .tab-btn.travel i {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .tab-btn.travel:hover {
+            color: #a78bfa;
+            background: #f8fafc;
+            border-bottom-color: #a78bfa;
+        }
+
+        .tab-btn.travel.active {
+            color: #7c3aed;
+            border-bottom-color: #7c3aed;
+            background: #ffffff;
+        }
+
+        .tab-btn.travel.active i {
+            transform: translateY(-1px);
+            color: #7c3aed;
+        }
+
+
+        /* Content panel */
+        .tabs-content {
+            padding: 2rem 2rem 2.2rem 2rem;
+            background: #ffffff;
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeSlideUp 0.3s ease forwards;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        /* ── Success Card Grid ── */
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        /* Horizontal card: photo left, info right */
+        .success-card {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            border-radius: 20px;
+            overflow: hidden;
+            background:
+              linear-gradient(135deg, rgba(224,242,254,.55) 0%, rgba(241,245,249,.60) 40%, #ffffff 100%);
+            border: 1px solid rgba(148,197,233,.28);
+            box-shadow: 0 6px 28px rgba(1,149,216,.10), 0 1.5px 6px rgba(0,0,0,.04);
+            transition: transform .28s ease, box-shadow .28s ease;
+            min-height: 180px;
+        }
+
+        .success-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+              radial-gradient(ellipse 55% 80% at 0% 80%, rgba(1,149,216,.08), transparent 70%),
+              linear-gradient(160deg, rgba(255,255,255,0) 50%, rgba(255,255,255,.55) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .success-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 38px rgba(1,149,216,.16), 0 2px 8px rgba(0,0,0,.06);
+        }
+
+        /* Left: student image */
+        .success-card-img {
+            position: relative;
+            z-index: 2;
+            flex: 0 0 42%;
+            max-width: 42%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 10px;
+        }
+
+        .success-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        /* Diagonal ribbon badge */
+        .success-badge {
+            position: absolute;
+            top: 14px;
+            right: -38px;
+            z-index: 10;
+            width: 130px;
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .07em;
+            color: #ffffff;
+            transform: rotate(45deg);
+            box-shadow: 0 3px 10px rgba(0,0,0,.15);
+            white-space: nowrap;
+        }
+
+        .success-badge::before,
+        .success-badge::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            border: 5px solid transparent;
+        }
+
+        .success-badge::before {
+            left: 0;
+        }
+
+        .success-badge::after {
+            right: 0;
+        }
+
+        .success-badge.admitted::before,
+        .success-badge.admitted::after {
+            border-top-color: #1d4ed8;
+        }
+
+        .success-badge.approved::before,
+        .success-badge.approved::after {
+            border-top-color: #047857;
+        }
+
+        .success-badge.granted::before,
+        .success-badge.granted::after {
+            border-top-color: #6d28d9;
+        }
+
+        .success-badge.admitted {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+        }
+
+        .success-badge.approved {
+            background: linear-gradient(135deg, #34d399, #059669);
+        }
+
+        .success-badge.granted {
+            background: linear-gradient(135deg, #a78bfa, #7c3aed);
+        }
+
+        /* ── Diagonal Ribbon Badge ── */
+        .success-card.has-ribbon {
+            overflow: hidden;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 18px;
+            right: -34px;
+            z-index: 10;
+            width: 150px;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            color: #ffffff;
+            transform: rotate(45deg);
+            box-shadow: 0 4px 12px rgba(0,0,0,.18);
+        }
+
+        .ribbon::before,
+        .ribbon::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            border: 5px solid transparent;
+        }
+
+        .ribbon::before {
+            left: 0;
+        }
+
+        .ribbon::after {
+            right: 0;
+        }
+
+        .ribbon.admitted {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+        }
+
+        .ribbon.admitted::before,
+        .ribbon.admitted::after {
+            border-top-color: #1d4ed8;
+        }
+
+        .ribbon.approved {
+            background: linear-gradient(135deg, #34d399, #059669);
+        }
+
+        .ribbon.approved::before,
+        .ribbon.approved::after {
+            border-top-color: #047857;
+        }
+
+        .ribbon.granted {
+            background: linear-gradient(135deg, #a78bfa, #7c3aed);
+        }
+
+        .ribbon.granted::before,
+        .ribbon.granted::after {
+            border-top-color: #6d28d9;
+        }
+
+        /* Right: info panel */
+        .success-card-info {
+            z-index: 2;
+            flex: 1;
+            padding: 28px 22px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .success-card-name {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .success-card-old-uni {
+            margin: 0;
+            font-size: 11.5px;
+            color: #94a3b8;
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .success-card-uni {
+            margin: 0;
+            font-size: 14px;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 1.35;
+        }
+
+        .success-card-uni i {
+            color: #0195D8;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .success-card-score {
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e40af;
+            width: fit-content;
+        }
+
+        .success-card-score strong {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1e3a8a;
+        }
+
+        .success-card-score i {
+            color: #0195D8;
+            font-size: 15px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1100px) {
+            .success-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .success-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .success-card {
+                min-height: 160px;
+            }
+
+            .success-card-name {
+                font-size: 18px;
+            }
+
+            .success-card-uni {
+                font-size: 13px;
+            }
+
+            .success-card-score {
+                font-size: 13px;
+                padding: 7px 16px;
+            }
+        }
+
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+         /* Content styling */
+        .visa-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+
+        .visa-heading i {
+            font-size: 1.8rem;
+            color: #3b82f6;
+            background: #eef4ff;
+            padding: 8px;
+            border-radius: 16px;
+        }
+
+        .visa-heading h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+
+        .desc-text {
+            color: #334155;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            background: #f8fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #ecf3fa;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.8rem 0 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #ffffff;
+            padding: 0.6rem 0.8rem;
+            border-radius: 18px;
+            transition: background 0.2s;
+        }
+
+        .feature-item i {
+            font-size: 1.2rem;
+            color: #2563eb;
+            background: #eef2ff;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-top: 2px;
+        }
+
+        .feature-text strong {
+            font-weight: 700;
+            color: #0f172a;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .feature-text span {
+            color: #475569;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .info-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1f5f9;
+            padding: 0.7rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-top: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-badge i {
+            color: #3b82f6;
+            font-size: 0.9rem;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 0.6rem 1.3rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: #1e293b;
+            cursor: default;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .action-btn i {
+            font-size: 0.85rem;
+            color: #3b82f6;
+        }
+
+        .action-btn:hover {
+            background: #f8fafc;
+            border-color: #94a3b8;
+            transform: scale(0.98);
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e2e8f0, transparent);
+        }
+
+        /* responsive touches */
+        @media (max-width: 680px) {
+            .visa-card {
+                border-radius: 1.5rem;
+            }
+            .tabs-nav {
+                padding: 0 1rem;
+            }
+            .tab-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+                gap: 6px;
+            }
+            .tab-btn i {
+                font-size: 0.9rem;
+            }
+            .tabs-content {
+                padding: 1.5rem;
+            }
+            .visa-heading h2 {
+                font-size: 1.35rem;
+            }
+            .card-header {
+                padding: 1.2rem 1.5rem 0 1.5rem;
+            }
+            .feature-item {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab-btn {
+                flex: 1 0 auto;
+                justify-content: center;
+            }
+            .visa-heading i {
+                font-size: 1.4rem;
+            }
+        }
+</style>
+<section class="success-story-section">
+<style data-home-success-viewmore-fix>
+.success-story-section,
+.success-story-section .visa-card,
+.success-story-section .showcase-action-footer{
+  overflow:visible !important;
+}
+.success-story-section .showcase-action-footer{
+  position:relative;
+  z-index:3;
+  padding-bottom:18px;
+}
+.success-story-section .showcase-consult-link{
+  box-shadow:0 14px 30px rgba(2,149,218,.28) !important;
+}
+</style>
+
+<style data-home-success-image-fix>
+.success-story-section .success-card-img{position:relative;overflow:hidden;}
+.success-story-section .success-card-img img{width:100%;height:100%;display:block;object-fit:cover;}
+.success-story-section .home-success-photo-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:7px;padding:18px;text-align:center;background:radial-gradient(circle at 15% 15%,rgba(255,255,255,.92) 0 15%,transparent 16%),radial-gradient(circle at 86% 82%,rgba(70,188,240,.18) 0 28%,transparent 29%),linear-gradient(145deg,#eef9ff 0%,#d8f1ff 52%,#ccecff 100%);color:#0d3155;}
+.success-story-section .home-success-photo-fallback .hsf-initials{width:66px;height:66px;border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.78);border:1px solid rgba(1,149,216,.16);color:#0195d8;font-weight:800;font-size:24px;box-shadow:0 10px 26px rgba(1,149,216,.10);}
+.success-story-section .home-success-photo-fallback .hsf-name{max-width:150px;font-size:12px;line-height:1.3;font-weight:800;color:#15324f;}
+.success-story-section .success-card-img.is-fallback img{display:none!important;}
+.success-story-section .success-card-img.is-fallback .home-success-photo-fallback{display:flex;}
+</style>
+ <div class="visa-card"> <div class="showcase-header"> <h2 class="destinations-title">Our <span class="accent">Success</span> Stories </h2> <p class="showcase-subtext">Proven results across student, visitor & spouse visas</p> </div> <!-- <div class="card-header">
+        <h1>
+            <i class="fas fa-passport"></i> 
+            Visa Compass
+        </h1>
+        <p>Explore pathways — study, work, or visit with confidence</p>
+    </div> --> <!-- Tab Buttons --> <div class="tabs-nav" role="tablist" aria-label="Visa categories"> <button class="tab-btn active" data-tab="0" id="tab-student" role="tab" aria-selected="true"> <i class="fas fa-graduation-cap"></i> Student Visa
+</button> <button class="tab-btn work" data-tab="1" id="tab-work" role="tab" aria-selected="false"> <i class="fas fa-briefcase"></i> Spouse Visa
+</button> <button class="tab-btn travel" data-tab="2" id="tab-visitor" role="tab" aria-selected="false"> <i class="fas fa-plane-departure"></i> Visitor Visa
+</button> </div> <!-- Tab Panels --> <div class="tabs-content"> <!-- Student Visa Panel --> <div class="tab-pane active" role="tabpanel" aria-hidden="false"> <div class="success-grid"> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/visitor/Moazzem Hossain Kajol.webp" alt="Shahroza Nahrin Tanha" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">ST</span><span class="hsf-name">Shahroza Nahrin Tanha</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Shahroza Nahrin Tanha</h3><p class="success-card-old-uni">Ex - North South University</p><p class="success-card-uni"><i class="fas fa-university"></i> McGill University</p><div class="success-card-score">IELTS: <strong>8.5</strong> <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/students/rishant-sharma.webp" alt="Rishant Sharma" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">RS</span><span class="hsf-name">Rishant Sharma</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Rishant Sharma</h3><p class="success-card-old-uni">Ex - The University of Melbourne</p><p class="success-card-uni"><i class="fas fa-university"></i> University of Toronto</p><div class="success-card-score">IELTS: <strong>8.0</strong> <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/students/fahim-faisal.webp" alt="Fahim Faisal" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">FF</span><span class="hsf-name">Fahim Faisal</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Fahim Faisal</h3><p class="success-card-old-uni">Ex - BRAC University</p><p class="success-card-uni"><i class="fas fa-university"></i> University of New Brunswick (UNB)</p><div class="success-card-score">IELTS: <strong>8.0</strong> <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/students/bhabna-mukherjee.webp" alt="Bhabna Mukherjee" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">BM</span><span class="hsf-name">Bhabna Mukherjee</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Bhabna Mukherjee</h3><p class="success-card-old-uni">Ex - Jahangirnagar University</p><p class="success-card-uni"><i class="fas fa-university"></i> Carleton University</p><div class="success-card-score">IELTS: <strong>7.5</strong> <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/students/s-m-yusuf-mallick.webp" alt="S M Yusuf Mallick" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SM</span><span class="hsf-name">S M Yusuf Mallick</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">S M Yusuf Mallick</h3><p class="success-card-old-uni">Ex - University of Dhaka</p><p class="success-card-uni"><i class="fas fa-university"></i> New York Institute of Technology - Vancouver Campus</p><div class="success-card-score">IELTS: <strong>8.0</strong> <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/students/nusrat-jahan.webp" alt="Nusrat Jahan" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">NJ</span><span class="hsf-name">Nusrat Jahan</span></span></div> <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Nusrat Jahan</h3><p class="success-card-old-uni">Ex - Rajshahi University of Engineering & Technology (RUET)</p><p class="success-card-uni"><i class="fas fa-university"></i> University of Ottawa</p><div class="success-card-score">IELTS: <strong>6.5</strong> <i class="fas fa-check-circle"></i></div></div> </div> <!-- <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p3.jpg" alt="Shakib Rahman" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SR</span><span class="hsf-name">Shakib Rahman</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Shakib Rahman</h3><p class="success-card-uni"><i class="fas fa-university"></i> McGill University</p><div class="success-card-score">IELTS: <strong>7.5</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p4.jpg" alt="Tasnim Sultana" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">TS</span><span class="hsf-name">Tasnim Sultana</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Tasnim Sultana</h3><p class="success-card-uni"><i class="fas fa-university"></i> University of Waterloo</p><div class="success-card-score">IELTS: <strong>7.0</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p4-2.jpg" alt="Imran Hossain" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">IH</span><span class="hsf-name">Imran Hossain</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Imran Hossain</h3><p class="success-card-uni"><i class="fas fa-university"></i> Monash University</p><div class="success-card-score">IELTS: <strong>6.5</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p4-3.jpg" alt="Sadia Islam" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SI</span><span class="hsf-name">Sadia Islam</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Sadia Islam</h3><p class="success-card-uni"><i class="fas fa-university"></i> University of Edinburgh</p><div class="success-card-score">IELTS: <strong>7.5</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/t1.jpg" alt="Karim Uddin" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">KU</span><span class="hsf-name">Karim Uddin</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Karim Uddin</h3><p class="success-card-uni"><i class="fas fa-university"></i> University of Calgary</p><div class="success-card-score">IELTS: <strong>6.5</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/t2.jpg" alt="Mithila Roy" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">MR</span><span class="hsf-name">Mithila Roy</span></span></div>
+              <div class="success-card-info"><span class="success-badge admitted">ADMITTED</span><h3 class="success-card-name">Mithila Roy</h3><p class="success-card-uni"><i class="fas fa-university"></i> University of Auckland</p><div class="success-card-score">IELTS: <strong>7.0</strong> <i class="fas fa-check-circle"></i></div></div>
+            </div> --> </div> </div> <!-- Work Permit Visa Panel --> <div class="tab-pane" role="tabpanel" aria-hidden="true"> <div class="success-grid"> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Humayra Binte Kabir Prity.webp" alt="Humayra Binte Kabir Prity" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">HP</span><span class="hsf-name">Humayra Binte Kabir Prity</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Humayra Binte Kabir Prity</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Toronto, Ontario, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Nabila Nasir.webp" alt="Nabila Nasir" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">NN</span><span class="hsf-name">Nabila Nasir</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Nabila Nasir</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Vancouver, British Columbia, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Shekh Khushbu Rahman.webp" alt="Shekh Khushbu Rahman" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SR</span><span class="hsf-name">Shekh Khushbu Rahman</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Shekh Khushbu Rahman</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Windsor, Ontario, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Mahmudur Rahman.webp" alt="Mahmudur Rahman" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">MR</span><span class="hsf-name">Mahmudur Rahman</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Mahmudur Rahman</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Windsor, Ontario, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Sagor Kumar Biswas.webp" alt="Sagor Kumar Biswas" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SB</span><span class="hsf-name">Sagor Kumar Biswas</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Sagor Kumar Biswas</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Toronto, Ontario, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/work/Syedzadi Afia Abeda.webp" alt="Syedzadi Afia Abeda" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SA</span><span class="hsf-name">Syedzadi Afia Abeda</span></span></div> <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Syedzadi Afia Abeda</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Toronto, Ontario, Canada</p><div class="success-card-score">OWP Approved <i class="fas fa-check-circle"></i></div></div> </div> <!--  <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/t1.jpg" alt="Rafiq Ahmed" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">RA</span><span class="hsf-name">Rafiq Ahmed</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Rafiq Ahmed</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Ottawa, Canada</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/t2.jpg" alt="Jannatul Ferdous" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">JF</span><span class="hsf-name">Jannatul Ferdous</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Jannatul Ferdous</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Auckland, NZ</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/aus-student.png" alt="Belal Hossain" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">BH</span><span class="hsf-name">Belal Hossain</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Belal Hossain</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Dublin, Ireland</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/europe-student.png" alt="Samira Chowdhury" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SC</span><span class="hsf-name">Samira Chowdhury</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Samira Chowdhury</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Tokyo, Japan</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/Adib.png" alt="Firoz Alam" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">FA</span><span class="hsf-name">Firoz Alam</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Firoz Alam</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Calgary, Canada</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/arnab.png" alt="Tahmina Khanam" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">TK</span><span class="hsf-name">Tahmina Khanam</span></span></div>
+              <div class="success-card-info"><span class="success-badge approved">APPROVED</span><h3 class="success-card-name">Tahmina Khanam</h3><p class="success-card-uni"><i class="fas fa-briefcase"></i> Brisbane, Australia</p><div class="success-card-score">Work Permit <i class="fas fa-check-circle"></i></div></div>
+            </div> --> </div> </div> <!-- Visitor Visa Panel --> <div class="tab-pane" role="tabpanel" aria-hidden="true"> <div class="success-grid"> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/visitor/Mohammad Salahuddin Mia.webp" alt="Mohammad Salahuddin Mia" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">MM</span><span class="hsf-name">Mohammad Salahuddin Mia</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Mohammad Salahuddin Mia</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Canada Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/pptx/slide-090.webp" alt="Imran Choudhury" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">IC</span><span class="hsf-name">Imran Choudhury</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Imran Choudhury</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Australia Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/visitor/Ahanaf Akhyer Hossain.webp" alt="Ahanaf Akhyer Hossain" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">AH</span><span class="hsf-name">Ahanaf Akhyer Hossain</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Ahanaf Akhyer Hossain</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> UK Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/pptx/slide-006.webp" alt="Simon Tushar Gomes" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SG</span><span class="hsf-name">Simon Tushar Gomes</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Simon Tushar Gomes</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> USA Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="/assets/success/pptx/slide-017.webp" alt="Anthony Biddut Rozario" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">AR</span><span class="hsf-name">Anthony Biddut Rozario</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Anthony Biddut Rozario</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Japan Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <div class="success-card"> <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/clients/visitor/Moazzem Hossain Kajol.webp" alt="Moazzem Hossain Kajol" loading="lazy"><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">MK</span><span class="hsf-name">Moazzem Hossain Kajol</span></span></div> <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Moazzem Hossain Kajol</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Europe Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div> </div> <!-- <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p4-2.jpg" alt="Shafiqul Islam" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">SI</span><span class="hsf-name">Shafiqul Islam</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Shafiqul Islam</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Canada Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/p4-3.jpg" alt="Dilara Begum" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">DB</span><span class="hsf-name">Dilara Begum</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Dilara Begum</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Australia Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/aus-student.png" alt="Abul Kalam" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">AK</span><span class="hsf-name">Abul Kalam</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Abul Kalam</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> UK Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/europe-student.png" alt="Rashida Khatun" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">RK</span><span class="hsf-name">Rashida Khatun</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Rashida Khatun</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> USA Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/Adib.png" alt="Nurul Haque" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">NH</span><span class="hsf-name">Nurul Haque</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Nurul Haque</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Europe Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div>
+            <div class="success-card">
+              <div class="success-card-img"><img onerror="this.parentElement.classList.add('is-fallback')" src="assets/arnab.png" alt="Farida Yasmin" loading="lazy"/><span class="home-success-photo-fallback" aria-hidden="true"><span class="hsf-initials">FY</span><span class="hsf-name">Farida Yasmin</span></span></div>
+              <div class="success-card-info"><span class="success-badge granted">GRANTED</span><h3 class="success-card-name">Farida Yasmin</h3><p class="success-card-uni"><i class="fas fa-plane-departure"></i> Canada Visit</p><div class="success-card-score">Visitor Visa <i class="fas fa-check-circle"></i></div></div>
+            </div> --> </div> </div> </div> <div class="showcase-action-footer"> <a href="/success-stories/" class="showcase-consult-link"><i class="fa-regular fa-eye"></i> View More</a> </div> <!-- <div class="hero-ctas-center">
+                  <a class="big-btn" href="/contact/#book">View More</a>
+        
+                </div> --> </div> </section>
+<script id="sa-home-success-legacy-tabs">
+(function() {
+        // Get tab buttons and panes
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const panes = document.querySelectorAll('.tab-pane');
+        
+        // Tab activation function
+        function activateTab(index) {
+            // Validate index
+            if (index < 0 || index >= tabBtns.length) return;
+            
+            // Update buttons active state and aria-selected
+            tabBtns.forEach((btn, i) => {
+                const isActive = i === index;
+                if (isActive) {
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                } else {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            });
+            
+            // Update panes visibility
+            panes.forEach((pane, i) => {
+                if (i === index) {
+                    pane.classList.add('active');
+                    pane.setAttribute('aria-hidden', 'false');
+                } else {
+                    pane.classList.remove('active');
+                    pane.setAttribute('aria-hidden', 'true');
+                }
+            });
+        }
+        
+        // Attach click event to each tab button
+        tabBtns.forEach((btn, idx) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabIndex = parseInt(btn.getAttribute('data-tab'), 10);
+                // fallback: if data-tab not consistent use index from loop
+                const targetIndex = !isNaN(tabIndex) ? tabIndex : idx;
+                if (!btn.classList.contains('active')) {
+                    activateTab(targetIndex);
+                }
+            });
+            
+            // Add keyboard support (Enter / Space)
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+            
+            // Make them focusable for accessibility
+            btn.setAttribute('tabindex', '0');
+        });
+        
+        // Set initial ARIA attributes for panes
+        panes.forEach((pane, i) => {
+            pane.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
+        });
+        
+        // Ensure first tab is correctly synced if DOM loaded with active states
+        const activeIndex = Array.from(tabBtns).findIndex(btn => btn.classList.contains('active'));
+        if (activeIndex !== -1 && activeIndex !== 0) {
+            // synchronize panes according to whichever active tab present
+            panes.forEach((pane, idx) => {
+                if(idx === activeIndex) {
+                    pane.classList.add('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+        } else if (activeIndex === -1) {
+            // fallback to first tab if no active class
+            activateTab(0);
+        } else {
+            // sync panes for first tab active if some pane not active
+            const firstPaneActive = panes[0]?.classList.contains('active');
+            if (!firstPaneActive && tabBtns[0]?.classList.contains('active')) {
+                panes.forEach((pane, i) => {
+                    if(i === 0) pane.classList.add('active');
+                    else pane.classList.remove('active');
+                });
+            }
+        }
+        
+        // Optional: add smooth resize protection and minor additional effect
+        // Set body background consistency
+        window.addEventListener('load', () => {
+            // Prevents any layout shift due to dynamic content
+            document.body.style.opacity = '1';
+        });
+        
+        // tiny improvement: keep the active button indicator on window resize
+        // not needed but ensures accessibility sync
+    })();
+</script>
 <section class="section team-v2-section" id="experts"> <div class="container"> <div class="team-v2-header"> <span class="team-v2-label">THE PEOPLE BEHIND YOUR SUCCESS</span> <h2 class="team-v2-title">Meet Our <span class="accent">Expert Team</span></h2> </div> <div class="team-v2-grid" id="teamGrid"> <!-- Member 1 --> <!-- <div class="team-v2-card">
         <div class="team-v2-img">
           <img src="assets/team/boss-new.jpg" alt="Supriya K. Chakraborty - CEO and Founder of SA Associates" loading="lazy" />
