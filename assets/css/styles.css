@@ -9473,3 +9473,114 @@ select.saa-modal-input {
   }
 }
 /* END FAQ CONTACT CTA DESIGN 2026-09-24 */
+
+/* ===== SAAVISA SHARED CONSULTATION CTA START ===== */
+/* One CTA design language for Contact, FAQ, Experts and any future .cta-banner block. */
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta{
+  max-width:1100px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding:64px 40px!important;
+  display:block!important;
+  position:relative!important;
+  overflow:hidden!important;
+  border:0!important;
+  border-radius:28px!important;
+  background:linear-gradient(135deg,#0195D8 0%,#0a78b8 50%,#0b364a 100%)!important;
+  box-shadow:0 18px 46px rgba(1,149,216,.22)!important;
+  color:#fff!important;
+  text-align:center!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta::before,
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  border-radius:50%!important;
+  background:rgba(255,255,255,.08)!important;
+  pointer-events:none!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta::before{
+  width:300px!important;height:300px!important;top:-120px!important;left:-80px!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta::after{
+  width:420px!important;height:420px!important;right:-120px!important;bottom:-200px!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta>*{
+  position:relative!important;z-index:1!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta h2{
+  max-width:880px!important;
+  margin:0 auto 10px!important;
+  font-size:clamp(28px,4vw,42px)!important;
+  line-height:1.1!important;
+  letter-spacing:-.02em!important;
+  font-weight:800!important;
+  color:#fff!important;
+  text-align:center!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta h2 .accent{
+  color:#fff!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta>p{
+  max-width:640px!important;
+  margin:0 auto 32px!important;
+  color:rgba(255,255,255,.90)!important;
+  font-size:16px!important;
+  line-height:1.6!important;
+  text-align:center!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:14px!important;
+  margin:0!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons a,
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta>a{
+  min-height:50px!important;
+  padding:0 30px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  border-radius:999px!important;
+  font-size:15px!important;
+  line-height:1!important;
+  font-weight:700!important;
+  text-decoration:none!important;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-btn-primary,
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .big-btn,
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons a:not(.cta-btn-wa){
+  background:#fff!important;
+  color:#0195D8!important;
+  border:1px solid rgba(255,255,255,.55)!important;
+  box-shadow:0 12px 24px rgba(0,0,0,.18)!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-btn-wa{
+  background:#25D366!important;
+  color:#fff!important;
+  border:1px solid #25D366!important;
+  box-shadow:0 12px 24px rgba(0,0,0,.14)!important;
+}
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons a:hover,
+.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta>a:hover{
+  transform:translateY(-3px)!important;
+}
+@media(max-width:600px){
+  .saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta{
+    padding:48px 24px!important;border-radius:22px!important;
+  }
+  .saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons{
+    flex-direction:column!important;
+  }
+  .saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta .cta-buttons a,
+  .saa-consultation-cta.saa-consultation-cta.saa-consultation-cta.saa-consultation-cta>a{
+    width:100%!important;
+  }
+}
+/* ===== SAAVISA SHARED CONSULTATION CTA END ===== */

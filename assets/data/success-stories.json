@@ -18,7 +18,10 @@
       "MCGILL UNIVERSITY"
     ],
     "old": "Ex - North South University",
-    "asset": "assets/success/students/shahroza-nahrin-tanha.webp"
+    "asset": "assets/success/students/shahroza-nahrin-tanha.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 0,
@@ -28,7 +31,10 @@
     "institution": "University of Toronto",
     "program": "",
     "asset": "assets/success/students/rishant-sharma.webp",
-    "old": "Ex - The University of Melbourne"
+    "old": "Ex - The University of Melbourne",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 106,
@@ -61,7 +67,10 @@
       "Master of Computer Science by Coursework program"
     ],
     "old": "Ex - BRAC University",
-    "asset": "assets/success/students/fahim-faisal.webp"
+    "asset": "assets/success/students/fahim-faisal.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 96,
@@ -94,14 +103,17 @@
       "IELTS 7.5"
     ],
     "old": "Ex - Jahangirnagar University",
-    "asset": "assets/success/students/bhabna-mukherjee.webp"
+    "asset": "assets/success/students/bhabna-mukherjee.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 9,
     "name": "S M Yusuf Mallick",
     "category": "student",
     "score": "IELTS: 8.0",
-    "institution": "",
+    "institution": "New York Institute of Technology, Vancouver",
     "program": "Student Visa with Family",
     "lines": [
       "www.saavisa.com",
@@ -116,7 +128,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "Ex - University of Dhaka",
-    "asset": "assets/success/students/s-m-yusuf-mallick.webp"
+    "asset": "assets/success/students/s-m-yusuf-mallick.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 0,
@@ -126,7 +141,10 @@
     "institution": "University of Ottawa",
     "program": "",
     "asset": "assets/success/students/nusrat-jahan.webp",
-    "old": "Ex - Rajshahi University of Engineering & Technology (RUET)"
+    "old": "Ex - Rajshahi University of Engineering & Technology (RUET)",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 1,
@@ -159,7 +177,10 @@
       "MSC IN COMPUTER SCIENCE"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-001.webp"
+    "asset": "assets/success/pptx/slide-001.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 2,
@@ -181,7 +202,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-002.webp"
+    "asset": "assets/success/pptx/slide-002.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 3,
@@ -203,7 +227,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-003.webp"
+    "asset": "assets/success/pptx/slide-003.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 4,
@@ -225,7 +252,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-004.webp"
+    "asset": "assets/success/pptx/slide-004.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 5,
@@ -246,7 +276,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-005.webp"
+    "asset": "assets/success/pptx/slide-005.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 6,
@@ -268,7 +301,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-006.webp"
+    "asset": "assets/success/pptx/slide-006.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 7,
@@ -286,7 +322,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-007.webp"
+    "asset": "assets/success/pptx/slide-007.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 8,
@@ -307,7 +346,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-008.webp"
+    "asset": "assets/success/pptx/slide-008.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 10,
@@ -341,7 +383,10 @@
       "IELTS 6.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-010.webp"
+    "asset": "assets/success/pptx/slide-010.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 11,
@@ -374,7 +419,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-011.webp"
+    "asset": "assets/success/pptx/slide-011.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 12,
@@ -395,7 +443,10 @@
       "Naimul Alam Patwary"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-012.webp"
+    "asset": "assets/success/pptx/slide-012.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 13,
@@ -416,7 +467,10 @@
       "Khadijatul Kubra Raisa"
     ],
     "old": "",
-    "asset": ""
+    "asset": "",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 14,
@@ -437,7 +491,10 @@
       "Sharmin Jahan Jue"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-014.webp"
+    "asset": "assets/success/pptx/slide-014.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 15,
@@ -459,7 +516,10 @@
       "IELTS 7.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-015.webp"
+    "asset": "assets/success/pptx/slide-015.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 16,
@@ -481,7 +541,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-016.webp"
+    "asset": "assets/success/pptx/slide-016.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 17,
@@ -499,7 +562,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-017.webp"
+    "asset": "assets/success/pptx/slide-017.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 18,
@@ -522,7 +588,10 @@
       "Duolingo 120"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-018.webp"
+    "asset": "assets/success/pptx/slide-018.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 19,
@@ -545,7 +614,10 @@
       "MOI-English"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-019.webp"
+    "asset": "assets/success/pptx/slide-019.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 20,
@@ -563,7 +635,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-020.webp"
+    "asset": "assets/success/pptx/slide-020.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 21,
@@ -583,7 +658,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-021.webp"
+    "asset": "assets/success/pptx/slide-021.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 22,
@@ -607,7 +685,10 @@
       "OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-022.webp"
+    "asset": "assets/success/pptx/slide-022.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 23,
@@ -627,7 +708,10 @@
       "OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-023.webp"
+    "asset": "assets/success/pptx/slide-023.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 24,
@@ -649,7 +733,10 @@
       "MASTER OF ADMINISTRATIVE SCIENCE: GLOBAL LEADERSHIP AND ADMINISTRATION"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-024.webp"
+    "asset": "assets/success/pptx/slide-024.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 25,
@@ -670,7 +757,10 @@
       "MD ASHRAFUL ISLAM"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-025.webp"
+    "asset": "assets/success/pptx/slide-025.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 26,
@@ -692,7 +782,10 @@
       "IELTS 7.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-026.webp"
+    "asset": "assets/success/pptx/slide-026.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 27,
@@ -714,7 +807,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-027.webp"
+    "asset": "assets/success/pptx/slide-027.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 28,
@@ -735,7 +831,10 @@
       "IELTS 7.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-028.webp"
+    "asset": "assets/success/pptx/slide-028.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 29,
@@ -756,7 +855,10 @@
       "Fatema Amin Mouri"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-029.webp"
+    "asset": "assets/success/pptx/slide-029.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 30,
@@ -789,7 +891,10 @@
       "IELTS 8.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-030.webp"
+    "asset": "assets/success/pptx/slide-030.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 31,
@@ -821,7 +926,10 @@
       "IELTS 7.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-031.webp"
+    "asset": "assets/success/pptx/slide-031.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 32,
@@ -842,7 +950,10 @@
       "Swakhar Ghosh"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-032.webp"
+    "asset": "assets/success/pptx/slide-032.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 33,
@@ -863,7 +974,10 @@
       "Sharukh Sajid"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-033.webp"
+    "asset": "assets/success/pptx/slide-033.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 34,
@@ -896,7 +1010,10 @@
       "IELTS 8.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-034.webp"
+    "asset": "assets/success/pptx/slide-034.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 35,
@@ -917,7 +1034,10 @@
       "freehelpline@gmail.com"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-035.webp"
+    "asset": "assets/success/pptx/slide-035.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 36,
@@ -938,7 +1058,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-036.webp"
+    "asset": "assets/success/pptx/slide-036.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 37,
@@ -959,7 +1082,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-037.webp"
+    "asset": "assets/success/pptx/slide-037.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 38,
@@ -979,7 +1105,10 @@
       "CANADA STUDY PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-038.webp"
+    "asset": "assets/success/pptx/slide-038.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 39,
@@ -1000,7 +1129,10 @@
       "LAKEHEAD UNIVERSITY ENVIRONMENTAL SCIENCE"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-039.webp"
+    "asset": "assets/success/pptx/slide-039.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 40,
@@ -1022,7 +1154,10 @@
       "HOSPITALITY & TOURISM"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-040.webp"
+    "asset": "assets/success/pptx/slide-040.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 41,
@@ -1043,7 +1178,10 @@
       "LAKEHEAD UNIVERSITY BACHELOR OF COMMERCE"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-041.webp"
+    "asset": "assets/success/pptx/slide-041.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 42,
@@ -1064,7 +1202,10 @@
       "LAKEHEAD UNIVERSITY BACHELOR OF SCIENCE"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-042.webp"
+    "asset": "assets/success/pptx/slide-042.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 43,
@@ -1086,7 +1227,10 @@
       "MASTER OF ENGINEERING"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-043.webp"
+    "asset": "assets/success/pptx/slide-043.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 44,
@@ -1107,7 +1251,10 @@
       "UNIVERSITY OF CALGARY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-044.webp"
+    "asset": "assets/success/pptx/slide-044.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 45,
@@ -1131,7 +1278,10 @@
       "“Explore New Horizons with SAA”"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-045.webp"
+    "asset": "assets/success/pptx/slide-045.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 46,
@@ -1152,7 +1302,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-046.webp"
+    "asset": "assets/success/pptx/slide-046.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 47,
@@ -1174,7 +1327,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-047.webp"
+    "asset": "assets/success/pptx/slide-047.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 48,
@@ -1195,7 +1351,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-048.webp"
+    "asset": "assets/success/pptx/slide-048.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 49,
@@ -1216,7 +1375,10 @@
       "UNIVERSITY CANADA WEST"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-049.webp"
+    "asset": "assets/success/pptx/slide-049.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 50,
@@ -1238,7 +1400,10 @@
       "SPOUSE OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-050.webp"
+    "asset": "assets/success/pptx/slide-050.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 51,
@@ -1269,7 +1434,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-051.webp"
+    "asset": "assets/success/pptx/slide-051.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 52,
@@ -1291,7 +1459,10 @@
       "SPOUSE OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-052.webp"
+    "asset": "assets/success/pptx/slide-052.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 53,
@@ -1323,7 +1494,10 @@
       "IELTS 7.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-053.webp"
+    "asset": "assets/success/pptx/slide-053.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 54,
@@ -1344,7 +1518,10 @@
       "MEMORIAL UNIVERSITY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-054.webp"
+    "asset": "assets/success/pptx/slide-054.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 55,
@@ -1376,7 +1553,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-055.webp"
+    "asset": "assets/success/pptx/slide-055.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 56,
@@ -1398,7 +1578,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-056.webp"
+    "asset": "assets/success/pptx/slide-056.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 57,
@@ -1417,7 +1600,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-057.webp"
+    "asset": "assets/success/pptx/slide-057.webp",
+    "countries": [
+      "USA"
+    ]
   },
   {
     "slide": 58,
@@ -1450,7 +1636,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-058.webp"
+    "asset": "assets/success/pptx/slide-058.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 59,
@@ -1482,7 +1671,10 @@
       "IELTS 7.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-059.webp"
+    "asset": "assets/success/pptx/slide-059.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 60,
@@ -1515,7 +1707,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-060.webp"
+    "asset": "assets/success/pptx/slide-060.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 62,
@@ -1536,7 +1731,10 @@
       "MCMASTER UNIVERSITY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-062.webp"
+    "asset": "assets/success/pptx/slide-062.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 63,
@@ -1557,7 +1755,10 @@
       "NIAGARA UNIVERSITY IN ONTARIO"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-063.webp"
+    "asset": "assets/success/pptx/slide-063.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 64,
@@ -1578,7 +1779,10 @@
       "MEMORIAL UNIVERSITY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-064.webp"
+    "asset": "assets/success/pptx/slide-064.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 65,
@@ -1600,7 +1804,10 @@
       "SPOUSE OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-065.webp"
+    "asset": "assets/success/pptx/slide-065.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 66,
@@ -1621,7 +1828,10 @@
       "UNIVERSITY CANADA WEST"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-066.webp"
+    "asset": "assets/success/pptx/slide-066.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 67,
@@ -1643,7 +1853,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-067.webp"
+    "asset": "assets/success/pptx/slide-067.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 68,
@@ -1675,7 +1888,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-068.webp"
+    "asset": "assets/success/pptx/slide-068.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 69,
@@ -1697,7 +1913,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-069.webp"
+    "asset": "assets/success/pptx/slide-069.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 70,
@@ -1718,7 +1937,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-070.webp"
+    "asset": "assets/success/pptx/slide-070.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 71,
@@ -1739,7 +1961,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-071.webp"
+    "asset": "assets/success/pptx/slide-071.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 72,
@@ -1760,7 +1985,10 @@
       "FAIRLEIGH DICKINSON UNIVERSITY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-072.webp"
+    "asset": "assets/success/pptx/slide-072.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 73,
@@ -1791,7 +2019,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-073.webp"
+    "asset": "assets/success/pptx/slide-073.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 74,
@@ -1809,7 +2040,14 @@
       "+880 1750037770- 4"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-074.webp"
+    "asset": "assets/success/pptx/slide-074.webp",
+    "countries": [
+      "USA",
+      "Canada",
+      "Europe",
+      "UK",
+      "Australia"
+    ]
   },
   {
     "slide": 75,
@@ -1831,7 +2069,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-075.webp"
+    "asset": "assets/success/pptx/slide-075.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 76,
@@ -1851,7 +2092,11 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-076.webp"
+    "asset": "assets/success/pptx/slide-076.webp",
+    "countries": [
+      "USA",
+      "Canada"
+    ]
   },
   {
     "slide": 77,
@@ -1872,7 +2117,10 @@
       "FAIRLEIGH DICKINSON UNIVERSITY"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-077.webp"
+    "asset": "assets/success/pptx/slide-077.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 78,
@@ -1893,7 +2141,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-078.webp"
+    "asset": "assets/success/pptx/slide-078.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 79,
@@ -1914,7 +2165,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-079.webp"
+    "asset": "assets/success/pptx/slide-079.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 80,
@@ -1935,7 +2189,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-080.webp"
+    "asset": "assets/success/pptx/slide-080.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 81,
@@ -1967,14 +2224,17 @@
       "IELTS 7.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-081.webp"
+    "asset": "assets/success/pptx/slide-081.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 82,
     "name": "Jasmin Akter",
     "category": "student",
     "score": "IELTS: 6.5",
-    "institution": "UNIVERSITY",
+    "institution": "University Canada West",
     "program": "",
     "lines": [
       "sa associates",
@@ -1999,7 +2259,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-082.webp"
+    "asset": "assets/success/pptx/slide-082.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 83,
@@ -2030,7 +2293,10 @@
       "MOI"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-083.webp"
+    "asset": "assets/success/pptx/slide-083.webp",
+    "countries": [
+      "Australia"
+    ]
   },
   {
     "slide": 84,
@@ -2062,7 +2328,10 @@
       "IELTS 7.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-084.webp"
+    "asset": "assets/success/pptx/slide-084.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 85,
@@ -2093,7 +2362,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-085.webp"
+    "asset": "assets/success/pptx/slide-085.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 87,
@@ -2124,7 +2396,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-087.webp"
+    "asset": "assets/success/pptx/slide-087.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 88,
@@ -2154,7 +2429,10 @@
       "OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-088.webp"
+    "asset": "assets/success/pptx/slide-088.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 89,
@@ -2184,7 +2462,10 @@
       "OPEN WORK PERMIT"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-089.webp"
+    "asset": "assets/success/pptx/slide-089.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 90,
@@ -2205,7 +2486,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-090.webp"
+    "asset": "assets/success/pptx/slide-090.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 91,
@@ -2226,7 +2510,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-091.webp"
+    "asset": "assets/success/pptx/slide-091.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 92,
@@ -2258,7 +2545,10 @@
       "IELTS 8.0"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-092.webp"
+    "asset": "assets/success/pptx/slide-092.webp",
+    "countries": [
+      "USA"
+    ]
   },
   {
     "slide": 94,
@@ -2279,7 +2569,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-094.webp"
+    "asset": "assets/success/pptx/slide-094.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 95,
@@ -2311,7 +2604,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-095.webp"
+    "asset": "assets/success/pptx/slide-095.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 98,
@@ -2333,7 +2629,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-098.webp"
+    "asset": "assets/success/pptx/slide-098.webp",
+    "countries": [
+      "USA"
+    ]
   },
   {
     "slide": 99,
@@ -2356,7 +2655,10 @@
       "Under Ivy League"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-099.webp"
+    "asset": "assets/success/pptx/slide-099.webp",
+    "countries": [
+      "USA"
+    ]
   },
   {
     "slide": 100,
@@ -2377,7 +2679,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-100.webp"
+    "asset": "assets/success/pptx/slide-100.webp",
+    "countries": [
+      "UK"
+    ]
   },
   {
     "slide": 101,
@@ -2398,7 +2703,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-101.webp"
+    "asset": "assets/success/pptx/slide-101.webp",
+    "countries": [
+      "UK"
+    ]
   },
   {
     "slide": 105,
@@ -2430,7 +2738,10 @@
       "IELTS 6.5"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-105.webp"
+    "asset": "assets/success/pptx/slide-105.webp",
+    "countries": [
+      "Australia"
+    ]
   },
   {
     "slide": 107,
@@ -2451,7 +2762,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-107.webp"
+    "asset": "assets/success/pptx/slide-107.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 108,
@@ -2474,7 +2788,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-108.webp"
+    "asset": "assets/success/pptx/slide-108.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 109,
@@ -2495,7 +2812,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-109.webp"
+    "asset": "assets/success/pptx/slide-109.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 110,
@@ -2527,7 +2847,10 @@
       "Masters of Business Administration"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-110.webp"
+    "asset": "assets/success/pptx/slide-110.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 111,
@@ -2548,7 +2871,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-111.webp"
+    "asset": "assets/success/pptx/slide-111.webp",
+    "countries": [
+      "Australia"
+    ]
   },
   {
     "slide": 112,
@@ -2569,7 +2895,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-112.webp"
+    "asset": "assets/success/pptx/slide-112.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 113,
@@ -2602,7 +2931,10 @@
       "Masters of Business Administration"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-113.webp"
+    "asset": "assets/success/pptx/slide-113.webp",
+    "countries": [
+      "UK"
+    ]
   },
   {
     "slide": 114,
@@ -2623,7 +2955,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-114.webp"
+    "asset": "assets/success/pptx/slide-114.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 115,
@@ -2644,7 +2979,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-115.webp"
+    "asset": "assets/success/pptx/slide-115.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 116,
@@ -2676,7 +3014,10 @@
       "Masters of Business Administration"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-116.webp"
+    "asset": "assets/success/pptx/slide-116.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 118,
@@ -2698,7 +3039,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-118.webp"
+    "asset": "assets/success/pptx/slide-118.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 119,
@@ -2720,7 +3064,10 @@
       "[ sister concern of SA Associates ]"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-119.webp"
+    "asset": "assets/success/pptx/slide-119.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 120,
@@ -2741,7 +3088,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-120.webp"
+    "asset": "assets/success/pptx/slide-120.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 125,
@@ -2773,7 +3123,10 @@
       "Masters of Business Administration"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-125.webp"
+    "asset": "assets/success/pptx/slide-125.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 126,
@@ -2794,7 +3147,10 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-126.webp"
+    "asset": "assets/success/pptx/slide-126.webp",
+    "countries": [
+      "Canada"
+    ]
   },
   {
     "slide": 127,
@@ -2815,6 +3171,9 @@
       "Visit Us :"
     ],
     "old": "",
-    "asset": "assets/success/pptx/slide-127.webp"
+    "asset": "assets/success/pptx/slide-127.webp",
+    "countries": [
+      "Canada"
+    ]
   }
 ]

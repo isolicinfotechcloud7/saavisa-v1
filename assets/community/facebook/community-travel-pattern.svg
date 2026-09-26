@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 760" fill="none">
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#79BFFF"/>
+    </pattern>
+    <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#8FCCFF" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#8FCCFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeR" x1="1" y1="0" x2="0" y2="0">
+      <stop stop-color="#8FCCFF" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#8FCCFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft oversized corner geometry -->
+  <circle cx="-25" cy="54" r="180" fill="#CBEAFF" fill-opacity=".42"/>
+  <circle cx="1905" cy="60" r="210" fill="#BFE5FF" fill-opacity=".38"/>
+  <path d="M0 635L250 760H0V635Z" fill="#DFF1FF" fill-opacity=".46"/>
+  <path d="M1920 360L1765 455L1920 555V360Z" fill="#E3F3FF" fill-opacity=".48"/>
+
+  <!-- stylised dotted world map, left -->
+  <g opacity=".48">
+    <path d="M8 142C70 102 155 95 230 116C291 132 329 169 381 164C410 162 438 148 470 153C442 182 419 213 385 224C349 236 319 220 282 225C252 230 234 248 209 264C176 285 133 291 100 273C70 257 59 227 34 208C15 193 1 177 8 142Z" fill="url(#dots)"/>
+    <path d="M210 267C240 281 267 305 280 336C290 361 285 390 272 413C260 434 244 453 235 479C225 507 228 541 214 567C195 553 181 533 174 510C165 480 170 449 156 421C143 393 119 373 112 342C107 317 118 289 140 277C160 266 187 260 210 267Z" fill="url(#dots)"/>
+    <path d="M394 114C426 100 461 98 491 111C512 120 531 140 550 151C528 161 506 169 484 166C456 161 435 144 410 134C402 131 397 124 394 114Z" fill="url(#dots)"/>
+  </g>
+
+  <!-- stylised dotted world map, right -->
+  <g opacity=".45">
+    <path d="M1367 123C1412 98 1465 91 1510 104C1547 114 1577 138 1616 139C1651 140 1683 121 1719 126C1759 132 1791 158 1823 180C1794 198 1764 213 1730 216C1690 219 1655 201 1615 202C1576 203 1545 222 1508 228C1473 233 1435 223 1410 198C1387 176 1378 150 1367 123Z" fill="url(#dots)"/>
+    <path d="M1527 226C1555 230 1582 245 1598 268C1613 289 1617 315 1610 340C1604 363 1590 382 1578 403C1564 427 1557 451 1552 478C1529 470 1511 455 1501 433C1488 406 1487 376 1478 349C1470 325 1454 303 1457 278C1460 252 1480 232 1504 226C1511 224 1519 224 1527 226Z" fill="url(#dots)"/>
+    <path d="M1628 243C1662 231 1695 236 1722 255C1743 270 1758 292 1778 309C1757 319 1735 329 1712 329C1681 329 1654 311 1632 291C1617 277 1604 258 1608 249C1611 245 1619 243 1628 243Z" fill="url(#dots)"/>
+  </g>
+
+  <!-- flight paths -->
+  <path d="M15 183C97 186 126 260 212 266C284 271 339 211 421 217" stroke="#4AA6FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 10" opacity=".72"/>
+  <path d="M1450 211C1518 217 1563 260 1627 276C1691 292 1746 266 1799 279C1843 289 1870 316 1915 320" stroke="#4AA6FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 10" opacity=".72"/>
+
+  <!-- plane icons -->
+  <g transform="translate(410 208) rotate(-12) scale(1.45)" fill="#63B3F7" opacity=".88">
+    <path d="M0 12L31 0L37 3L24 15L40 21L35 25L18 20L11 32L7 30L10 18L0 15Z"/>
+  </g>
+  <g transform="translate(1435 198) rotate(12) scale(1.45)" fill="#63B3F7" opacity=".88">
+    <path d="M0 12L31 0L37 3L24 15L40 21L35 25L18 20L11 32L7 30L10 18L0 15Z"/>
+  </g>
+
+  <!-- soft side fades -->
+  <rect x="0" y="0" width="460" height="760" fill="url(#fadeL)" opacity=".14"/>
+  <rect x="1460" y="0" width="460" height="760" fill="url(#fadeR)" opacity=".14"/>
+</svg>

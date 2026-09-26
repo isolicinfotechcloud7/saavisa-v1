@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48">
-  <rect width="64" height="48" fill="#FFFFFF"/>
-  <rect width="16" height="48" x="0" y="0" fill="#D80621"/>
-  <rect width="16" height="48" x="48" y="0" fill="#D80621"/>
-  <path fill="#D80621" d="M32 10l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Canada flag">
+  <title>Canada flag</title>
+  <defs>
+    <clipPath id="flag-circle"><circle cx="40" cy="40" r="39"/></clipPath>
+  </defs>
+  <g clip-path="url(#flag-circle)">
+    <image href="/assets/destinations/canada-flag.webp" x="0" y="0" width="80" height="80" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <circle cx="40" cy="40" r="39" fill="none" stroke="#e7edf2" stroke-width="2"/>
 </svg>
