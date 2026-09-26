@@ -2,6 +2,186 @@
   const qs = (sel, root = document) => root.querySelector(sel);
   const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+
+  /* ===== GLOBAL TOUCH SWIPE V1 START ===== */
+
+  const bindSwipe = (
+    element,
+    onSwipeLeft,
+    onSwipeRight,
+    options = {}
+  ) => {
+    if (!element || element.dataset.saaSwipeBound === '1') return;
+
+    element.dataset.saaSwipeBound = '1';
+
+    const threshold = options.threshold || 42;
+    const ratio = options.ratio || 1.15;
+
+    let startX = 0;
+    let startY = 0;
+    let tracking = false;
+    let suppressClickUntil = 0;
+
+    /*
+     * Keep normal vertical page scrolling.
+     * Horizontal movement remains available to our carousel.
+     */
+    if (!element.style.touchAction) {
+      element.style.touchAction = options.touchAction || 'pan-y';
+    }
+
+    element.addEventListener(
+      'touchstart',
+      (event) => {
+        if (event.touches.length !== 1) return;
+
+        const touch = event.touches[0];
+
+        startX = touch.clientX;
+        startY = touch.clientY;
+        tracking = true;
+      },
+      { passive: true }
+    );
+
+    element.addEventListener(
+      'touchcancel',
+      () => {
+        tracking = false;
+      },
+      { passive: true }
+    );
+
+    element.addEventListener(
+      'touchend',
+      (event) => {
+        if (!tracking || !event.changedTouches.length) return;
+
+        tracking = false;
+
+        const touch = event.changedTouches[0];
+
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+
+        const absX = Math.abs(dx);
+        const absY = Math.abs(dy);
+
+        /*
+         * Ignore vertical scrolling and tiny accidental movement.
+         */
+        if (
+          absX < threshold ||
+          absX <= absY * ratio
+        ) {
+          return;
+        }
+
+        /*
+         * Prevent an image/link beneath the finger from also
+         * opening after a successful horizontal swipe.
+         */
+        suppressClickUntil = Date.now() + 350;
+
+        if (dx < 0) {
+          onSwipeLeft?.();
+        } else {
+          onSwipeRight?.();
+        }
+      },
+      { passive: true }
+    );
+
+    element.addEventListener(
+      'click',
+      (event) => {
+        if (Date.now() >= suppressClickUntil) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      true
+    );
+  };
+
+
+  /*
+   * Experts page paged galleries.
+   * Swipe left/right exactly like pressing the pagination dots.
+   */
+  const initPagedGallerySwipe = () => {
+    qsa('.gal-dots').forEach((dots) => {
+      const scope = dots.parentElement;
+      const buttons = qsa('.gal-dot', dots);
+
+      if (!scope || buttons.length < 2) return;
+
+      const currentIndex = () => {
+        const active = buttons.findIndex((btn) =>
+          btn.classList.contains('is-active')
+        );
+
+        return active >= 0 ? active : 0;
+      };
+
+      bindSwipe(
+        scope,
+        () => {
+          const index = currentIndex();
+          buttons[(index + 1) % buttons.length]?.click();
+        },
+        () => {
+          const index = currentIndex();
+          buttons[
+            (index - 1 + buttons.length) % buttons.length
+          ]?.click();
+        }
+      );
+    });
+  };
+
+
+  /*
+   * Experts image lightbox.
+   */
+  const initLightboxSwipe = () => {
+    const lightbox = qs('#lb');
+    if (!lightbox) return;
+
+    const stage = qs('.lb-stage', lightbox);
+    const prev = qs('.lb-prev', lightbox);
+    const next = qs('.lb-next', lightbox);
+
+    if (!stage) return;
+
+    bindSwipe(
+      stage,
+      () => next?.click(),
+      () => prev?.click(),
+      {
+        threshold: 38,
+        touchAction: 'none'
+      }
+    );
+  };
+
+
+  /*
+   * Homepage mobile team section already uses native horizontal
+   * scrolling. This only makes the interaction more deliberate.
+   */
+  const initTeamNativeSwipe = () => {
+    const grid = qs('#teamGrid');
+    if (!grid) return;
+
+    grid.style.webkitOverflowScrolling = 'touch';
+    grid.style.overscrollBehaviorX = 'contain';
+  };
+
+  /* ===== GLOBAL TOUCH SWIPE V1 END ===== */
+
+
   const closeAllDropdowns = () => {
     qsa('[data-dropdown].open').forEach((d) => d.classList.remove('open'));
     qsa('[data-mobile-item].open').forEach((b) => b.classList.remove('open'));
@@ -106,6 +286,12 @@
         e.preventDefault();
         go(1);
       });
+
+      bindSwipe(
+        root,
+        () => go(1),
+        () => go(-1)
+      );
 
       let timer = window.setInterval(() => go(1), 6500);
       root.addEventListener('mouseenter', () => {
@@ -251,6 +437,12 @@
     qs('[data-testi-prev]', slider)?.addEventListener('click', () => goTo(current - 1));
     qs('[data-testi-next]', slider)?.addEventListener('click', () => goTo(current + 1));
 
+    bindSwipe(
+      slider,
+      () => goTo(current + 1),
+      () => goTo(current - 1)
+    );
+
     // Auto-advance every 6 seconds
     setInterval(() => goTo(current + 1), 6000);
   };
@@ -259,15 +451,50 @@
     const slides = qsa('.hero-slide');
     if (slides.length <= 1) return;
 
-    let currentIndex = 0;
+    const hero =
+      qs('.hero') ||
+      slides[0].parentElement;
 
-    const nextSlide = () => {
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].classList.add('active');
+    let currentIndex = slides.findIndex((slide) =>
+      slide.classList.contains('active')
+    );
+
+    if (currentIndex < 0) currentIndex = 0;
+
+    let timer = null;
+
+    const goTo = (index) => {
+      slides[currentIndex]?.classList.remove('active');
+
+      currentIndex =
+        (index + slides.length) %
+        slides.length;
+
+      slides[currentIndex]?.classList.add('active');
     };
 
-    setInterval(nextSlide, 6000);
+    const startTimer = () => {
+      if (timer) window.clearInterval(timer);
+
+      timer = window.setInterval(
+        () => goTo(currentIndex + 1),
+        6000
+      );
+    };
+
+    const userGoTo = (index) => {
+      goTo(index);
+      startTimer();
+    };
+
+    bindSwipe(
+      hero,
+      () => userGoTo(currentIndex + 1),
+      () => userGoTo(currentIndex - 1),
+      { threshold: 44 }
+    );
+
+    startTimer();
   };
 
   const initStatCounters = () => {
@@ -370,6 +597,9 @@
   initBlog();
   initActiveNav();
   initHeroSlideshow();
+  initPagedGallerySwipe();
+  initLightboxSwipe();
+  initTeamNativeSwipe();
   initStatCounters();
   initStatCircleAnimation();
 })();

@@ -10877,3 +10877,35 @@ select.saa-modal-input {
   }
 
 /* ===== MOBILE HOME HERO ASSET SYNC V8 END ===== */
+
+/* ===== GLOBAL CAROUSEL SWIPE V1 START ===== */
+
+@media (hover: none), (pointer: coarse) {
+
+  /* JS-controlled horizontal swipe areas */
+  .hero,
+  [data-slider],
+  [data-testi-slider],
+  .reviews-carousel,
+  .gal-page {
+    touch-action: pan-y;
+  }
+
+  /* Native horizontal card carousel */
+  .team-v2-grid {
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .team-v2-card {
+    scroll-snap-stop: always;
+  }
+
+  /* Experts fullscreen gallery */
+  #lb .lb-stage {
+    touch-action: none;
+  }
+}
+
+/* ===== GLOBAL CAROUSEL SWIPE V1 END ===== */
