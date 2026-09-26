@@ -9584,3 +9584,148 @@ select.saa-modal-input {
   }
 }
 /* ===== SAAVISA SHARED CONSULTATION CTA END ===== */
+
+/* ===== HOMEPAGE MOBILE HERO FIX START ===== */
+
+/* Prevent the whole page from becoming horizontally scrollable */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 720px) {
+
+    /* Mobile page/container containment */
+    .container {
+        width: calc(100% - 32px);
+        max-width: 100%;
+    }
+
+    .header .inner,
+    .hero-inner,
+    .hero-grid,
+    .hero-copy {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Keep logo/header inside the viewport */
+    .brand.logo-only {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .brand.logo-only .logo {
+        width: min(150px, 40vw);
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .hero-slides,
+    .hero-slide {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-slide {
+        padding: 38px 0 46px;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    /* Long eyebrow must wrap instead of forcing page width */
+    .hero .eyebrow {
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+        white-space: normal;
+        flex-wrap: wrap;
+        line-height: 1.35;
+        border-radius: 18px;
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .hero-title {
+        max-width: 100%;
+        font-size: clamp(32px, 9.3vw, 40px);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+        overflow-wrap: break-word;
+    }
+
+    .hero .lead {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    /* Buttons */
+    .hero-ctas {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        text-align: center;
+    }
+
+    /* Stats */
+    .stats.glass {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px;
+        margin-top: 18px;
+    }
+
+    .stats.glass .stat {
+        min-width: 0;
+        padding: 12px 10px;
+    }
+
+    .stats.glass .stat strong {
+        font-size: 17px;
+    }
+
+    .stats.glass .stat span {
+        overflow-wrap: anywhere;
+    }
+
+    /* Decorative foreground artwork must never create page overflow */
+    .hero-student-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-student {
+        max-width: none;
+    }
+}
+
+/* ===== HOMEPAGE MOBILE HERO FIX END ===== */
+
