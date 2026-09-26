@@ -10828,3 +10828,154 @@ select.saa-modal-input {
 }
 
 /* ===== MOBILE HOME HERO PREMIUM END ===== */
+
+/* SAAVISA MOBILE HERO INDICATOR DOTS START */
+@media (max-width: 767.98px) {
+  /* remove text/count/location-style indicator content on mobile hero */
+  .home-hero-mobile .hero-mobile-indicator,
+  .home-hero-mobile .hero-carousel-indicator,
+  .home-hero-mobile .hero-slide-indicator,
+  .page-hero-mobile .hero-mobile-indicator,
+  .page-hero-mobile .hero-carousel-indicator,
+  .page-hero-mobile .hero-slide-indicator,
+  .mobile-hero-carousel .hero-mobile-indicator,
+  .mobile-hero-carousel .hero-carousel-indicator,
+  .mobile-hero-carousel .hero-slide-indicator {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding-top: 10px !important;
+    padding-bottom: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+  }
+
+  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-label,
+  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-count,
+  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-separator,
+  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-label,
+  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-count,
+  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-separator,
+  .home-hero-mobile .hero-slide-indicator > .hero-indicator-label,
+  .home-hero-mobile .hero-slide-indicator > .hero-indicator-count,
+  .home-hero-mobile .hero-slide-indicator > .hero-indicator-separator,
+  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-label,
+  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-count,
+  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-separator,
+  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-label,
+  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-count,
+  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-separator,
+  .page-hero-mobile .hero-slide-indicator > .hero-indicator-label,
+  .page-hero-mobile .hero-slide-indicator > .hero-indicator-count,
+  .page-hero-mobile .hero-slide-indicator > .hero-indicator-separator,
+  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-label,
+  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-count,
+  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-separator,
+  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-label,
+  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-count,
+  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-separator,
+  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-label,
+  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-count,
+  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-separator {
+    display: none !important;
+  }
+
+  /* subtle dots only */
+  .home-hero-mobile .hero-mobile-indicator .dot,
+  .home-hero-mobile .hero-mobile-indicator button,
+  .home-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet,
+  .home-hero-mobile .hero-mobile-indicator [data-slide-dot],
+  .home-hero-mobile .hero-carousel-indicator .dot,
+  .home-hero-mobile .hero-carousel-indicator button,
+  .home-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet,
+  .home-hero-mobile .hero-carousel-indicator [data-slide-dot],
+  .home-hero-mobile .hero-slide-indicator .dot,
+  .home-hero-mobile .hero-slide-indicator button,
+  .home-hero-mobile .hero-slide-indicator .swiper-pagination-bullet,
+  .home-hero-mobile .hero-slide-indicator [data-slide-dot],
+  .page-hero-mobile .hero-mobile-indicator .dot,
+  .page-hero-mobile .hero-mobile-indicator button,
+  .page-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet,
+  .page-hero-mobile .hero-mobile-indicator [data-slide-dot],
+  .page-hero-mobile .hero-carousel-indicator .dot,
+  .page-hero-mobile .hero-carousel-indicator button,
+  .page-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet,
+  .page-hero-mobile .hero-carousel-indicator [data-slide-dot],
+  .page-hero-mobile .hero-slide-indicator .dot,
+  .page-hero-mobile .hero-slide-indicator button,
+  .page-hero-mobile .hero-slide-indicator .swiper-pagination-bullet,
+  .page-hero-mobile .hero-slide-indicator [data-slide-dot],
+  .mobile-hero-carousel .hero-mobile-indicator .dot,
+  .mobile-hero-carousel .hero-mobile-indicator button,
+  .mobile-hero-carousel .hero-mobile-indicator .swiper-pagination-bullet,
+  .mobile-hero-carousel .hero-mobile-indicator [data-slide-dot],
+  .mobile-hero-carousel .hero-carousel-indicator .dot,
+  .mobile-hero-carousel .hero-carousel-indicator button,
+  .mobile-hero-carousel .hero-carousel-indicator .swiper-pagination-bullet,
+  .mobile-hero-carousel .hero-carousel-indicator [data-slide-dot],
+  .mobile-hero-carousel .hero-slide-indicator .dot,
+  .mobile-hero-carousel .hero-slide-indicator button,
+  .mobile-hero-carousel .hero-slide-indicator .swiper-pagination-bullet,
+  .mobile-hero-carousel .hero-slide-indicator [data-slide-dot] {
+    width: 8px !important;
+    min-width: 8px !important;
+    height: 8px !important;
+    min-height: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: rgba(23, 49, 87, 0.22) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: 0 !important;
+    color: transparent !important;
+  }
+
+  .home-hero-mobile .hero-mobile-indicator .dot.active,
+  .home-hero-mobile .hero-mobile-indicator button.active,
+  .home-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet-active,
+  .home-hero-mobile .hero-mobile-indicator [data-slide-dot].active,
+  .home-hero-mobile .hero-carousel-indicator .dot.active,
+  .home-hero-mobile .hero-carousel-indicator button.active,
+  .home-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet-active,
+  .home-hero-mobile .hero-carousel-indicator [data-slide-dot].active,
+  .home-hero-mobile .hero-slide-indicator .dot.active,
+  .home-hero-mobile .hero-slide-indicator button.active,
+  .home-hero-mobile .hero-slide-indicator .swiper-pagination-bullet-active,
+  .home-hero-mobile .hero-slide-indicator [data-slide-dot].active,
+  .page-hero-mobile .hero-mobile-indicator .dot.active,
+  .page-hero-mobile .hero-mobile-indicator button.active,
+  .page-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet-active,
+  .page-hero-mobile .hero-mobile-indicator [data-slide-dot].active,
+  .page-hero-mobile .hero-carousel-indicator .dot.active,
+  .page-hero-mobile .hero-carousel-indicator button.active,
+  .page-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet-active,
+  .page-hero-mobile .hero-carousel-indicator [data-slide-dot].active,
+  .page-hero-mobile .hero-slide-indicator .dot.active,
+  .page-hero-mobile .hero-slide-indicator button.active,
+  .page-hero-mobile .hero-slide-indicator .swiper-pagination-bullet-active,
+  .page-hero-mobile .hero-slide-indicator [data-slide-dot].active,
+  .mobile-hero-carousel .hero-mobile-indicator .dot.active,
+  .mobile-hero-carousel .hero-mobile-indicator button.active,
+  .mobile-hero-carousel .hero-mobile-indicator .swiper-pagination-bullet-active,
+  .mobile-hero-carousel .hero-mobile-indicator [data-slide-dot].active,
+  .mobile-hero-carousel .hero-carousel-indicator .dot.active,
+  .mobile-hero-carousel .hero-carousel-indicator button.active,
+  .mobile-hero-carousel .hero-carousel-indicator .swiper-pagination-bullet-active,
+  .mobile-hero-carousel .hero-carousel-indicator [data-slide-dot].active,
+  .mobile-hero-carousel .hero-slide-indicator .dot.active,
+  .mobile-hero-carousel .hero-slide-indicator button.active,
+  .mobile-hero-carousel .hero-slide-indicator .swiper-pagination-bullet-active,
+  .mobile-hero-carousel .hero-slide-indicator [data-slide-dot].active {
+    width: 22px !important;
+    min-width: 22px !important;
+    background: #7ccfff !important;
+  }
+}
+/* SAAVISA MOBILE HERO INDICATOR DOTS END */
