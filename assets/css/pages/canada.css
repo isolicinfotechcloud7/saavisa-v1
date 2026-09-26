@@ -2837,3 +2837,21 @@ margin:14px 0 18px 0;
   }
 }
 /* ===== MOBILE COUNTRY HERO REAL FROST END ===== */
+
+/* ===== MOBILE COUNTRY HERO FROST TUNING V5 START ===== */
+@media (max-width:768px){
+
+  .saa-page .country-hero > .country-hero-frost{
+    background:rgba(248,252,255,.20) !important;
+
+    backdrop-filter:
+      blur(2.5px)
+      saturate(.96) !important;
+
+    -webkit-backdrop-filter:
+      blur(2.5px)
+      saturate(.96) !important;
+  }
+
+}
+/* ===== MOBILE COUNTRY HERO FROST TUNING V5 END ===== */
