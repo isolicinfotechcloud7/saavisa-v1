@@ -2805,7 +2805,7 @@ margin:14px 0 18px 0;
 .saa-page .section { padding: 40px 0 !important; }}
 /* Shared site chrome is outside main.saa-page. */
 
-/* ===== MOBILE COUNTRY HERO FROST START ===== */
+/* ===== MOBILE COUNTRY HERO REAL FROST START ===== */
 @media (max-width: 768px) {
 
   .saa-page .country-hero {
@@ -2813,31 +2813,32 @@ margin:14px 0 18px 0;
     overflow: hidden !important;
   }
 
-  /* one full frosted layer over the hero artwork */
-  .saa-page .country-hero::after {
-    content: "" !important;
-
+  /*
+   * Real DOM overlay instead of ::before/::after.
+   * Existing country CSS cannot cancel this layer.
+   */
+  .saa-page .country-hero > .country-hero-frost {
     position: absolute !important;
     inset: 0 !important;
 
-    z-index: 1 !important;
-
     display: block !important;
 
-    background: rgba(248, 252, 255, .34) !important;
+    z-index: 1 !important;
+
+    background:
+      rgba(248, 252, 255, .54) !important;
 
     backdrop-filter:
       blur(7px)
-      saturate(.92) !important;
+      saturate(.88) !important;
 
     -webkit-backdrop-filter:
       blur(7px)
-      saturate(.92) !important;
+      saturate(.88) !important;
 
     pointer-events: none !important;
   }
 
-  /* text/content simply stays above the frost */
   .saa-page .country-hero .hero-content {
     position: relative !important;
     z-index: 2 !important;
@@ -2851,4 +2852,4 @@ margin:14px 0 18px 0;
     -webkit-backdrop-filter: none !important;
   }
 }
-/* ===== MOBILE COUNTRY HERO FROST END ===== */
+/* ===== MOBILE COUNTRY HERO REAL FROST END ===== */
