@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 760" fill="none">
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#7ABEFF"/>
+    </pattern>
+    <linearGradient id="fadeLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A8D6FF" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#A8D6FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeRight" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#A8D6FF" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#A8D6FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="-30" cy="50" r="185" fill="#D9EEFF" fill-opacity=".52"/>
+  <circle cx="1940" cy="72" r="210" fill="#D5EBFF" fill-opacity=".48"/>
+  <path d="M0 620L248 760H0V620Z" fill="#E6F4FF" fill-opacity=".60"/>
+  <path d="M1920 358L1770 455L1920 552V358Z" fill="#E8F5FF" fill-opacity=".55"/>
+  <g opacity=".50">
+    <path d="M29 182C74 156 136 145 204 151C266 157 329 175 380 198C328 212 294 238 252 248C197 261 136 250 90 227C55 209 28 195 29 182Z" fill="url(#dots)"/>
+    <path d="M112 241C144 236 182 241 211 260C238 277 251 307 247 340C244 370 225 397 199 418C174 438 143 450 114 452C125 420 122 390 115 361C108 331 97 301 100 273C102 257 106 246 112 241Z" fill="url(#dots)"/>
+    <path d="M356 132C390 122 429 122 462 136C481 144 500 156 516 172C491 177 470 179 449 176C415 171 387 154 356 132Z" fill="url(#dots)"/>
+  </g>
+  <g opacity=".48">
+    <path d="M1380 166C1430 141 1495 139 1558 148C1623 157 1688 177 1737 202C1690 215 1649 235 1602 240C1555 245 1515 230 1475 232C1436 234 1403 249 1368 249C1385 224 1388 195 1380 166Z" fill="url(#dots)"/>
+    <path d="M1483 246C1517 244 1553 253 1583 272C1606 288 1621 310 1624 337C1627 361 1618 385 1600 407C1577 435 1541 456 1502 460C1514 430 1512 397 1504 366C1496 336 1478 308 1477 279C1476 266 1478 254 1483 246Z" fill="url(#dots)"/>
+    <path d="M1680 173C1711 166 1745 169 1776 182C1800 191 1821 205 1840 224C1814 227 1789 227 1764 224C1732 220 1704 202 1680 173Z" fill="url(#dots)"/>
+  </g>
+  <g opacity=".82" transform="translate(424 212)">
+    <circle cx="0" cy="0" r="22" fill="#D9EEFF"/>
+    <rect x="-10" y="-10" width="20" height="20" rx="6" fill="#5DAEFF" transform="rotate(18)"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff" fill-opacity=".95"/>
+  </g>
+  <g opacity=".82" transform="translate(1452 214)">
+    <circle cx="0" cy="0" r="22" fill="#D9EEFF"/>
+    <path d="M0 -12L12 0L0 12L-12 0Z" fill="#5DAEFF"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ffffff" fill-opacity=".95"/>
+  </g>
+  <g opacity=".55" stroke="#78BBFF" stroke-width="4" stroke-linecap="round">
+    <path d="M364 176c10-10 24-15 38-12"/>
+    <path d="M390 188c7-6 15-9 24-8"/>
+    <path d="M1390 176c10-10 24-15 38-12"/>
+    <path d="M1417 188c6-6 14-9 23-8"/>
+  </g>
+  <rect x="0" y="0" width="430" height="760" fill="url(#fadeLeft)" opacity=".16"/>
+  <rect x="1490" y="0" width="430" height="760" fill="url(#fadeRight)" opacity=".16"/>
+</svg>

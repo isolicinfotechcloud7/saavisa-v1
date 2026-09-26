@@ -1,0 +1,79 @@
+/* ===== HOME SUCCESS + FACEBOOK COMMUNITY 2026-09-26 ===== */
+.home-success-showcase{
+  padding:84px 0 88px;
+  background:
+    radial-gradient(760px 360px at 8% 0%,rgba(1,149,216,.09),transparent 68%),
+    radial-gradient(760px 380px at 92% 100%,rgba(56,189,248,.10),transparent 70%),
+    linear-gradient(180deg,#ffffff 0%,#f5fbff 52%,#ffffff 100%);
+}
+.home-success-showcase .home-success-head{
+  max-width:820px;margin:0 auto 42px;text-align:center;
+}
+.home-success-showcase .home-success-kicker,
+.fb-community .fbp-label{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  margin:0 auto 13px;padding:7px 13px;border-radius:999px;
+  background:#e8f7fe;border:1px solid rgba(1,149,216,.14);
+  color:#0786c1;font-size:11px;font-weight:900;letter-spacing:.10em;text-transform:uppercase;
+}
+.home-success-showcase .home-success-kicker::before,
+.fb-community .fbp-label::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:#0195D8;box-shadow:0 0 0 4px rgba(1,149,216,.10);
+}
+.home-success-showcase h2,
+.fb-community .fbp-head h2{
+  margin:0 0 12px;color:#102239;font-size:clamp(34px,4vw,48px);line-height:1.06;letter-spacing:-.04em;font-weight:850;
+}
+.home-success-showcase h2 .accent,
+.fb-community .fbp-head h2 .accent{color:#0195D8;}
+.home-success-showcase .home-success-head p,
+.fb-community .fbp-head p{
+  max-width:760px;margin:0 auto;color:#607186;font-size:16px;line-height:1.68;
+}
+.home-success-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1180px;margin:0 auto;
+}
+.home-success-card{
+  position:relative;overflow:hidden;border-radius:24px;background:#fff;border:1px solid rgba(15,39,66,.09);
+  box-shadow:0 18px 44px rgba(15,39,66,.08);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+.home-success-card:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(1,149,216,.14);border-color:rgba(1,149,216,.24);}
+.home-success-media{position:relative;height:250px;overflow:hidden;background:linear-gradient(145deg,#dff4fd,#c5e7f7);}
+.home-success-media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;}
+.home-success-media::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,transparent,rgba(7,52,82,.18));pointer-events:none;}
+.home-success-placeholder{width:100%;height:100%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#eaf8fe,#cdeaf8);color:#0e7eb6;}
+.home-success-placeholder span{width:74px;height:74px;border-radius:22px;display:grid;place-items:center;background:rgba(255,255,255,.8);font-size:25px;font-weight:900;box-shadow:0 12px 30px rgba(1,149,216,.12);}
+.home-success-status{position:absolute;z-index:3;left:16px;top:16px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);color:#0786c1;font-size:9.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;}
+.home-success-body{padding:22px 22px 24px;}
+.home-success-type{display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;color:#0786c1;font-size:10.5px;font-weight:900;letter-spacing:.065em;text-transform:uppercase;}
+.home-success-body h3{margin:0 0 10px;color:#102239;font-size:21px;line-height:1.15;letter-spacing:-.025em;}
+.home-success-meta{display:flex;flex-direction:column;gap:5px;color:#607186;font-size:13px;line-height:1.48;}
+.home-success-meta strong{color:#263f58;font-weight:800;}
+.home-success-score{display:inline-flex;margin-top:14px;padding:7px 10px;border-radius:10px;background:#eaf8fe;color:#0786c1;font-size:11px;font-weight:850;}
+.home-success-actions{text-align:center;margin-top:34px;}
+.home-success-actions .home-success-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 24px;border-radius:999px;background:#0195D8;color:#fff;font-size:14px;font-weight:800;box-shadow:0 12px 24px rgba(1,149,216,.22);transition:transform .25s ease,background .25s ease;}
+.home-success-actions .home-success-link:hover{transform:translateY(-2px);background:#087db7;color:#fff;}
+
+.fb-community{padding:82px 0 88px;background:var(--ex-wash,#eef8fd);}
+.fb-community *{box-sizing:border-box;}
+.fb-community .fbp-head{text-align:center;max-width:860px;margin:0 auto 42px;}
+.fbp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:1180px;margin:0 auto;}
+.fbp-card{position:relative;display:flex;flex-direction:column;min-height:255px;padding:25px 22px 22px;background:#fff;border:1px solid rgba(17,24,39,.09);border-radius:22px;box-shadow:0 14px 34px rgba(17,24,39,.07);text-decoration:none;color:inherit;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;}
+.fbp-card:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(24,119,242,.14);border-color:rgba(24,119,242,.26);}
+.fbp-mark{display:grid;place-items:center;width:46px;height:46px;margin-bottom:16px;border-radius:14px;background:#eef5ff;color:#1877F2;}
+.fbp-name{display:flex;align-items:center;gap:6px;flex-wrap:wrap;color:#102239;font-size:17px;font-weight:850;line-height:1.3;letter-spacing:-.01em;}
+.fbp-verified{flex:0 0 auto;}
+.fbp-handle{margin-top:5px;color:#7a8999;font-size:12px;word-break:break-all;}
+.fbp-count{margin-top:auto;padding-top:20px;color:#7a8999;font-size:13px;}
+.fbp-count strong{display:block;color:#102239;font-size:30px;font-weight:850;letter-spacing:-.03em;line-height:1.05;}
+.fbp-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid rgba(17,24,39,.09);}
+.fbp-go{display:inline-flex;align-items:center;gap:7px;color:#1877F2;font-size:13px;font-weight:850;}
+.fbp-go svg{transition:transform .25s ease;}.fbp-card:hover .fbp-go svg{transform:translateX(3px);}
+.fbp-tag{padding:5px 9px;border-radius:999px;background:#eaf8fe;color:#0786c1;font-size:9px;font-weight:850;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;}
+
+@media(max-width:1040px){.home-success-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.fbp-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:680px){
+  .home-success-showcase,.fb-community{padding:62px 0 66px;}
+  .home-success-grid,.fbp-grid{grid-template-columns:1fr;max-width:430px;}
+  .home-success-media{height:280px;}
+}
