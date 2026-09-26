@@ -2871,3 +2871,16 @@ margin:14px 0 18px 0;
 
 }
 /* ===== MOBILE COUNTRY HERO FROST TUNING V5 END ===== */
+
+/* ===== MOBILE COUNTRY HERO TEXT SHADOW START ===== */
+@media (max-width:768px){
+
+  .saa-page .country-hero h1,
+  .saa-page .country-hero p.subline{
+    text-shadow:
+      0 1px 1px rgba(255,255,255,.95),
+      0 2px 5px rgba(255,255,255,.70) !important;
+  }
+
+}
+/* ===== MOBILE COUNTRY HERO TEXT SHADOW END ===== */
