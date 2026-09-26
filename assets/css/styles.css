@@ -10402,3 +10402,429 @@ select.saa-modal-input {
   }
 }
 /* MOBILE FOOTER NAV CARDS END */
+
+/* ===== MOBILE HOME HERO PREMIUM START ===== */
+@media (max-width:720px){
+
+  /* ---------- overall hero ---------- */
+
+  .hero{
+    min-height:790px !important;
+    padding:0 !important;
+    border-radius:0 0 28px 28px !important;
+    overflow:hidden !important;
+    box-shadow:0 16px 36px rgba(8,46,75,.10);
+  }
+
+  .hero-slides{
+    min-height:790px !important;
+  }
+
+  .hero-slide{
+    min-height:790px !important;
+    padding:30px 0 32px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-slide .container.hero-inner{
+    width:calc(100% - 32px) !important;
+    max-width:100% !important;
+    margin:0 auto !important;
+  }
+
+  .hero-grid{
+    display:block !important;
+  }
+
+  .hero-copy{
+    position:relative !important;
+    width:100% !important;
+    max-width:none !important;
+    z-index:3 !important;
+  }
+
+  .hero-media,
+  .hero-student-wrap,
+  .hero-leaves{
+    display:none !important;
+  }
+
+
+  /* ---------- richer destination artwork ---------- */
+
+  .hero-slide::before{
+    transform:scale(1.035);
+    transition:transform 7s ease !important;
+  }
+
+  .hero-slide.active::before{
+    transform:scale(1);
+  }
+
+  .hero-slide[data-slide="canada"]::before{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 42%,
+        rgba(255,255,255,.67) 70%,
+        rgba(229,247,255,.36) 100%
+      ),
+      url("../1.jpg") !important;
+    background-position:center, 68% center !important;
+    background-size:cover, cover !important;
+    filter:saturate(1.22) contrast(1.04) !important;
+  }
+
+  .hero-slide[data-slide="usa"]::before{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 42%,
+        rgba(255,255,255,.66) 70%,
+        rgba(255,239,243,.34) 100%
+      ),
+      url("../2.png") !important;
+    background-position:center, 64% center !important;
+    background-size:cover, cover !important;
+    filter:saturate(1.24) contrast(1.04) !important;
+  }
+
+  .hero-slide[data-slide="uk"]::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 43%,
+        rgba(255,255,255,.68) 71%,
+        rgba(235,242,255,.36) 100%
+      ),
+      url("../st.jpg") !important;
+    background-position:center, center !important;
+    background-size:cover, cover !important;
+    background-repeat:no-repeat !important;
+    filter:saturate(1.18) contrast(1.03) !important;
+    z-index:0 !important;
+  }
+
+  .hero-slide[data-slide="europe"]::before{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 42%,
+        rgba(255,255,255,.67) 70%,
+        rgba(242,236,255,.34) 100%
+      ),
+      url("../3.png") !important;
+    background-position:center, 62% center !important;
+    background-size:cover, cover !important;
+    filter:saturate(1.22) contrast(1.04) !important;
+  }
+
+  .hero-slide[data-slide="australia"]::before{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 42%,
+        rgba(255,255,255,.67) 70%,
+        rgba(233,247,255,.34) 100%
+      ),
+      url("../4.png") !important;
+    background-position:center, 65% center !important;
+    background-size:cover, cover !important;
+    filter:saturate(1.22) contrast(1.04) !important;
+  }
+
+  .hero-slide::after{
+    background:
+      radial-gradient(
+        520px 300px at 10% 12%,
+        rgba(2,149,218,.12),
+        transparent 65%
+      ) !important;
+  }
+
+
+  /* ---------- eyebrow ---------- */
+
+  .hero .eyebrow{
+    display:inline-flex !important;
+    width:auto !important;
+    max-width:100% !important;
+    padding:8px 12px !important;
+    margin:0 0 18px !important;
+
+    border-radius:999px !important;
+    border:1px solid rgba(17,33,46,.12) !important;
+    background:rgba(255,255,255,.65) !important;
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    font-size:11.5px !important;
+    line-height:1.4 !important;
+    font-weight:600 !important;
+    color:#384657 !important;
+    letter-spacing:.01em !important;
+  }
+
+
+  /* ---------- typography ---------- */
+
+  .hero-title{
+    max-width:100% !important;
+    margin:0 0 16px !important;
+
+    font-size:clamp(34px,9.5vw,40px) !important;
+    line-height:1.04 !important;
+    letter-spacing:-.035em !important;
+
+    color:#101b2d !important;
+  }
+
+  .hero .lead{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+
+    font-size:15.5px !important;
+    line-height:1.58 !important;
+    color:#3d4858 !important;
+  }
+
+
+  /* ---------- CTA buttons ---------- */
+
+  .hero-ctas{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:9px !important;
+    width:100% !important;
+    margin-top:20px !important;
+  }
+
+  .hero-ctas .btn{
+    width:100% !important;
+    min-height:52px !important;
+    margin:0 !important;
+    padding:13px 17px !important;
+
+    justify-content:center !important;
+    text-align:center !important;
+
+    border-radius:16px !important;
+    font-size:15px !important;
+    font-weight:650 !important;
+  }
+
+  .hero-ctas .btn.primary{
+    border:0 !important;
+    color:#fff !important;
+    background:
+      linear-gradient(135deg,#0295DA 0%,#087fc0 100%) !important;
+
+    box-shadow:
+      0 12px 26px rgba(2,149,218,.24),
+      inset 0 1px 0 rgba(255,255,255,.22) !important;
+  }
+
+  .hero-ctas .btn:not(.primary){
+    color:#162235 !important;
+    background:rgba(255,255,255,.78) !important;
+    border:1px solid rgba(17,33,46,.12) !important;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:0 7px 18px rgba(25,46,66,.07) !important;
+  }
+
+
+  /* ---------- replace huge 2x2 stats with trust rail ---------- */
+
+  .hero .stats.glass{
+    position:relative !important;
+
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:18px 0 0 !important;
+    padding:7px !important;
+    gap:0 !important;
+
+    border-radius:18px !important;
+    border:1px solid rgba(17,33,46,.10) !important;
+
+    background:rgba(255,255,255,.72) !important;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    box-shadow:
+      0 10px 24px rgba(25,46,66,.07),
+      inset 0 1px 0 rgba(255,255,255,.7) !important;
+  }
+
+  .hero .stats.glass .stat{
+    min-width:0 !important;
+    min-height:58px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    padding:7px 3px !important;
+
+    background:transparent !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    text-align:center !important;
+  }
+
+  .hero .stats.glass .stat:first-child,
+  .hero .stats.glass .stat:nth-child(2){
+    border-right:1px solid rgba(17,33,46,.09) !important;
+  }
+
+  .hero .stats.glass .stat:nth-child(3),
+  .hero .stats.glass .stat:nth-child(4){
+    display:none !important;
+  }
+
+  .hero .stats.glass .stat strong{
+    font-size:15px !important;
+    line-height:1.1 !important;
+    color:#122033 !important;
+    white-space:nowrap !important;
+  }
+
+  .hero .stats.glass .stat span{
+    margin-top:4px !important;
+    font-size:9.5px !important;
+    line-height:1.15 !important;
+    color:#687588 !important;
+  }
+
+  .hero .stats.glass::after{
+    content:"95%+\A Success" !important;
+    white-space:pre-line !important;
+
+    min-height:58px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    text-align:center !important;
+
+    font-size:15px !important;
+    line-height:1.25 !important;
+    font-weight:750 !important;
+    color:#122033 !important;
+  }
+
+
+  /* ---------- slide identity + dots ---------- */
+
+  .hero-copy::after{
+    display:block !important;
+    margin-top:15px !important;
+
+    font-size:10.5px !important;
+    line-height:1 !important;
+    font-weight:750 !important;
+    letter-spacing:.11em !important;
+
+    color:rgba(23,54,76,.58) !important;
+    white-space:nowrap !important;
+  }
+
+  .hero-slide[data-slide="canada"] .hero-copy::after{
+    content:"CANADA  ·  01/05     ●  ○  ○  ○  ○";
+  }
+
+  .hero-slide[data-slide="usa"] .hero-copy::after{
+    content:"USA  ·  02/05     ○  ●  ○  ○  ○";
+  }
+
+  .hero-slide[data-slide="uk"] .hero-copy::after{
+    content:"UK  ·  03/05     ○  ○  ●  ○  ○";
+  }
+
+  .hero-slide[data-slide="europe"] .hero-copy::after{
+    content:"EUROPE  ·  04/05     ○  ○  ○  ●  ○";
+  }
+
+  .hero-slide[data-slide="australia"] .hero-copy::after{
+    content:"AUSTRALIA  ·  05/05     ○  ○  ○  ○  ●";
+  }
+
+
+  /* ---------- subtle carousel entrance ---------- */
+
+  .hero-slide.active .eyebrow{
+    animation:saHeroMobileIn .48s ease both;
+  }
+
+  .hero-slide.active .hero-title{
+    animation:saHeroMobileIn .56s .05s ease both;
+  }
+
+  .hero-slide.active .lead{
+    animation:saHeroMobileIn .56s .10s ease both;
+  }
+
+  .hero-slide.active .hero-ctas{
+    animation:saHeroMobileIn .56s .15s ease both;
+  }
+
+  .hero-slide.active .stats.glass{
+    animation:saHeroMobileIn .56s .20s ease both;
+  }
+
+  .hero-slide.active .hero-copy::after{
+    animation:saHeroMobileIn .56s .24s ease both;
+  }
+}
+
+@media (max-width:360px){
+  .hero,
+  .hero-slides,
+  .hero-slide{
+    min-height:825px !important;
+  }
+
+  .hero-title{
+    font-size:32px !important;
+  }
+
+  .hero-copy::after{
+    font-size:9.5px !important;
+    letter-spacing:.07em !important;
+  }
+}
+
+@keyframes saHeroMobileIn{
+  from{
+    opacity:0;
+    transform:translateY(9px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===== MOBILE HOME HERO PREMIUM END ===== */
