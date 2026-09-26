@@ -10944,260 +10944,184 @@ select.saa-modal-input {
 
 /* ===== MOBILE HOME IMAGE HERO V3 END ===== */
 
-/* ===== MOBILE HOME IMAGE HERO V4 START ===== */
+/* ===== MOBILE HOME IMAGE HERO V5 START ===== */
+@media (max-width: 720px) {
 
-@media (max-width:720px){
-
-  /* tighter overall composition */
   .hero-slide{
-    padding-top:22px !important;
-    padding-bottom:28px !important;
-  }
-
-  .hero .eyebrow{
-    margin-bottom:14px !important;
+    padding-top: 22px !important;
+    padding-bottom: 26px !important;
   }
 
   .hero-title{
-    margin-bottom:12px !important;
-    font-size:clamp(32px,8.9vw,39px) !important;
+    font-size: clamp(33px, 8.8vw, 38px) !important;
+    line-height: 1.04 !important;
+    margin-bottom: 14px !important;
   }
 
   .hero .lead{
-    font-size:14.5px !important;
-    line-height:1.52 !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
   }
-
-
-  /* ======================================================
-     CINEMATIC DESTINATION IMAGE
-     ====================================================== */
 
   .mobile-hero-visual{
-    height:215px !important;
-    margin:17px 0 14px !important;
-
-    border-radius:22px !important;
-
-    background:#dbeaf3 !important;
-
+    position: relative !important;
+    overflow: hidden !important;
+    height: 255px !important;
+    margin: 18px 0 14px !important;
+    border-radius: 22px !important;
+    background: #dde9f2 !important;
     box-shadow:
-      0 16px 34px rgba(20,57,82,.13),
-      inset 0 1px 0 rgba(255,255,255,.75) !important;
+      0 14px 30px rgba(24, 55, 85, 0.10),
+      inset 0 1px 0 rgba(255,255,255,.85) !important;
   }
 
-
-  /* show the interesting LOWER part of each destination
-     instead of acres of empty sky */
   .mobile-hero-visual::before{
-    background-position:center bottom !important;
-    transform:scale(1.04) !important;
-    transform-origin:center bottom !important;
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    opacity: 1 !important;
   }
 
-
-  /* CANADA */
-  .hero-slide[data-slide="canada"]
-  .mobile-hero-visual::before{
-    background-size:cover !important;
-    background-position:center 63% !important;
-    filter:saturate(1.20) contrast(1.05) !important;
-  }
-
-
-  /* USA */
-  .hero-slide[data-slide="usa"]
-  .mobile-hero-visual::before{
-    background-size:115% auto !important;
-    background-position:center bottom !important;
-    filter:saturate(1.20) contrast(1.05) !important;
-  }
-
-
-  /* UK */
-  .hero-slide[data-slide="uk"]
-  .mobile-hero-visual::before{
-    background-size:cover !important;
-    background-position:center 52% !important;
-    filter:saturate(1.12) contrast(1.04) !important;
-  }
-
-
-  /* EUROPE */
-  .hero-slide[data-slide="europe"]
-  .mobile-hero-visual::before{
-    background-size:132% auto !important;
-    background-position:center bottom !important;
-    filter:saturate(1.25) contrast(1.07) !important;
-  }
-
-
-  /* AUSTRALIA */
-  .hero-slide[data-slide="australia"]
-  .mobile-hero-visual::before{
-    background-size:132% auto !important;
-    background-position:center bottom !important;
-    filter:saturate(1.25) contrast(1.07) !important;
-  }
-
-
-  /* softer cinematic depth — not a washed overlay */
   .mobile-hero-visual::after{
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
     background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,0) 42%,
-        rgba(5,29,46,.18) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(8,35,53,.055),
-        transparent 44%
-      ) !important;
+      linear-gradient(180deg, rgba(255,255,255,.02) 0%, rgba(255,255,255,0) 55%, rgba(9,31,50,.08) 100%) !important;
   }
 
+  /* use the same desktop background assets on mobile */
+  .hero-slide[data-slide="canada"] .mobile-hero-visual::before{
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+      url("/assets/1.jpg") !important;
+    background-position: center, 70% center !important;
+    background-size: cover, cover !important;
+  }
 
-  /* ======================================================
-     STUDENT CUTOUT
-     ====================================================== */
+  .hero-slide[data-slide="usa"] .mobile-hero-visual::before{
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
+      url("/assets/2.jpg") !important;
+    background-position: center, center center !important;
+    background-size: cover, cover !important;
+  }
 
+  .hero-slide[data-slide="uk"] .mobile-hero-visual::before{
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)),
+      url("/assets/uk-hero-bg.jpg") !important;
+    background-position: center, center 34% !important;
+    background-size: cover, cover !important;
+  }
+
+  .hero-slide[data-slide="europe"] .mobile-hero-visual::before{
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
+      url("/assets/3.jpg") !important;
+    background-position: center, center center !important;
+    background-size: cover, cover !important;
+  }
+
+  .hero-slide[data-slide="australia"] .mobile-hero-visual::before{
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
+      url("/assets/4.jpg") !important;
+    background-position: center, center center !important;
+    background-size: cover, cover !important;
+  }
+
+  /* foreground people centered on mobile */
   .mobile-hero-visual > img{
-    right:1% !important;
-    bottom:-2px !important;
-
-    height:91% !important;
-    width:auto !important;
-    max-width:64% !important;
-
-    filter:
-      drop-shadow(0 12px 16px rgba(8,30,46,.22)) !important;
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: 0 !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    height: 92% !important;
+    max-width: 72% !important;
+    object-fit: contain !important;
+    object-position: 50% 100% !important;
+    z-index: 2 !important;
+    filter: drop-shadow(0 10px 18px rgba(12, 35, 54, .18)) !important;
   }
 
-  .hero-slide[data-slide="canada"]
-  .mobile-hero-visual > img{
-    right:0 !important;
-    height:94% !important;
-    max-width:62% !important;
+  .hero-slide[data-slide="canada"] .mobile-hero-visual > img{
+    height: 95% !important;
+    max-width: 64% !important;
   }
 
-  .hero-slide[data-slide="usa"]
-  .mobile-hero-visual > img{
-    right:0 !important;
-    height:93% !important;
-    max-width:64% !important;
+  .hero-slide[data-slide="usa"] .mobile-hero-visual > img{
+    height: 93% !important;
+    max-width: 60% !important;
   }
 
-  .hero-slide[data-slide="europe"]
-  .mobile-hero-visual > img{
-    right:1% !important;
-    height:91% !important;
-    max-width:62% !important;
+  /* remove the UK student visa lady from mobile hero */
+  .hero-slide[data-slide="uk"] .mobile-hero-visual > img{
+    display: none !important;
   }
 
-  .hero-slide[data-slide="australia"]
-  .mobile-hero-visual > img{
-    right:0 !important;
-    height:91% !important;
-    max-width:66% !important;
+  .hero-slide[data-slide="europe"] .mobile-hero-visual > img{
+    height: 92% !important;
+    max-width: 58% !important;
   }
 
+  .hero-slide[data-slide="australia"] .mobile-hero-visual > img{
+    height: 93% !important;
+    max-width: 66% !important;
+  }
 
-  /* ======================================================
-     PURE EXPERTS-STYLE DOTS
-     no label, no counter, no dark capsule
-     ====================================================== */
-
+  /* keep subtle centered dots only */
   .mobile-hero-dots{
-    left:50% !important;
-    bottom:11px !important;
-
-    gap:8px !important;
-
-    padding:0 !important;
-
-    background:transparent !important;
-    border:0 !important;
-
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-
-    box-shadow:none !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    z-index: 3 !important;
   }
 
   .mobile-hero-dots span{
-    width:8px !important;
-    height:8px !important;
-
-    background:rgba(255,255,255,.78) !important;
-
-    border:1px solid rgba(17,46,67,.16) !important;
-
-    box-shadow:
-      0 1px 4px rgba(10,32,48,.18) !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,.82) !important;
+    border: 1px solid rgba(16, 42, 62, .10) !important;
+    box-shadow: 0 1px 4px rgba(12,35,54,.14) !important;
   }
 
   .mobile-hero-dots span.active{
-    width:28px !important;
-
-    background:#65caf7 !important;
-    border-color:#65caf7 !important;
-
-    box-shadow:
-      0 2px 7px rgba(2,149,218,.25) !important;
+    width: 30px !important;
+    background: #67caf7 !important;
+    border-color: #67caf7 !important;
   }
 
-
-  /* tighter controls beneath artwork */
   .hero-ctas{
-    gap:8px !important;
+    gap: 9px !important;
   }
 
-  .hero-ctas .btn{
-    min-height:49px !important;
-    padding:11px 15px !important;
-
-    border-radius:15px !important;
-
-    font-size:14.5px !important;
-  }
-
-
-  /* keep the compact stats rail, but bring it closer */
   .hero .stats.glass{
-    margin-top:13px !important;
-  }
-
-
-  /* remove the old person entrance offset from V3 */
-  .hero-slide.active .mobile-hero-visual > img{
-    animation:saaHeroPersonV4
-      .62s .05s cubic-bezier(.16,1,.3,1) both !important;
+    margin-top: 12px !important;
   }
 }
 
-
-@media (max-width:380px){
-
+@media (max-width: 380px) {
   .mobile-hero-visual{
-    height:195px !important;
-  }
-
-  .hero-title{
-    font-size:31px !important;
+    height: 232px !important;
   }
 }
-
-
-@keyframes saaHeroPersonV4{
-  from{
-    opacity:0;
-    transform:translate3d(18px,5px,0);
-  }
-
-  to{
-    opacity:1;
-    transform:translate3d(0,0,0);
-  }
-}
-
-/* ===== MOBILE HOME IMAGE HERO V4 END ===== */
+/* ===== MOBILE HOME IMAGE HERO V5 END ===== */
