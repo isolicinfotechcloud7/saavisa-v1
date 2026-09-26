@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study Abroad Consultancy in Bangladesh | SA Associates</title><meta name="description" content="SA Associates is Bangladesh's #1 study abroad consultancy since 1998. Get expert visa guidance for Canada, USA, UK &#38; Australia. 7,500+ students placed with 95%+ visa success rate."><link rel="canonical" href="https://saavisa.com/"><meta name="robots" content="index, follow"><meta name="author" content="SA Associates"><meta property="og:site_name" content="SA Associates"><meta property="og:image" content="https://saavisa.com/assets/branding/logo.png"><link rel="icon" type="image/png" href="/assets/branding/favicon.png"><!-- Main stylesheet --><link rel="stylesheet" href="/assets/css/styles.css?v=20260927-mobile-hero-v5">
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study Abroad Consultancy in Bangladesh | SA Associates</title><meta name="description" content="SA Associates is Bangladesh's #1 study abroad consultancy since 1998. Get expert visa guidance for Canada, USA, UK &#38; Australia. 7,500+ students placed with 95%+ visa success rate."><link rel="canonical" href="https://saavisa.com/"><meta name="robots" content="index, follow"><meta name="author" content="SA Associates"><meta property="og:site_name" content="SA Associates"><meta property="og:image" content="https://saavisa.com/assets/branding/logo.png"><link rel="icon" type="image/png" href="/assets/branding/favicon.png"><!-- Main stylesheet --><link rel="stylesheet" href="/assets/css/styles.css?v=20260927-mobile-hero-v7">
 <link rel="stylesheet" href="/assets/css/pages/home-success-community.css?v=20260926-home-success-facebook-v1">
 <link rel="stylesheet" href="/assets/css/pages/facebook-community.css?v=20260926-fb-no-small-shapes-v5"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/registration-showcase.css"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><!-- Google Fonts --><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"><!-- AOS animations (used on homepage) --><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Extra head content from individual pages --> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <script type="application/ld+json">
   {
@@ -2311,4 +2311,55 @@ Probortok Circle, 3022/A Hillview R/A
 <span>Chat on <strong>WhatsApp</strong></span></a>
 <script src="/assets/js/navigation-update.js" defer></script>
 <script src="/assets/js/success-stories.js?v=20260924-content-polish-v1" defer></script><script src="/assets/js/consultation-modal.js?v=20260925-cta-modal-v1" defer></script>
+<!-- MOBILE HERO VISUAL SYNC V7 START -->
+<script>
+(function () {
+  function applyMobileHeroVisuals() {
+    if (window.innerWidth > 720) return;
+
+    document.querySelectorAll('.hero-slide').forEach(function (slide) {
+      var visual = slide.querySelector('.mobile-hero-visual');
+      if (!visual) return;
+
+      // 1) Sync exact desktop slide background (::before) into mobile card
+      try {
+        var beforeBg = window.getComputedStyle(slide, '::before').backgroundImage;
+        if (beforeBg && beforeBg !== 'none') {
+          visual.style.setProperty('--mh-bg', beforeBg);
+        }
+      } catch (e) {}
+
+      // 2) Sync exact desktop foreground person into mobile card
+      var person = slide.querySelector('.hero-student');
+      if (person && person.getAttribute('src')) {
+        var src = person.getAttribute('src').trim();
+        if (src) {
+          visual.style.setProperty('--mh-fg', 'url("' + src.replace(/"/g, '\\"') + '")');
+          visual.classList.remove('no-person');
+        } else {
+          visual.style.removeProperty('--mh-fg');
+          visual.classList.add('no-person');
+        }
+      } else {
+        visual.style.removeProperty('--mh-fg');
+        visual.classList.add('no-person');
+      }
+    });
+  }
+
+  function boot() {
+    applyMobileHeroVisuals();
+    setTimeout(applyMobileHeroVisuals, 120);
+    setTimeout(applyMobileHeroVisuals, 420);
+    requestAnimationFrame(applyMobileHeroVisuals);
+  }
+
+  document.addEventListener('DOMContentLoaded', boot, { once: true });
+  window.addEventListener('load', boot, { once: true });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth <= 720) applyMobileHeroVisuals();
+  }, { passive: true });
+})();
+</script>
+<!-- MOBILE HERO VISUAL SYNC V7 END -->
 </body></html>

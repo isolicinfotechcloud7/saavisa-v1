@@ -11125,3 +11125,100 @@ select.saa-modal-input {
   }
 }
 /* ===== MOBILE HOME IMAGE HERO V5 END ===== */
+
+/* ===== MOBILE HOME HERO VISUAL SYNC V7 START ===== */
+@media (max-width: 720px) {
+  .mobile-hero-visual{
+    --mh-bg: none;
+    --mh-fg: none;
+    position: relative !important;
+    overflow: hidden !important;
+    height: 300px !important;
+    margin: 18px 0 14px !important;
+    border-radius: 22px !important;
+    background: #dfe9f2 !important;
+    box-shadow:
+      0 14px 30px rgba(24,55,85,.10),
+      inset 0 1px 0 rgba(255,255,255,.82) !important;
+    isolation: isolate !important;
+  }
+
+  .mobile-hero-visual::before{
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-image: var(--mh-bg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .mobile-hero-visual::after{
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background-image: var(--mh-fg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-size: auto 96% !important;
+    filter: drop-shadow(0 12px 24px rgba(12,35,54,.18)) !important;
+  }
+
+  .mobile-hero-visual.no-person::after{
+    display: none !important;
+  }
+
+  .mobile-hero-visual > img,
+  .mobile-hero-visual .hero-student,
+  .mobile-hero-visual picture{
+    display: none !important;
+  }
+
+  /* slide-specific tuning so foreground fills height better */
+  .hero-slide[data-slide="canada"] .mobile-hero-visual::after{
+    background-size: auto 97% !important;
+    background-position: center bottom !important;
+  }
+
+  .hero-slide[data-slide="usa"] .mobile-hero-visual::after{
+    background-size: auto 96% !important;
+    background-position: center bottom !important;
+  }
+
+  .hero-slide[data-slide="uk"] .mobile-hero-visual::after{
+    background-size: auto 96% !important;
+    background-position: center bottom !important;
+  }
+
+  .hero-slide[data-slide="europe"] .mobile-hero-visual::after{
+    background-size: auto 94% !important;
+    background-position: center bottom !important;
+  }
+
+  .hero-slide[data-slide="australia"] .mobile-hero-visual::after{
+    background-size: auto 95% !important;
+    background-position: center bottom !important;
+  }
+
+  /* keep the mobile dots subtle and centered inside the visual */
+  .mobile-hero-dots{
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 14px !important;
+    z-index: 3 !important;
+  }
+
+  .hero-slide .hero-ctas{
+    margin-top: 14px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-hero-visual{
+    height: 280px !important;
+  }
+}
+/* ===== MOBILE HOME HERO VISUAL SYNC V7 END ===== */
