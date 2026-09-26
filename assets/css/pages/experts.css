@@ -1441,3 +1441,41 @@ a{text-decoration:none}
   }
 }
 /* ===== EXPERTS STORY/CTA SPACING FIX END ===== */
+
+/* ===== TEAM STORY CTA GAP FIX START ===== */
+.experts-team-story{
+    padding-bottom: 16px !important;
+}
+
+.experts-team-story + .final-cta{
+    padding-top: 18px !important;
+}
+
+@media (max-width: 768px){
+    .experts-team-story{
+        padding-bottom: 12px !important;
+    }
+
+    .experts-team-story + .final-cta{
+        padding-top: 14px !important;
+    }
+}
+/* ===== TEAM STORY CTA GAP FIX END ===== */
+
+
+/* ===== EXPERTS TEAM STORY BALANCED PADDING ===== */
+.saa-experts-page .experts-team-story{
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+}
+
+@media (max-width: 768px){
+    .saa-experts-page .experts-team-story{
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+}
+
+.saa-experts-page .experts-team-story + .final-cta {
+    padding-top: 70px !important;
+}
