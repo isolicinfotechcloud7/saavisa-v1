@@ -10403,579 +10403,543 @@ select.saa-modal-input {
 }
 /* MOBILE FOOTER NAV CARDS END */
 
-/* ===== MOBILE HOME HERO PREMIUM START ===== */
-@media (max-width:720px){
+/* ===== MOBILE HOME IMAGE HERO V3 START ===== */
 
-  /* ---------- overall hero ---------- */
+.mobile-hero-visual {
+  display: none;
+}
 
-  .hero{
-    min-height:790px !important;
-    padding:0 !important;
-    border-radius:0 0 28px 28px !important;
-    overflow:hidden !important;
-    box-shadow:0 16px 36px rgba(8,46,75,.10);
+@media (max-width:720px) {
+
+  /* HERO USES REAL CONTENT HEIGHT */
+  .hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 0 0 28px 28px !important;
+    background: #f8fcff !important;
   }
 
-  .hero-slides{
-    min-height:790px !important;
+  .hero-slides {
+    min-height: 0 !important;
+    height: auto !important;
   }
 
-  .hero-slide{
-    min-height:790px !important;
-    padding:30px 0 32px !important;
-    overflow:hidden !important;
+  .hero-slide {
+    position: relative !important;
+    inset: auto !important;
+
+    display: none !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 30px 0 34px !important;
+
+    opacity: 1 !important;
+    pointer-events: none !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        #f5fbff 0%,
+        #ffffff 45%,
+        #f4faff 100%
+      ) !important;
   }
 
-  .hero-slide .container.hero-inner{
-    width:calc(100% - 32px) !important;
-    max-width:100% !important;
-    margin:0 auto !important;
+  .hero-slide.active {
+    display: block !important;
+    pointer-events: auto !important;
   }
 
-  .hero-grid{
-    display:block !important;
+  /* kill old pale full-section artwork on mobile */
+  .hero-slide::before,
+  .hero-slide::after {
+    background: none !important;
+    background-image: none !important;
+    filter: none !important;
+    transform: none !important;
   }
 
-  .hero-copy{
-    position:relative !important;
-    width:100% !important;
-    max-width:none !important;
-    z-index:3 !important;
+  .hero-slide .container.hero-inner {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-grid {
+    display: block !important;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .hero-media,
   .hero-student-wrap,
-  .hero-leaves{
-    display:none !important;
-  }
-
-
-  /* ---------- richer destination artwork ---------- */
-
-  .hero-slide::before{
-    transform:scale(1.035);
-    transition:transform 7s ease !important;
-  }
-
-  .hero-slide.active::before{
-    transform:scale(1);
-  }
-
-  .hero-slide[data-slide="canada"]::before{
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.90) 42%,
-        rgba(255,255,255,.67) 70%,
-        rgba(229,247,255,.36) 100%
-      ),
-      url("../1.jpg") !important;
-    background-position:center, 68% center !important;
-    background-size:cover, cover !important;
-    filter:saturate(1.22) contrast(1.04) !important;
-  }
-
-  .hero-slide[data-slide="usa"]::before{
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.90) 42%,
-        rgba(255,255,255,.66) 70%,
-        rgba(255,239,243,.34) 100%
-      ),
-      url("../2.png") !important;
-    background-position:center, 64% center !important;
-    background-size:cover, cover !important;
-    filter:saturate(1.24) contrast(1.04) !important;
-  }
-
-  .hero-slide[data-slide="uk"]::before{
-    content:"" !important;
-    position:absolute !important;
-    inset:0 !important;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.90) 43%,
-        rgba(255,255,255,.68) 71%,
-        rgba(235,242,255,.36) 100%
-      ),
-      url("../st.jpg") !important;
-    background-position:center, center !important;
-    background-size:cover, cover !important;
-    background-repeat:no-repeat !important;
-    filter:saturate(1.18) contrast(1.03) !important;
-    z-index:0 !important;
-  }
-
-  .hero-slide[data-slide="europe"]::before{
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.90) 42%,
-        rgba(255,255,255,.67) 70%,
-        rgba(242,236,255,.34) 100%
-      ),
-      url("../3.png") !important;
-    background-position:center, 62% center !important;
-    background-size:cover, cover !important;
-    filter:saturate(1.22) contrast(1.04) !important;
-  }
-
-  .hero-slide[data-slide="australia"]::before{
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(255,255,255,.90) 42%,
-        rgba(255,255,255,.67) 70%,
-        rgba(233,247,255,.34) 100%
-      ),
-      url("../4.png") !important;
-    background-position:center, 65% center !important;
-    background-size:cover, cover !important;
-    filter:saturate(1.22) contrast(1.04) !important;
-  }
-
-  .hero-slide::after{
-    background:
-      radial-gradient(
-        520px 300px at 10% 12%,
-        rgba(2,149,218,.12),
-        transparent 65%
-      ) !important;
-  }
-
-
-  /* ---------- eyebrow ---------- */
-
-  .hero .eyebrow{
-    display:inline-flex !important;
-    width:auto !important;
-    max-width:100% !important;
-    padding:8px 12px !important;
-    margin:0 0 18px !important;
-
-    border-radius:999px !important;
-    border:1px solid rgba(17,33,46,.12) !important;
-    background:rgba(255,255,255,.65) !important;
-
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-
-    font-size:11.5px !important;
-    line-height:1.4 !important;
-    font-weight:600 !important;
-    color:#384657 !important;
-    letter-spacing:.01em !important;
-  }
-
-
-  /* ---------- typography ---------- */
-
-  .hero-title{
-    max-width:100% !important;
-    margin:0 0 16px !important;
-
-    font-size:clamp(34px,9.5vw,40px) !important;
-    line-height:1.04 !important;
-    letter-spacing:-.035em !important;
-
-    color:#101b2d !important;
-  }
-
-  .hero .lead{
-    width:100% !important;
-    max-width:100% !important;
-    margin:0 !important;
-
-    font-size:15.5px !important;
-    line-height:1.58 !important;
-    color:#3d4858 !important;
-  }
-
-
-  /* ---------- CTA buttons ---------- */
-
-  .hero-ctas{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    gap:9px !important;
-    width:100% !important;
-    margin-top:20px !important;
-  }
-
-  .hero-ctas .btn{
-    width:100% !important;
-    min-height:52px !important;
-    margin:0 !important;
-    padding:13px 17px !important;
-
-    justify-content:center !important;
-    text-align:center !important;
-
-    border-radius:16px !important;
-    font-size:15px !important;
-    font-weight:650 !important;
-  }
-
-  .hero-ctas .btn.primary{
-    border:0 !important;
-    color:#fff !important;
-    background:
-      linear-gradient(135deg,#0295DA 0%,#087fc0 100%) !important;
-
-    box-shadow:
-      0 12px 26px rgba(2,149,218,.24),
-      inset 0 1px 0 rgba(255,255,255,.22) !important;
-  }
-
-  .hero-ctas .btn:not(.primary){
-    color:#162235 !important;
-    background:rgba(255,255,255,.78) !important;
-    border:1px solid rgba(17,33,46,.12) !important;
-
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    box-shadow:0 7px 18px rgba(25,46,66,.07) !important;
-  }
-
-
-  /* ---------- replace huge 2x2 stats with trust rail ---------- */
-
-  .hero .stats.glass{
-    position:relative !important;
-
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-
-    width:100% !important;
-    max-width:100% !important;
-
-    margin:18px 0 0 !important;
-    padding:7px !important;
-    gap:0 !important;
-
-    border-radius:18px !important;
-    border:1px solid rgba(17,33,46,.10) !important;
-
-    background:rgba(255,255,255,.72) !important;
-
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    box-shadow:
-      0 10px 24px rgba(25,46,66,.07),
-      inset 0 1px 0 rgba(255,255,255,.7) !important;
-  }
-
-  .hero .stats.glass .stat{
-    min-width:0 !important;
-    min-height:58px !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    padding:7px 3px !important;
-
-    background:transparent !important;
-    border:0 !important;
-    border-radius:0 !important;
-    box-shadow:none !important;
-
-    text-align:center !important;
-  }
-
-  .hero .stats.glass .stat:first-child,
-  .hero .stats.glass .stat:nth-child(2){
-    border-right:1px solid rgba(17,33,46,.09) !important;
-  }
-
-  .hero .stats.glass .stat:nth-child(3),
-  .hero .stats.glass .stat:nth-child(4){
-    display:none !important;
-  }
-
-  .hero .stats.glass .stat strong{
-    font-size:15px !important;
-    line-height:1.1 !important;
-    color:#122033 !important;
-    white-space:nowrap !important;
-  }
-
-  .hero .stats.glass .stat span{
-    margin-top:4px !important;
-    font-size:9.5px !important;
-    line-height:1.15 !important;
-    color:#687588 !important;
-  }
-
-  .hero .stats.glass::after{
-    content:"95%+\A Success" !important;
-    white-space:pre-line !important;
-
-    min-height:58px !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    text-align:center !important;
-
-    font-size:15px !important;
-    line-height:1.25 !important;
-    font-weight:750 !important;
-    color:#122033 !important;
-  }
-
-
-  /* ---------- slide identity + dots ---------- */
-
-  .hero-copy::after{
-    display:block !important;
-    margin-top:15px !important;
-
-    font-size:10.5px !important;
-    line-height:1 !important;
-    font-weight:750 !important;
-    letter-spacing:.11em !important;
-
-    color:rgba(23,54,76,.58) !important;
-    white-space:nowrap !important;
-  }
-
-  .hero-slide[data-slide="canada"] .hero-copy::after{
-    content:"CANADA  ·  01/05     ●  ○  ○  ○  ○";
-  }
-
-  .hero-slide[data-slide="usa"] .hero-copy::after{
-    content:"USA  ·  02/05     ○  ●  ○  ○  ○";
-  }
-
-  .hero-slide[data-slide="uk"] .hero-copy::after{
-    content:"UK  ·  03/05     ○  ○  ●  ○  ○";
-  }
-
-  .hero-slide[data-slide="europe"] .hero-copy::after{
-    content:"EUROPE  ·  04/05     ○  ○  ○  ●  ○";
-  }
-
-  .hero-slide[data-slide="australia"] .hero-copy::after{
-    content:"AUSTRALIA  ·  05/05     ○  ○  ○  ○  ●";
-  }
-
-
-  /* ---------- subtle carousel entrance ---------- */
-
-  .hero-slide.active .eyebrow{
-    animation:saHeroMobileIn .48s ease both;
-  }
-
-  .hero-slide.active .hero-title{
-    animation:saHeroMobileIn .56s .05s ease both;
-  }
-
-  .hero-slide.active .lead{
-    animation:saHeroMobileIn .56s .10s ease both;
-  }
-
-  .hero-slide.active .hero-ctas{
-    animation:saHeroMobileIn .56s .15s ease both;
-  }
-
-  .hero-slide.active .stats.glass{
-    animation:saHeroMobileIn .56s .20s ease both;
-  }
-
-  .hero-slide.active .hero-copy::after{
-    animation:saHeroMobileIn .56s .24s ease both;
-  }
-}
-
-@media (max-width:360px){
-  .hero,
-  .hero-slides,
-  .hero-slide{
-    min-height:825px !important;
-  }
-
-  .hero-title{
-    font-size:32px !important;
-  }
-
-  .hero-copy::after{
-    font-size:9.5px !important;
-    letter-spacing:.07em !important;
-  }
-}
-
-@keyframes saHeroMobileIn{
-  from{
-    opacity:0;
-    transform:translateY(9px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-/* ===== MOBILE HOME HERO PREMIUM END ===== */
-
-/* SAAVISA MOBILE HERO INDICATOR DOTS START */
-@media (max-width: 767.98px) {
-  /* remove text/count/location-style indicator content on mobile hero */
-  .home-hero-mobile .hero-mobile-indicator,
-  .home-hero-mobile .hero-carousel-indicator,
-  .home-hero-mobile .hero-slide-indicator,
-  .page-hero-mobile .hero-mobile-indicator,
-  .page-hero-mobile .hero-carousel-indicator,
-  .page-hero-mobile .hero-slide-indicator,
-  .mobile-hero-carousel .hero-mobile-indicator,
-  .mobile-hero-carousel .hero-carousel-indicator,
-  .mobile-hero-carousel .hero-slide-indicator {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    padding-top: 10px !important;
-    padding-bottom: 0 !important;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    color: transparent !important;
-    text-transform: none !important;
-    letter-spacing: 0 !important;
-  }
-
-  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-label,
-  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-count,
-  .home-hero-mobile .hero-mobile-indicator > .hero-indicator-separator,
-  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-label,
-  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-count,
-  .home-hero-mobile .hero-carousel-indicator > .hero-indicator-separator,
-  .home-hero-mobile .hero-slide-indicator > .hero-indicator-label,
-  .home-hero-mobile .hero-slide-indicator > .hero-indicator-count,
-  .home-hero-mobile .hero-slide-indicator > .hero-indicator-separator,
-  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-label,
-  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-count,
-  .page-hero-mobile .hero-mobile-indicator > .hero-indicator-separator,
-  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-label,
-  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-count,
-  .page-hero-mobile .hero-carousel-indicator > .hero-indicator-separator,
-  .page-hero-mobile .hero-slide-indicator > .hero-indicator-label,
-  .page-hero-mobile .hero-slide-indicator > .hero-indicator-count,
-  .page-hero-mobile .hero-slide-indicator > .hero-indicator-separator,
-  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-label,
-  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-count,
-  .mobile-hero-carousel .hero-mobile-indicator > .hero-indicator-separator,
-  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-label,
-  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-count,
-  .mobile-hero-carousel .hero-carousel-indicator > .hero-indicator-separator,
-  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-label,
-  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-count,
-  .mobile-hero-carousel .hero-slide-indicator > .hero-indicator-separator {
+  .hero-leaves {
     display: none !important;
   }
 
-  /* subtle dots only */
-  .home-hero-mobile .hero-mobile-indicator .dot,
-  .home-hero-mobile .hero-mobile-indicator button,
-  .home-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet,
-  .home-hero-mobile .hero-mobile-indicator [data-slide-dot],
-  .home-hero-mobile .hero-carousel-indicator .dot,
-  .home-hero-mobile .hero-carousel-indicator button,
-  .home-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet,
-  .home-hero-mobile .hero-carousel-indicator [data-slide-dot],
-  .home-hero-mobile .hero-slide-indicator .dot,
-  .home-hero-mobile .hero-slide-indicator button,
-  .home-hero-mobile .hero-slide-indicator .swiper-pagination-bullet,
-  .home-hero-mobile .hero-slide-indicator [data-slide-dot],
-  .page-hero-mobile .hero-mobile-indicator .dot,
-  .page-hero-mobile .hero-mobile-indicator button,
-  .page-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet,
-  .page-hero-mobile .hero-mobile-indicator [data-slide-dot],
-  .page-hero-mobile .hero-carousel-indicator .dot,
-  .page-hero-mobile .hero-carousel-indicator button,
-  .page-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet,
-  .page-hero-mobile .hero-carousel-indicator [data-slide-dot],
-  .page-hero-mobile .hero-slide-indicator .dot,
-  .page-hero-mobile .hero-slide-indicator button,
-  .page-hero-mobile .hero-slide-indicator .swiper-pagination-bullet,
-  .page-hero-mobile .hero-slide-indicator [data-slide-dot],
-  .mobile-hero-carousel .hero-mobile-indicator .dot,
-  .mobile-hero-carousel .hero-mobile-indicator button,
-  .mobile-hero-carousel .hero-mobile-indicator .swiper-pagination-bullet,
-  .mobile-hero-carousel .hero-mobile-indicator [data-slide-dot],
-  .mobile-hero-carousel .hero-carousel-indicator .dot,
-  .mobile-hero-carousel .hero-carousel-indicator button,
-  .mobile-hero-carousel .hero-carousel-indicator .swiper-pagination-bullet,
-  .mobile-hero-carousel .hero-carousel-indicator [data-slide-dot],
-  .mobile-hero-carousel .hero-slide-indicator .dot,
-  .mobile-hero-carousel .hero-slide-indicator button,
-  .mobile-hero-carousel .hero-slide-indicator .swiper-pagination-bullet,
-  .mobile-hero-carousel .hero-slide-indicator [data-slide-dot] {
-    width: 8px !important;
-    min-width: 8px !important;
-    height: 8px !important;
-    min-height: 8px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-    border-radius: 999px !important;
-    background: rgba(23, 49, 87, 0.22) !important;
-    box-shadow: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    font-size: 0 !important;
-    color: transparent !important;
+  /* remove old country/count text indicator */
+  .hero-copy::after {
+    content: none !important;
+    display: none !important;
   }
 
-  .home-hero-mobile .hero-mobile-indicator .dot.active,
-  .home-hero-mobile .hero-mobile-indicator button.active,
-  .home-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet-active,
-  .home-hero-mobile .hero-mobile-indicator [data-slide-dot].active,
-  .home-hero-mobile .hero-carousel-indicator .dot.active,
-  .home-hero-mobile .hero-carousel-indicator button.active,
-  .home-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet-active,
-  .home-hero-mobile .hero-carousel-indicator [data-slide-dot].active,
-  .home-hero-mobile .hero-slide-indicator .dot.active,
-  .home-hero-mobile .hero-slide-indicator button.active,
-  .home-hero-mobile .hero-slide-indicator .swiper-pagination-bullet-active,
-  .home-hero-mobile .hero-slide-indicator [data-slide-dot].active,
-  .page-hero-mobile .hero-mobile-indicator .dot.active,
-  .page-hero-mobile .hero-mobile-indicator button.active,
-  .page-hero-mobile .hero-mobile-indicator .swiper-pagination-bullet-active,
-  .page-hero-mobile .hero-mobile-indicator [data-slide-dot].active,
-  .page-hero-mobile .hero-carousel-indicator .dot.active,
-  .page-hero-mobile .hero-carousel-indicator button.active,
-  .page-hero-mobile .hero-carousel-indicator .swiper-pagination-bullet-active,
-  .page-hero-mobile .hero-carousel-indicator [data-slide-dot].active,
-  .page-hero-mobile .hero-slide-indicator .dot.active,
-  .page-hero-mobile .hero-slide-indicator button.active,
-  .page-hero-mobile .hero-slide-indicator .swiper-pagination-bullet-active,
-  .page-hero-mobile .hero-slide-indicator [data-slide-dot].active,
-  .mobile-hero-carousel .hero-mobile-indicator .dot.active,
-  .mobile-hero-carousel .hero-mobile-indicator button.active,
-  .mobile-hero-carousel .hero-mobile-indicator .swiper-pagination-bullet-active,
-  .mobile-hero-carousel .hero-mobile-indicator [data-slide-dot].active,
-  .mobile-hero-carousel .hero-carousel-indicator .dot.active,
-  .mobile-hero-carousel .hero-carousel-indicator button.active,
-  .mobile-hero-carousel .hero-carousel-indicator .swiper-pagination-bullet-active,
-  .mobile-hero-carousel .hero-carousel-indicator [data-slide-dot].active,
-  .mobile-hero-carousel .hero-slide-indicator .dot.active,
-  .mobile-hero-carousel .hero-slide-indicator button.active,
-  .mobile-hero-carousel .hero-slide-indicator .swiper-pagination-bullet-active,
-  .mobile-hero-carousel .hero-slide-indicator [data-slide-dot].active {
-    width: 22px !important;
-    min-width: 22px !important;
-    background: #7ccfff !important;
+
+  /* EYEBROW */
+  .hero .eyebrow {
+    display: inline-flex !important;
+
+    width: auto !important;
+    max-width: 100% !important;
+
+    margin: 0 0 17px !important;
+    padding: 8px 12px !important;
+
+    border-radius: 999px !important;
+    border: 1px solid rgba(25,48,70,.11) !important;
+
+    background: rgba(255,255,255,.88) !important;
+
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+
+    color: #445164 !important;
+
+    box-shadow: 0 5px 14px rgba(22,56,80,.04) !important;
+  }
+
+
+  /* HEADLINE */
+  .hero-title {
+    margin: 0 0 13px !important;
+
+    font-size: clamp(33px,9.1vw,40px) !important;
+    line-height: 1.045 !important;
+    letter-spacing: -.035em !important;
+
+    color: #101d30 !important;
+  }
+
+  .hero .lead {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+
+    color: #465366 !important;
+  }
+
+
+  /* ========================================================
+     IMAGE IS NOW A REAL CONTENT SECTION
+     ======================================================== */
+
+  .mobile-hero-visual {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 275px !important;
+
+    margin: 20px 0 17px !important;
+
+    overflow: hidden !important;
+
+    border-radius: 26px !important;
+    border: 1px solid rgba(255,255,255,.9) !important;
+
+    isolation: isolate !important;
+
+    background: #dceef7 !important;
+
+    box-shadow:
+      0 22px 45px rgba(19,58,86,.16),
+      inset 0 1px 0 rgba(255,255,255,.8) !important;
+  }
+
+
+  /* destination backdrop */
+  .mobile-hero-visual::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    z-index: 0 !important;
+
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  .hero-slide[data-slide="canada"] .mobile-hero-visual::before {
+    background-image: url("../1.jpg") !important;
+    background-position: center 53% !important;
+    filter: saturate(1.25) contrast(1.06) !important;
+  }
+
+  .hero-slide[data-slide="usa"] .mobile-hero-visual::before {
+    background-image: url("../2.png") !important;
+    background-position: center 54% !important;
+    filter: saturate(1.25) contrast(1.06) !important;
+  }
+
+  .hero-slide[data-slide="uk"] .mobile-hero-visual::before {
+    background-image: url("../st.jpg") !important;
+    background-position: center 48% !important;
+    filter: saturate(1.13) contrast(1.05) !important;
+  }
+
+  .hero-slide[data-slide="europe"] .mobile-hero-visual::before {
+    background-image: url("../3.png") !important;
+    background-position: center 53% !important;
+    filter: saturate(1.25) contrast(1.06) !important;
+  }
+
+  .hero-slide[data-slide="australia"] .mobile-hero-visual::before {
+    background-image: url("../4.png") !important;
+    background-position: center 54% !important;
+    filter: saturate(1.25) contrast(1.06) !important;
+  }
+
+
+  /* cinematic depth */
+  .mobile-hero-visual::after {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    z-index: 1 !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4,30,50,.12) 0%,
+        rgba(4,30,50,0) 45%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0) 45%,
+        rgba(3,30,49,.25) 100%
+      ) !important;
+
+    pointer-events: none !important;
+  }
+
+
+  /* foreground student */
+  .mobile-hero-visual > img {
+    position: absolute !important;
+
+    z-index: 2 !important;
+
+    right: -3% !important;
+    bottom: -5px !important;
+
+    width: auto !important;
+    max-width: 72% !important;
+    height: 99% !important;
+
+    object-fit: contain !important;
+    object-position: right bottom !important;
+
+    filter:
+      drop-shadow(0 17px 20px rgba(8,31,48,.25)) !important;
+  }
+
+  .hero-slide[data-slide="canada"] .mobile-hero-visual > img {
+    right: -1% !important;
+    max-width: 70% !important;
+  }
+
+  .hero-slide[data-slide="usa"] .mobile-hero-visual > img {
+    right: -2% !important;
+    max-width: 72% !important;
+  }
+
+  .hero-slide[data-slide="europe"] .mobile-hero-visual > img {
+    right: -4% !important;
+    max-width: 75% !important;
+  }
+
+  .hero-slide[data-slide="australia"] .mobile-hero-visual > img {
+    right: -3% !important;
+    max-width: 75% !important;
+  }
+
+  /*
+   UK uses st.jpg, which is a regular photograph rather than
+   transparent foreground artwork. Use it as backdrop only.
+  */
+  .hero-slide[data-slide="uk"] .mobile-hero-visual > img {
+    display: none !important;
+  }
+
+
+  /* ========================================================
+     SUBTLE EXPERTS-STYLE DOTS ONLY
+     ======================================================== */
+
+  .mobile-hero-dots {
+    position: absolute !important;
+
+    z-index: 5 !important;
+
+    left: 50% !important;
+    bottom: 13px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 7px !important;
+
+    padding: 7px 9px !important;
+
+    transform: translateX(-50%) !important;
+
+    border-radius: 999px !important;
+
+    background: rgba(4,31,51,.30) !important;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .mobile-hero-dots span {
+    display: block !important;
+
+    width: 7px !important;
+    height: 7px !important;
+
+    border-radius: 999px !important;
+
+    background: rgba(255,255,255,.63) !important;
+
+    transition:
+      width .25s ease,
+      background .25s ease !important;
+  }
+
+  .mobile-hero-dots span.active {
+    width: 25px !important;
+
+    background: #6cccf8 !important;
+  }
+
+
+  /* CTA */
+  .hero-ctas {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    width: 100% !important;
+
+    gap: 9px !important;
+
+    margin: 0 !important;
+  }
+
+  .hero-ctas .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 52px !important;
+
+    justify-content: center !important;
+
+    padding: 13px 16px !important;
+
+    border-radius: 16px !important;
+
+    font-size: 15px !important;
+    font-weight: 650 !important;
+
+    text-align: center !important;
+  }
+
+  .hero-ctas .btn.primary {
+    color: #fff !important;
+
+    border: 0 !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        #05a4e7,
+        #0287ca
+      ) !important;
+
+    box-shadow:
+      0 12px 25px rgba(2,149,218,.25) !important;
+  }
+
+  .hero-ctas .btn:not(.primary) {
+    color: #162337 !important;
+
+    background: rgba(255,255,255,.94) !important;
+
+    border: 1px solid rgba(22,35,55,.11) !important;
+
+    box-shadow:
+      0 7px 17px rgba(26,55,77,.055) !important;
+  }
+
+
+  /* ========================================================
+     KEEP THE GOOD NEW COMPACT STATS DESIGN
+     ======================================================== */
+
+  .hero .stats.glass {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(3,minmax(0,1fr)) !important;
+
+    width: 100% !important;
+
+    margin: 16px 0 0 !important;
+    padding: 7px !important;
+
+    gap: 0 !important;
+
+    border: 1px solid rgba(21,45,66,.09) !important;
+    border-radius: 18px !important;
+
+    background: rgba(255,255,255,.90) !important;
+
+    box-shadow:
+      0 10px 23px rgba(29,64,89,.065) !important;
+  }
+
+  .hero .stats.glass .stat {
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 0 !important;
+    min-height: 58px !important;
+
+    padding: 7px 3px !important;
+
+    text-align: center !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+  }
+
+  .hero .stats.glass .stat:first-child,
+  .hero .stats.glass .stat:nth-child(2) {
+    border-right:
+      1px solid rgba(18,45,66,.09) !important;
+  }
+
+  .hero .stats.glass .stat:nth-child(3),
+  .hero .stats.glass .stat:nth-child(4) {
+    display: none !important;
+  }
+
+  .hero .stats.glass .stat strong {
+    font-size: 15px !important;
+    line-height: 1.1 !important;
+
+    color: #122136 !important;
+
+    white-space: nowrap !important;
+  }
+
+  .hero .stats.glass .stat span {
+    margin-top: 4px !important;
+
+    font-size: 9.5px !important;
+    line-height: 1.15 !important;
+
+    color: #6c7889 !important;
+  }
+
+  .hero .stats.glass::after {
+    content: "95%+\A Success" !important;
+
+    white-space: pre-line !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 58px !important;
+
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    font-weight: 750 !important;
+
+    color: #122136 !important;
+
+    text-align: center !important;
+  }
+
+
+  /* SUBTLE ENTRANCE */
+  .hero-slide.active .mobile-hero-visual {
+    animation:
+      saaHeroCardIn .55s cubic-bezier(.16,1,.3,1) both;
+  }
+
+  .hero-slide.active .mobile-hero-visual > img {
+    animation:
+      saaHeroPersonIn .70s .06s
+      cubic-bezier(.16,1,.3,1) both;
   }
 }
-/* SAAVISA MOBILE HERO INDICATOR DOTS END */
+
+@media (max-width:380px) {
+  .mobile-hero-visual {
+    height: 245px !important;
+  }
+
+  .hero-title {
+    font-size: 32px !important;
+  }
+}
+
+@keyframes saaHeroCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes saaHeroPersonIn {
+  from {
+    opacity: 0;
+    transform: translate3d(28px,8px,0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+/* ===== MOBILE HOME IMAGE HERO V3 END ===== */
