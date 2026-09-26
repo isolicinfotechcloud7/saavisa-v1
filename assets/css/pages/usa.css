@@ -2822,15 +2822,15 @@ margin:14px 0 18px 0;
     z-index: 1 !important;
 
     background:
-      rgba(248, 252, 255, .54) !important;
+      rgba(248, 252, 255, .34) !important;
 
     backdrop-filter:
-      blur(7px)
-      saturate(.88) !important;
+      blur(4px)
+      saturate(.92) !important;
 
     -webkit-backdrop-filter:
-      blur(7px)
-      saturate(.88) !important;
+      blur(4px)
+      saturate(.92) !important;
 
     pointer-events: none !important;
   }
