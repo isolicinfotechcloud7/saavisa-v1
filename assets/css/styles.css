@@ -9587,13 +9587,6 @@ select.saa-modal-input {
 
 /* ===== HOMEPAGE MOBILE HERO FIX START ===== */
 
-/* Prevent the whole page from becoming horizontally scrollable */
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 @media (max-width: 720px) {
 
     /* Mobile page/container containment */
@@ -10267,3 +10260,34 @@ body {
 
 /* ===== MOBILE RHYTHM + GLOBAL FOOTER FIX END ===== */
 
+/* ===== DESKTOP STEPS VISIBILITY SAFETY START ===== */
+@media (min-width: 721px) {
+    .steps-section [data-aos] {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+}
+/* ===== DESKTOP STEPS VISIBILITY SAFETY END ===== */
+
+
+/* ===== WHY CHOOSE US MOBILE ICON CENTER FIX ===== */
+@media (max-width: 720px) {
+    .why-choose-section .showcase-item-row {
+        display: block !important;
+    }
+
+    .why-choose-section .showcase-item-icon {
+        margin: 0 auto 18px !important;
+    }
+
+    .why-choose-section .showcase-item-content {
+        width: 100% !important;
+        min-width: 0 !important;
+        text-align: left !important;
+    }
+
+    .why-choose-section .showcase-item-row:hover {
+        transform: none !important;
+    }
+}
