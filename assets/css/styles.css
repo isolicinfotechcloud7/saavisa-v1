@@ -10863,7 +10863,7 @@ select.saa-modal-input {
 
   .hero-slide[data-slide="uk"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/uk-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/uk-student.webp");
+    --saa-mobile-person: url("/assets/hero/uk-student-12189ea70e.webp");
   }
 
   .hero-slide[data-slide="europe"] .mobile-hero-visual {
@@ -10873,7 +10873,7 @@ select.saa-modal-input {
 
   .hero-slide[data-slide="australia"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/australia-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/australia-student.webp");
+    --saa-mobile-person: url("/assets/hero/australia-student-1e0c442900.webp");
   }
 
 /* ===== MOBILE HOME HERO ASSET SYNC V8 END ===== */
