@@ -39,3 +39,10 @@ Embedded HTML images, external flag images, external Unsplash images and CSS dat
 - City Bank HTML uses the exact requested /assets/localized/embedded/sfde4tersgrfdv.jpg path with a new cache-busting query. R5 intentionally does not overwrite that file's bytes.
 - The Files They Signed Off keeps all original titles/captions and uses the eight new supplied images, plus compact blue statistic overlays.
 - About Mission uses mission.jpg and About Vision uses vision.jpg (previous swap corrected).
+
+
+## R6 — Canada flag + success stories mobile gap
+- Replaced all references to `/assets/localized/flags/ca.svg` with the proven local `/assets/destinations/canada-flag.webp`.
+- Fixed the Success Stories mobile pagination regression where R5's `display:grid!important` overrode hidden paginated cards and left a huge invisible layout gap.
+- Added explicit `[hidden]{display:none!important}` for success-story cards and intrinsic mobile list sizing.
+- Bumped relevant stylesheet query versions to R6 for cache busting.

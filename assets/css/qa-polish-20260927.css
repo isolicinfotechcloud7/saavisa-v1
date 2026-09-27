@@ -370,3 +370,16 @@
   .saa-experts-page .signed-off-item .signed-off-stat span{font-size:7.5px}
 }
 /* ===== R5 MOBILE/CONTENT CORRECTIONS END ===== */
+
+
+/* ===== R6 FLAG + SUCCESS MOBILE GAP FIX START ===== */
+/* Hidden paginated success-story cards must remain out of layout even though R5 gives .story display:grid!important. */
+.saa-success-page .story[hidden]{display:none!important}
+
+/* Keep the mobile success-story list intrinsically sized to only the current page. */
+@media(max-width:760px){
+  .saa-success-page .story-list{height:auto!important;min-height:0!important}
+  .saa-success-page .story-main{height:auto!important;min-height:0!important}
+  .saa-success-page .stories-layout{height:auto!important;min-height:0!important;align-items:start!important}
+}
+/* ===== R6 FLAG + SUCCESS MOBILE GAP FIX END ===== */
