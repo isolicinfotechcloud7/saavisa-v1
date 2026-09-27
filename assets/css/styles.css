@@ -10909,3 +10909,38 @@ select.saa-modal-input {
 }
 
 /* ===== GLOBAL CAROUSEL SWIPE V1 END ===== */
+
+/* ===== MOBILE HERO PERSON SCALE V9 START ===== */
+@media (max-width:720px){
+
+  /*
+   * Keep the existing center-bottom alignment exactly as-is.
+   * Only reduce foreground people size so the full subject
+   * sits more comfortably inside the destination image card.
+   */
+  .mobile-hero-visual::after{
+    background-position:center bottom !important;
+    background-size:auto 90% !important;
+  }
+
+  .hero-slide[data-slide="canada"] .mobile-hero-visual::after{
+    background-size:auto 92% !important;
+  }
+
+  .hero-slide[data-slide="usa"] .mobile-hero-visual::after{
+    background-size:auto 89% !important;
+  }
+
+  .hero-slide[data-slide="uk"] .mobile-hero-visual::after{
+    background-size:auto 90% !important;
+  }
+
+  .hero-slide[data-slide="europe"] .mobile-hero-visual::after{
+    background-size:auto 88% !important;
+  }
+
+  .hero-slide[data-slide="australia"] .mobile-hero-visual::after{
+    background-size:auto 90% !important;
+  }
+}
+/* ===== MOBILE HERO PERSON SCALE V9 END ===== */
