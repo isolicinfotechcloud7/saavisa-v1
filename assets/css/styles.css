@@ -1198,8 +1198,8 @@ position: relative;
   position: absolute;
   inset: 0;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Ccircle cx='300' cy='300' r='280' fill='none' stroke='%23d10f2f' stroke-width='1.5' opacity='0.06'/%3E%3Ccircle cx='300' cy='300' r='220' fill='none' stroke='%23d10f2f' stroke-width='1' opacity='0.05'/%3E%3Ccircle cx='300' cy='300' r='160' fill='none' stroke='%23d10f2f' stroke-width='0.8' opacity='0.04'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='180' fill='none' stroke='%23d10f2f' stroke-width='1' opacity='0.05'/%3E%3C/svg%3E");
+    url("/assets/localized/embedded-css/0751a2d35900ba.svg"),
+    url("/assets/localized/embedded-css/313417f3497758.svg");
   background-position: right -100px top -100px, left -80px bottom -80px;
   background-repeat: no-repeat;
   background-size: 600px 600px, 400px 400px;
@@ -1372,7 +1372,7 @@ position: relative;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('/assets/company/backgrounds/why-choose-home.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.08;
@@ -1590,8 +1590,8 @@ hr{
   position: absolute;
   inset: 0;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Ccircle cx='300' cy='300' r='280' fill='none' stroke='%23fff' stroke-width='1' opacity='0.07'/%3E%3Ccircle cx='300' cy='300' r='200' fill='none' stroke='%23fff' stroke-width='0.8' opacity='0.05'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='180' fill='none' stroke='%23fff' stroke-width='1' opacity='0.06'/%3E%3C/svg%3E");
+    url("/assets/localized/embedded-css/38e441f88feece.svg"),
+    url("/assets/localized/embedded-css/316b50f74b38ee.svg");
   background-position: right -120px center, left -60px bottom -60px;
   background-repeat: no-repeat;
   background-size: 600px 600px, 400px 400px;
@@ -5298,7 +5298,7 @@ hr{
 
 .highlighter::after {
   content: "";
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><path d="M0,5 Q20,0 40,5 T80,5" stroke="%230295DA" fill="none" stroke-width="2"/></svg>') no-repeat;
+  background: url("/assets/localized/embedded-css/e23da464f6e4d3.svg") no-repeat;
   background-size: 90% 100%;
   display: block;
   width: 100%;
@@ -8257,7 +8257,7 @@ hr{
 }
 
 select.saa-modal-input {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("/assets/localized/embedded-css/18be138b808a68.svg");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 36px;
@@ -8433,7 +8433,7 @@ select.saa-modal-input {
 
 /* Hero override for services */
 .services-hero-page {
-  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2200&q=88');
+  background-image: url('/assets/company/backgrounds/why-choose-home.jpg');
 }
 
 /* Service Shortcuts Bar */
