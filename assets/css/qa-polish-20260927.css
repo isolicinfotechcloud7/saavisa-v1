@@ -218,3 +218,155 @@
   }
   .ceo-welcome-card{width:100%!important;margin-left:0!important;margin-right:0!important}
 }
+
+/* ===== MOBILE HERO SMOOTH TRANSITION — R4 ===== */
+@media(max-width:720px){
+  .hero-slides{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    align-items:start!important;
+  }
+
+  .hero-slide{
+    grid-area:1/1!important;
+    display:block!important;
+    position:relative!important;
+    inset:auto!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    transform:translate3d(14px,0,0) scale(.995)!important;
+    pointer-events:none!important;
+    z-index:1!important;
+    transition:
+      opacity .58s cubic-bezier(.22,.61,.36,1),
+      transform .58s cubic-bezier(.22,.61,.36,1),
+      visibility 0s linear .58s!important;
+    will-change:opacity,transform;
+  }
+
+  .hero-slide.active{
+    opacity:1!important;
+    visibility:visible!important;
+    transform:translate3d(0,0,0) scale(1)!important;
+    pointer-events:auto!important;
+    z-index:2!important;
+    transition:
+      opacity .58s cubic-bezier(.22,.61,.36,1),
+      transform .58s cubic-bezier(.22,.61,.36,1),
+      visibility 0s linear 0s!important;
+  }
+}
+
+@media(max-width:720px) and (prefers-reduced-motion:reduce){
+  .hero-slide,.hero-slide.active{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
+/* ===== R5 MOBILE/CONTENT CORRECTIONS — 2026-09-27 ===== */
+@media(max-width:720px){
+  /* 1. Homepage stats: a different quiet motif on every row. */
+  .sa-stats-card::after{display:none!important;content:none!important}
+  .sa-stat-item{padding-right:96px!important;overflow:hidden!important}
+  .sa-stat-item::after{
+    content:""!important;display:block!important;position:absolute!important;right:16px!important;top:50%!important;
+    transform:translateY(-50%)!important;width:72px!important;height:72px!important;background-position:center!important;
+    background-size:contain!important;background-repeat:no-repeat!important;opacity:.24!important;pointer-events:none!important
+  }
+  .sa-stat-item:nth-child(1)::after{background-image:url('/assets/localized/ui/stats-students.svg')!important}
+  .sa-stat-item:nth-child(2)::after{background-image:url('/assets/localized/ui/stats-visitor.svg')!important}
+  .sa-stat-item:nth-child(3)::after{background-image:url('/assets/localized/ui/stats-spouse.svg')!important}
+  .sa-stat-item:nth-child(4)::after{background-image:url('/assets/localized/ui/stats-success.svg')!important}
+
+  /* 2. Australia homepage hero: exactly two headline rows on phone widths. */
+  .hero-slide[data-slide="australia"] .hero-title.australia-hero-title{
+    font-size:clamp(29px,7.8vw,34px)!important;line-height:1.08!important;letter-spacing:-.042em!important
+  }
+  .hero-slide[data-slide="australia"] .australia-title-line{display:block!important;white-space:nowrap!important}
+
+  /* 3. Why Choose Us: icons were already centered; center the titles as requested. */
+  .why-choose-section .showcase-item-title{text-align:center!important}
+
+  /* 4. Homepage CEO: simple edge-to-edge portrait frame, no blurred pseudo-layer or inset image padding. */
+  .ceo-welcome-section{padding:44px 0!important}
+  .ceo-welcome-section>.container{width:calc(100% - 36px)!important;max-width:none!important;padding:0!important;margin-inline:auto!important}
+  .ceo-welcome-card{width:100%!important;margin:0!important;border-radius:22px!important;overflow:hidden!important;background:#fff!important}
+  .ceo-welcome-img{position:relative!important;width:100%!important;max-width:none!important;min-height:0!important;aspect-ratio:3/4!important;margin:0!important;padding:0!important;background:#dfeaf2!important;overflow:hidden!important}
+  .ceo-welcome-img::before,.ceo-welcome-img::after{display:none!important;content:none!important}
+  .ceo-welcome-img img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;object-fit:cover!important;object-position:center 14%!important;display:block!important}
+  .ceo-welcome-content{margin:0!important;padding:24px 22px 26px!important}
+
+  /* 5. Country Visa Types: icon + heading centered on mobile while details remain easy to scan. */
+  .saa-page .visa-feature-card>.visa-line-icon,
+  .saa-page .visa-small-card>.visa-line-icon{margin-left:auto!important;margin-right:auto!important}
+  .saa-page .visa-feature-card h3,.saa-page .visa-small-card h3{text-align:center!important}
+  .saa-page .visa-small-card .visa-tag{align-self:center!important}
+
+  /* 6. Experts/About panoramic hero art: deliberately crop toward the visual subject instead of empty centre. */
+  .saa-experts-page .experts-hero{
+    background-size:auto 100%!important;background-position:8% center!important;background-repeat:no-repeat!important
+  }
+  .saa-experts-page .experts-hero::before{
+    background:linear-gradient(180deg,rgba(248,252,255,.62),rgba(248,252,255,.78))!important;
+    backdrop-filter:blur(1.4px)!important;-webkit-backdrop-filter:blur(1.4px)!important
+  }
+  .saa-page-about .about-hero,.saa-page-about .contact-hero{
+    background-size:auto 100%!important;background-position:88% center!important;background-repeat:no-repeat!important
+  }
+  .saa-page-about .about-hero::before,.saa-page-about .contact-hero::before{
+    content:""!important;display:block!important;position:absolute!important;inset:0!important;z-index:0!important;
+    background:rgba(248,252,255,.54)!important;backdrop-filter:blur(1.2px)!important;-webkit-backdrop-filter:blur(1.2px)!important
+  }
+  .saa-page-about .about-hero .container,.saa-page-about .contact-hero .container{position:relative!important;z-index:1!important}
+
+  /* 7. Success stories: image first, full readable text beneath it — never a narrow text rail. */
+  .saa-success-page .story{
+    display:grid!important;grid-template-columns:1fr!important;gap:0!important;padding:14px!important;
+    border-radius:22px!important;overflow:hidden!important
+  }
+  .saa-success-page .story-media{
+    width:100%!important;min-height:0!important;aspect-ratio:4/3!important;border-radius:16px!important;overflow:hidden!important
+  }
+  .saa-success-page .story-media>img{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important
+  }
+  .saa-success-page .story-body{width:100%!important;padding:18px 5px 7px!important;align-self:auto!important}
+  .saa-success-page .story-body h3{font-size:22px!important;line-height:1.18!important}
+  .saa-success-page .st-prev,.saa-success-page .st-dest{font-size:14.5px!important}
+}
+
+@media(max-width:560px){
+  /* 8. Registration licences: remove forced landscape ratio and give the bottom rows/footer breathing room. */
+  .registration-showcase .license-card::before,.registration-showcase .license-card::after{display:none!important;content:none!important}
+  .registration-showcase .license-card{
+    aspect-ratio:auto!important;height:auto!important;min-height:420px!important;padding:5px!important;overflow:hidden!important
+  }
+  .registration-showcase .license-inner{
+    height:auto!important;min-height:410px!important;padding:20px 18px 18px!important;overflow:hidden!important
+  }
+  .registration-showcase .license-facts{margin-top:22px!important}
+  .registration-showcase .fact-row{min-height:39px!important;line-height:1.25!important;align-items:start!important}
+  .registration-showcase .license-footer{
+    position:static!important;left:auto!important;right:auto!important;bottom:auto!important;margin-top:13px!important;
+    padding-top:10px!important;border-top:1px solid rgba(33,102,172,.15)!important;min-height:24px!important;
+    white-space:normal!important;line-height:1.25!important
+  }
+}
+
+/* 9. Signed-off gallery: preserve original copy, place the requested numeric blue overlay on the new images. */
+.saa-experts-page .signed-off-item{position:relative!important}
+.saa-experts-page .signed-off-item .signed-off-stat{
+  position:absolute;left:14px;top:14px;z-index:4;display:flex;align-items:center;gap:9px;
+  padding:8px 11px;border-radius:12px;background:rgba(3,91,139,.90);color:#fff;
+  box-shadow:0 10px 24px rgba(3,66,103,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  pointer-events:none
+}
+.saa-experts-page .signed-off-item .signed-off-stat strong{font-size:21px;line-height:1;font-weight:900;letter-spacing:-.04em;color:#fff}
+.saa-experts-page .signed-off-item .signed-off-stat span{font-size:8.5px;line-height:1.15;font-weight:850;letter-spacing:.08em;color:rgba(255,255,255,.93)}
+@media(max-width:560px){
+  .saa-experts-page .signed-off-item .signed-off-stat{left:11px;top:11px;padding:7px 9px;border-radius:10px}
+  .saa-experts-page .signed-off-item .signed-off-stat strong{font-size:18px}
+  .saa-experts-page .signed-off-item .signed-off-stat span{font-size:7.5px}
+}
+/* ===== R5 MOBILE/CONTENT CORRECTIONS END ===== */

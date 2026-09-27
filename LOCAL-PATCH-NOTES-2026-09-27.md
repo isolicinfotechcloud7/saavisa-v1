@@ -24,3 +24,18 @@ Embedded HTML images, external flag images, external Unsplash images and CSS dat
 ## Round 3 — Homepage CEO mobile margin
 - Removed the accidental double mobile gutter around the CEO card.
 - The CEO card now uses the same 16px outer page margin as the rest of the mobile homepage.
+
+## R5 corrections — 2026-09-27
+- Mobile registration licence cards no longer use a forced landscape ratio; height/bottom spacing increased to prevent footer/field overlap.
+- Homepage mobile stats use four distinct subtle local SVG motifs, one per row.
+- Australia mobile hero heading is constrained to two lines only.
+- Why Choose Us mobile item titles are centered.
+- Canada flag SVG is now fully self-contained and no longer depends on an external image reference inside SVG.
+- Homepage CEO mobile card removes the blurred pseudo-background/padding artifact and uses a clean 3:4 portrait frame.
+- Country-page Visa Types cards center icon + heading on mobile.
+- Services page is restored to the original six Unsplash image choices, with HTML pointing to locally stored filenames. The deployment block downloads these exact originals into assets/services/localized before commit.
+- Success Stories mobile cards become image-first stacked cards; the six named student portraits use URL-safe local filenames to avoid failures caused by spaces.
+- Experts/About mobile hero background positioning now crops toward actual artwork instead of the empty center of the panoramic images.
+- City Bank HTML uses the exact requested /assets/localized/embedded/sfde4tersgrfdv.jpg path with a new cache-busting query. R5 intentionally does not overwrite that file's bytes.
+- The Files They Signed Off keeps all original titles/captions and uses the eight new supplied images, plus compact blue statistic overlays.
+- About Mission uses mission.jpg and About Vision uses vision.jpg (previous swap corrected).
