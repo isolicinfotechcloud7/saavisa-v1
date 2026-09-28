@@ -387,3 +387,45 @@
   }
 }
 /* ===== R21 FACEBOOK CARD CONCEPT END ===== */
+
+/* ===== R22 FACEBOOK CARD SPACING FIX START ===== */
+/* Fix two issues introduced by R21:
+   1) excessive empty body height caused by fixed/min card heights + margin-top:auto
+   2) Facebook mark overlapping the page title because the title margin was reset to zero
+*/
+.fb-community.fb-community--visual .fbp-card{
+  min-height:0!important;
+}
+.fb-community.fb-community--visual .fbp-body{
+  min-height:0!important;
+  padding:22px 20px 18px!important;
+}
+.fb-community.fb-community--visual .fbp-name{
+  margin-top:22px!important;
+}
+.fb-community.fb-community--visual .fbp-meta-row{
+  margin-top:18px!important;
+  padding-top:0!important;
+}
+@media (max-width:1360px){
+  .fb-community.fb-community--visual .fbp-card{
+    min-height:0!important;
+  }
+}
+@media (max-width:1120px){
+  .fb-community.fb-community--visual .fbp-card{
+    min-height:0!important;
+  }
+}
+@media (max-width:700px){
+  .fb-community.fb-community--visual .fbp-body{
+    padding:22px 18px 18px!important;
+  }
+  .fb-community.fb-community--visual .fbp-name{
+    margin-top:23px!important;
+  }
+  .fb-community.fb-community--visual .fbp-meta-row{
+    margin-top:18px!important;
+  }
+}
+/* ===== R22 FACEBOOK CARD SPACING FIX END ===== */
