@@ -1494,7 +1494,7 @@ margin:14px 0 18px 0;
 }
 .saa-page .visa-premium-section::after {
   content:"";position:absolute;right:6%;top:110px;width:260px;height:170px;z-index:0;opacity:.72;pointer-events:none;
-  background:url("/assets/destinations/canada-flag.webp") center/contain no-repeat;
+  background:url("/assets/localized/flags/ca.svg") center/contain no-repeat;
   filter:drop-shadow(0 18px 28px rgba(15,23,42,.12));
   transform:rotate(-4deg);
 }
@@ -1558,10 +1558,10 @@ margin:14px 0 18px 0;
 .saa-page .visa-feature-card.featured .visa-detail-grid, .saa-page .visa-small-card.blue-card .visa-detail-grid {border-top-color:rgba(255,255,255,.23) !important;}
 .saa-page .visa-detail-grid div {display:grid !important;grid-template-columns:28px 1fr !important;grid-template-rows:auto auto !important;column-gap:8px !important;align-items:start !important;min-width:0 !important;}
 .saa-page .visa-detail-grid div::before {grid-row:1/3;content:"";width:22px;height:22px;margin-top:2px;background:currentColor;opacity:.95;mask:center/contain no-repeat; -webkit-mask:center/contain no-repeat;color:#0195D8;}
-.saa-page .visa-detail-grid div:nth-child(1)::before {mask-image:url("/assets/localized/embedded-css/12c3dba98d5117.svg");-webkit-mask-image:url("/assets/localized/embedded-css/12c3dba98d5117.svg");}
-.saa-page .visa-detail-grid div:nth-child(2)::before {mask-image:url("/assets/localized/embedded-css/25bb0a2932e3e9.svg");-webkit-mask-image:url("/assets/localized/embedded-css/25bb0a2932e3e9.svg");}
-.saa-page .visa-detail-grid div:nth-child(3)::before {mask-image:url("/assets/localized/embedded-css/fd39660310d2e4.svg");-webkit-mask-image:url("/assets/localized/embedded-css/fd39660310d2e4.svg");}
-.saa-page .visa-detail-grid div:nth-child(4)::before {mask-image:url("/assets/localized/embedded-css/73cbdeb8e31039.svg");-webkit-mask-image:url("/assets/localized/embedded-css/73cbdeb8e31039.svg");}
+.saa-page .visa-detail-grid div:nth-child(1)::before {mask-image:url("/assets/localized/embedded-css/r13-clock.svg");-webkit-mask-image:url("/assets/localized/embedded-css/r13-clock.svg");}
+.saa-page .visa-detail-grid div:nth-child(2)::before {mask-image:url("/assets/localized/embedded-css/r13-calendar.svg");-webkit-mask-image:url("/assets/localized/embedded-css/r13-calendar.svg");}
+.saa-page .visa-detail-grid div:nth-child(3)::before {mask-image:url("/assets/localized/embedded-css/r13-bars.svg");-webkit-mask-image:url("/assets/localized/embedded-css/r13-bars.svg");}
+.saa-page .visa-detail-grid div:nth-child(4)::before {mask-image:url("/assets/localized/embedded-css/r13-shield.svg");-webkit-mask-image:url("/assets/localized/embedded-css/r13-shield.svg");}
 .saa-page .visa-feature-card.featured .visa-detail-grid div::before, .saa-page .visa-small-card.blue-card .visa-detail-grid div::before {color:#fff !important;opacity:.9;}
 .saa-page .visa-detail-grid small {font-size:10px !important;font-weight:900 !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:#0195D8 !important;line-height:1.2 !important;}
 .saa-page .visa-detail-grid strong {font-size:14px !important;font-weight:900 !important;color:#07162f !important;line-height:1.25 !important;}
@@ -1609,7 +1609,7 @@ margin:14px 0 18px 0;
   z-index:-1 !important;
   pointer-events:none !important;
   opacity:.88 !important;
-  background:url("/assets/destinations/canada-flag.webp") center/contain no-repeat !important;
+  background:url("/assets/localized/flags/ca.svg") center/contain no-repeat !important;
   filter:drop-shadow(0 24px 34px rgba(15,23,42,.16)) !important;
   transform:rotate(-3deg) !important;
 }
