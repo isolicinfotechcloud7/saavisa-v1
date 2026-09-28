@@ -267,27 +267,40 @@
   .fb-community.fb-community--visual .fbp-go,.fb-community.fb-community--visual .fbp-tag{width:100%!important;}
 }
 
-/* ===== R19 FACEBOOK CARD STRUCTURE START ===== */
-.fb-community.fb-community--visual .fbp-badge-row{
+/* ===== R20 FACEBOOK CARD STRUCTURE START ===== */
+/* Preserve the original card structure.
+   Only the gray page-type item becomes a compact badge/tag. */
+.fb-community.fb-community--visual .fbp-foot{
   display:flex!important;
   align-items:center!important;
-  min-height:27px!important;
-  margin-top:11px!important;
+  justify-content:flex-start!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  width:100%!important;
+  margin-top:auto!important;
+  padding-top:18px!important;
 }
-.fb-community.fb-community--visual .fbp-badge-row .fbp-tag{
+.fb-community.fb-community--visual .fbp-go{
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:155px!important;
+  min-height:50px!important;
+  padding:0 23px!important;
+}
+.fb-community.fb-community--visual .fbp-tag{
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
+  flex:0 0 auto!important;
   width:auto!important;
-  max-width:100%!important;
   min-width:0!important;
-  min-height:27px!important;
+  min-height:28px!important;
   padding:6px 11px!important;
-  border:1px solid rgba(82,105,135,.10)!important;
+  border:1px solid rgba(82,105,135,.12)!important;
   border-radius:999px!important;
-  background:#f1f5f9!important;
-  color:#5c6f88!important;
-  font-size:10.5px!important;
+  background:#edf4ff!important;
+  color:#536987!important;
+  font-size:10px!important;
   font-weight:800!important;
   line-height:1!important;
   letter-spacing:.025em!important;
@@ -295,30 +308,30 @@
   white-space:nowrap!important;
   box-shadow:none!important;
 }
-.fb-community.fb-community--visual .fbp-count{
-  margin-top:13px!important;
-}
-.fb-community.fb-community--visual .fbp-foot{
-  display:block!important;
-  width:100%!important;
-  margin-top:auto!important;
-  padding-top:18px!important;
-}
-.fb-community.fb-community--visual .fbp-go{
-  width:100%!important;
-  min-width:0!important;
-  min-height:50px!important;
-  padding:0 20px!important;
-  border-radius:14px!important;
-}
 @media (max-width:1360px){
-  .fb-community.fb-community--visual .fbp-go{min-width:0!important;}
-}
-@media (max-width:700px){
-  .fb-community.fb-community--visual .fbp-badge-row{margin-top:10px!important;}
-  .fb-community.fb-community--visual .fbp-badge-row .fbp-tag{
-    width:auto!important;
-    font-size:10px!important;
+  .fb-community.fb-community--visual .fbp-go{
+    min-width:138px!important;
+    padding-inline:18px!important;
+  }
+  .fb-community.fb-community--visual .fbp-tag{
+    padding-inline:10px!important;
+    font-size:9.5px!important;
   }
 }
-/* ===== R19 FACEBOOK CARD STRUCTURE END ===== */
+@media (max-width:700px){
+  .fb-community.fb-community--visual .fbp-foot{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    flex-wrap:wrap!important;
+  }
+  .fb-community.fb-community--visual .fbp-go{
+    width:auto!important;
+    flex:1 1 170px!important;
+  }
+  .fb-community.fb-community--visual .fbp-tag{
+    width:auto!important;
+    flex:0 0 auto!important;
+  }
+}
+/* ===== R20 FACEBOOK CARD STRUCTURE END ===== */
