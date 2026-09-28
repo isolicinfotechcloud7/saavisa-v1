@@ -62,6 +62,22 @@
     return m;
   }
 
+  /* ===== SUCCESS FILTER DIRECT SCROLL R11 START ===== */
+  function scrollToFilteredResults() {
+    var target = document.querySelector('.saa-success-page .ss-head--intro') || list;
+    if (!target) return;
+    var header = document.querySelector('.header, header, .site-header, .main-header');
+    var offset = header ? Math.min(Math.max(header.getBoundingClientRect().height, 68), 112) : 86;
+    function run() {
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset - 14;
+      window.scrollTo({ top: Math.max(0, top), behavior: reduce ? 'auto' : 'smooth' });
+    }
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () { setTimeout(run, 20); });
+    });
+  }
+  /* ===== SUCCESS FILTER DIRECT SCROLL R11 END ===== */
+
   function setSingleFilter(type, value) {
     if (active.type === type && active.value === value) {
       active = { type: '', value: '' };
@@ -70,6 +86,7 @@
     }
     if (search) search.value = '';
     apply(true);
+    scrollToFilteredResults();
   }
 
   function buildKindList(el) {

@@ -383,3 +383,40 @@
   .saa-success-page .stories-layout{height:auto!important;min-height:0!important;align-items:start!important}
 }
 /* ===== R6 FLAG + SUCCESS MOBILE GAP FIX END ===== */
+
+
+/* ===== R11 COUNTRY ICON VISIBILITY + CTA CONSISTENCY START ===== */
+.saa-page .facts-strip .fact-ico svg,
+.saa-page .facts-strip .fact-ico svg *,
+.saa-page .visa-line-icon svg,
+.saa-page .visa-line-icon svg *,
+.saa-page .work-ico svg,
+.saa-page .work-ico svg *,
+.saa-page .c-ico svg,
+.saa-page .c-ico svg *,
+.saa-page .req-card h3 .ico svg,
+.saa-page .req-card h3 .ico svg *,
+.saa-page .intake-pro-icon svg,
+.saa-page .intake-pro-icon svg *{
+  visibility:visible!important;
+  opacity:1!important;
+}
+.saa-page .visa-line-icon svg{
+  display:block!important;
+  width:29px!important;
+  height:29px!important;
+  fill:none!important;
+  stroke:currentColor!important;
+}
+.saa-page .facts-strip .fact-ico svg{
+  display:block!important;
+  width:23px!important;
+  height:23px!important;
+  fill:none!important;
+}
+@media(max-width:720px){
+  .saa-page .visa-line-icon svg{width:27px!important;height:27px!important}
+  .saa-page .facts-strip .fact-ico svg,
+  .saa-page .facts-strip .fact-ico svg *{stroke:var(--saa-site-blue)!important}
+}
+/* ===== R11 COUNTRY ICON VISIBILITY + CTA CONSISTENCY END ===== */
