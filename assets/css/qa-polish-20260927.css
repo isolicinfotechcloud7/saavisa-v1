@@ -420,3 +420,57 @@
   .saa-page .facts-strip .fact-ico svg *{stroke:var(--saa-site-blue)!important}
 }
 /* ===== R11 COUNTRY ICON VISIBILITY + CTA CONSISTENCY END ===== */
+
+/* ===== R12 CTA + SIGNED-OFF MEDIA START ===== */
+/* Homepage final CTA: one-line headline, useful supporting copy, same shared button geometry. */
+.sa-faq-cta.saa-consultation-cta h2{
+  font-size:clamp(25px,2.05vw,34px)!important;
+  line-height:1.12!important;
+  margin:0 0 9px!important;
+  text-wrap:balance;
+}
+.sa-faq-cta .sa-faq-cta-copy{
+  max-width:680px;
+  margin:0 auto 18px!important;
+  color:rgba(255,255,255,.88)!important;
+  font-size:14px!important;
+  line-height:1.55!important;
+  text-align:center;
+}
+.sa-faq-cta .cta-buttons{margin-top:0!important}
+@media(min-width:900px){
+  .sa-faq-cta.saa-consultation-cta h2{white-space:nowrap!important}
+}
+@media(max-width:720px){
+  .sa-faq-cta.saa-consultation-cta h2{font-size:26px!important;white-space:normal!important}
+  .sa-faq-cta .sa-faq-cta-copy{font-size:13.5px!important;margin-bottom:16px!important}
+}
+
+/* Signed-off cards: badge belongs to the photo and sits at its lower-left edge. */
+.saa-experts-page .signed-off-item{position:relative!important}
+.saa-experts-page .signed-off-item .signed-off-media{
+  position:relative!important;
+  width:100%!important;
+  overflow:hidden!important;
+}
+.saa-experts-page .signed-off-item .signed-off-media > img{
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:6/5!important;
+  object-fit:cover!important;
+  border-radius:0!important;
+}
+.saa-experts-page .signed-off-item .signed-off-stat{
+  top:auto!important;
+  bottom:12px!important;
+  left:12px!important;
+  right:auto!important;
+}
+@media(max-width:560px){
+  .saa-experts-page .signed-off-item .signed-off-stat{
+    top:auto!important;
+    bottom:10px!important;
+    left:10px!important;
+  }
+}
+/* ===== R12 CTA + SIGNED-OFF MEDIA END ===== */
