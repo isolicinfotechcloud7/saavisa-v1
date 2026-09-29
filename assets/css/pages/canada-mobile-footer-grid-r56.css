@@ -1,0 +1,65 @@
+/* ===== R56 CANADA MOBILE FOOTER GRID REPAIR START ===== */
+
+/*
+  R54 fixed the card body, but older card-specific mobile rules still force
+  some visa-detail-grid children to span the full row / keep narrow widths.
+  Result: Spousal / Visitor / Super Visa stats stack vertically.
+
+  R56 makes the footer layout deterministic on mobile:
+  - always 2 columns
+  - every stat occupies exactly one grid cell
+  - no inherited max-width / grid-column span
+  - preserve R53 icons and R54 body styling
+*/
+
+@media (max-width: 720px) {
+  .visa-premium-section .visa-feature-card .visa-detail-grid,
+  .visa-premium-section .visa-small-card .visa-detail-grid,
+  .visa-premium-section .visa-small-card.wide .visa-detail-grid,
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    grid-auto-columns: auto !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-items: stretch !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  .visa-premium-section .visa-feature-card .visa-detail-grid > div,
+  .visa-premium-section .visa-small-card .visa-detail-grid > div,
+  .visa-premium-section .visa-small-card.wide .visa-detail-grid > div,
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid > div,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid > div {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    justify-self: stretch !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Keep a balanced footprint across all six card variants. */
+  .visa-premium-section .visa-detail-grid > div {
+    min-height: 64px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .visa-premium-section .visa-feature-card .visa-detail-grid,
+  .visa-premium-section .visa-small-card .visa-detail-grid,
+  .visa-premium-section .visa-small-card.wide .visa-detail-grid {
+    gap: 8px !important;
+  }
+}
+
+/* ===== R56 CANADA MOBILE FOOTER GRID REPAIR END ===== */
