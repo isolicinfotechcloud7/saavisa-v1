@@ -10858,12 +10858,12 @@ select.saa-modal-input {
 
   .hero-slide[data-slide="usa"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/usa-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/usa-student.webp");
+    --saa-mobile-person: url("/assets/hero/usa-student-r35-20260929.webp");
   }
 
   .hero-slide[data-slide="uk"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/uk-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/uk-student-12189ea70e.webp");
+    --saa-mobile-person: url("/assets/hero/uk-student-r35-20260929.webp");
   }
 
   .hero-slide[data-slide="europe"] .mobile-hero-visual {
