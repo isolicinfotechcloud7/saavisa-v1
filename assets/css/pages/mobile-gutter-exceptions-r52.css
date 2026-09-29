@@ -1,0 +1,99 @@
+/* ===== R52 MOBILE GUTTER EXCEPTIONS FIX START ===== */
+
+/*
+  R50 established the shared mobile gutter, but two homepage structures bypassed
+  its selector:
+  1) 4 Steps is a DIV (.comm-section.steps-section), not a <section>.
+  2) Success Stories has no direct .container; its cards sit inside .tabs-content.
+
+  R52 brings those two structures onto the same 18px mobile content edge.
+  No card internals, typography, images, desktop layout, or spacing hierarchy change.
+*/
+
+@media (max-width: 720px) {
+  :root {
+    --saa-mobile-gutter: 18px;
+  }
+
+  /* -------------------------------------------------
+     4 SIMPLE STEPS
+     The wrapper is <div class="comm-section steps-section">.
+     ------------------------------------------------- */
+  body main .steps-section.comm-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body main .steps-section.comm-section > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    box-sizing: border-box !important;
+  }
+
+  body main .steps-section .steps-main-wrapper,
+  body main .steps-section .steps-card-wrap,
+  body main .steps-section .steps-img-wrap,
+  body main .steps-section .steps-card,
+  body main .steps-section .steps-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* -------------------------------------------------
+     SUCCESS STORIES
+     Remove the old double gutter:
+     section padding + tabs-content padding.
+     tabs-content becomes the single gutter owner.
+     ------------------------------------------------- */
+  body main .success-story-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body main .success-story-section .visa-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body main .success-story-section .tabs-nav {
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    box-sizing: border-box !important;
+  }
+
+  body main .success-story-section .tabs-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    box-sizing: border-box !important;
+  }
+
+  body main .success-story-section .success-grid,
+  body main .success-story-section .tab-pane,
+  body main .success-story-section .success-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --saa-mobile-gutter: 16px;
+  }
+}
+
+/* ===== R52 MOBILE GUTTER EXCEPTIONS FIX END ===== */
