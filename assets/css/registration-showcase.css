@@ -5,7 +5,7 @@
       --muted: #66778d;
       --blue: #2166af;
       --red: #d12335;
-      --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font: inherit;
     }
 .registration-showcase *, .registration-showcase *::before, .registration-showcase *::after { box-sizing: border-box; }
 .registration-showcase { margin: 0; color: var(--ink); background: #edf5ff; font-family: var(--font); }

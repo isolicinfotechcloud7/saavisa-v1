@@ -1,0 +1,77 @@
+/* ===== R30 TYPOGRAPHY SOURCE-OF-TRUTH FIX START ===== */
+
+/*
+  The global --font variable defined by the site remains the only font source.
+
+  Important: custom properties can be redefined inside a section. That is what
+  happened in .registration-showcase, where --font was locally changed to Inter.
+  So an h2 using var(--font) still rendered as Inter.
+
+  R30 prevents page/section-level --font shadowing by making every descendant
+  inherit the root/body --font value.
+*/
+
+:root{
+  --font-family:var(--font);
+}
+
+body{
+  --font:inherit!important;
+  font-family:var(--font)!important;
+}
+
+body *{
+  --font:inherit!important;
+}
+
+/* Semantic typography */
+h1,h2,h3,h4,h5,h6,
+h1 *,h2 *,h3 *,h4 *,h5 *,h6 *,
+p,a,li,dt,dd,label,legend,summary,figcaption,blockquote,
+th,td,caption,
+button,input,select,textarea,option{
+  font-family:var(--font)!important;
+}
+
+/* Common non-semantic UI text */
+.button,
+.btn,
+.tab-btn,
+.action-btn,
+.fbp-label,
+.fbp-name,
+.fbp-handle,
+.fbp-count,
+.fbp-tag,
+.fbp-go,
+.signed-off-stat,
+.section-kicker,
+.section-label,
+.hero-kicker{
+  font-family:var(--font)!important;
+}
+
+/* Native controls should inherit from the site. */
+button,input,select,textarea,option{
+  font-family:inherit!important;
+}
+
+/* Preserve icon-font glyphs. */
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+[class^="fa-"],
+[class*=" fa-"]{
+  font-family:"Font Awesome 6 Free"!important;
+}
+
+.fa-brands,
+.fab{
+  font-family:"Font Awesome 6 Brands"!important;
+}
+
+/* ===== R30 TYPOGRAPHY SOURCE-OF-TRUTH FIX END ===== */

@@ -5315,7 +5315,7 @@ hr{
 }
 
 .steps-section .button {
-  font-family: 'Poppins', sans-serif;
+  font-family:var(--font);
   background: #0295DA;
   border: none;
   outline: none;
@@ -5610,7 +5610,7 @@ hr{
         .tab-btn {
             background: transparent;
             border: none;
-            font-family: 'Inter', sans-serif;
+            font-family:var(--font);
             font-weight: 600;
             font-size: 1rem;
             padding: 1rem 1.6rem;
@@ -5654,7 +5654,7 @@ hr{
         .tab-btn.work {
             background: transparent;
             border: none;
-            font-family: 'Inter', sans-serif;
+            font-family:var(--font);
             font-weight: 600;
             font-size: 1rem;
             padding: 1rem 1.6rem;
@@ -5698,7 +5698,7 @@ hr{
         .tab-btn.travel {
             background: transparent;
             border: none;
-            font-family: 'Inter', sans-serif;
+            font-family:var(--font);
             font-weight: 600;
             font-size: 1rem;
             padding: 1rem 1.6rem;
@@ -6165,7 +6165,7 @@ hr{
             cursor: default;
             transition: all 0.2s;
             margin-top: 1rem;
-            font-family: 'Inter', sans-serif;
+            font-family:var(--font);
         }
 
         .action-btn i {
