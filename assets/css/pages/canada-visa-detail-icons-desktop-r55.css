@@ -1,0 +1,80 @@
+/* ===== R55 CANADA VISA DETAIL ICONS DESKTOP START ===== */
+
+/*
+  Fix for desktop Canada Visa Types cards.
+  R53 restored detail icons only inside @media (max-width: 720px), so desktop
+  never received the ::before icon masks. R55 adds the same semantic icons to
+  desktop only, without changing mobile or card sizing.
+*/
+
+@media (min-width: 721px) {
+  .visa-premium-section .visa-detail-grid > div {
+    display: grid !important;
+    grid-template-columns: 24px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 8px !important;
+    row-gap: 1px !important;
+    align-items: center !important;
+    min-width: 0 !important;
+  }
+
+  .visa-premium-section .visa-detail-grid > div::before {
+    content: "" !important;
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    width: 20px !important;
+    height: 20px !important;
+    align-self: center !important;
+    justify-self: center !important;
+    background-color: #0195D8 !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+    -webkit-mask-size: contain !important;
+    mask-size: contain !important;
+    opacity: .95 !important;
+  }
+
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid > div::before,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid > div::before {
+    background-color: #fff !important;
+    opacity: .92 !important;
+  }
+
+  /* Processing / clock */
+  .visa-premium-section .visa-detail-grid > div:nth-child(1)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* Validity / calendar */
+  .visa-premium-section .visa-detail-grid > div:nth-child(2)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='5' width='16' height='15' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M8 3v4M16 3v4M4 9h16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='5' width='16' height='15' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M8 3v4M16 3v4M4 9h16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* IELTS / duration / stay / work type */
+  .visa-premium-section .visa-detail-grid > div:nth-child(3)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 18v-5M10 18V8M15 18v-8M20 18V5' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M3 20h19' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 18v-5M10 18V8M15 18v-8M20 18V5' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M3 20h19' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* GIC / type / eligibility / insurance */
+  .visa-premium-section .visa-detail-grid > div:nth-child(4)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m9 12 2 2 4-4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m9 12 2 2 4-4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  }
+
+  .visa-premium-section .visa-detail-grid small {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  .visa-premium-section .visa-detail-grid strong {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+}
+
+/* ===== R55 CANADA VISA DETAIL ICONS DESKTOP END ===== */
