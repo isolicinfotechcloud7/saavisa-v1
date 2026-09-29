@@ -1,0 +1,90 @@
+/* ===== R50 MOBILE GLOBAL GUTTER START ===== */
+
+/*
+  One mobile horizontal content gutter across the site.
+
+  Reference: the existing mobile hero content / Registration-Licenses spacing.
+  Full-width section backgrounds remain full-width; only their inner .container
+  aligns to the shared gutter.
+
+  Intentionally untouched:
+  - homepage hero
+  - homepage large stats block
+  - Registration/Licenses container
+  - Success Stories custom no-container block
+  - header/footer
+  - desktop/tablet > 720px
+*/
+
+@media (max-width: 720px) {
+  :root {
+    --saa-mobile-gutter: 18px;
+  }
+
+  /*
+    Most site sections use a direct .container. Remove any section-level
+    horizontal padding so the gutter is not accidentally doubled.
+    Repeating .container inside :has() is intentional specificity: it wins
+    against older page-specific mobile overrides without touching markup.
+  */
+  body main section:has(> .container.container.container.container) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /*
+    One source of truth for the actual content edge.
+    18px on each side = the same safe margin already used successfully in
+    the country/mobile layout.
+  */
+  body main section > .container.container.container.container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    box-sizing: border-box !important;
+  }
+
+  /*
+    Homepage Community historically has a very specific container selector,
+    so state the same gutter explicitly.
+  */
+  body main .fb-community.fb-community--visual > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /*
+    R49 made Why Choose Us especially narrow. R50 supersedes only its OUTER
+    mobile gutter while preserving the internal card refinements.
+  */
+  body main .why-choose-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body main .why-choose-section > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: var(--saa-mobile-gutter) !important;
+    padding-right: var(--saa-mobile-gutter) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --saa-mobile-gutter: 16px;
+  }
+}
+
+/* ===== R50 MOBILE GLOBAL GUTTER END ===== */
