@@ -1,0 +1,121 @@
+/* ===== R39 HOMEPAGE SECTION HEADER SYSTEM START ===== */
+
+/* Narrow homepage-only header normalization. Special component typography is untouched. */
+
+.saa-section-divider {
+  width: min(380px, 70vw);
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #2574b8;
+}
+.saa-section-divider-line {
+  position: relative;
+  flex: 1 1 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.94) 44%, #72b7e5 100%);
+}
+.saa-section-divider-line:last-child { transform: rotate(180deg); }
+.saa-section-divider-line::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: -1.5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #3f91c6;
+}
+.saa-section-divider svg {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 1px 0 rgba(255,255,255,.8));
+}
+
+.destinations-header .destinations-title,
+.core-services .services-header .services-title,
+.showcase-header .destinations-title,
+.steps-section .sec-title .thick {
+  font-family: var(--font) !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 800 !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.025em !important;
+  color: #0f1728 !important;
+}
+
+.destinations-header .accent,
+.core-services .services-header .accent,
+.showcase-header .accent,
+.steps-section .sec-title .accent {
+  color: #0295DA !important;
+}
+
+.destinations-header,
+.core-services .services-header,
+.showcase-header {
+  text-align: center;
+  margin-bottom: 44px !important;
+}
+
+.destinations-header > p,
+.core-services .services-header > p,
+.showcase-header > p {
+  max-width: 760px;
+  margin: 7px auto 0 !important;
+  color: #5f667c;
+  font-family: var(--font) !important;
+  font-size: clamp(15px, 1.08vw, 18px) !important;
+  font-weight: 450;
+  line-height: 1.55 !important;
+}
+
+.steps-section .sec-title {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.steps-section .sec-title .thick { display: block; }
+
+.destinations-label,
+.services-label {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .saa-section-divider {
+    width: min(290px, 76vw);
+    margin-bottom: 10px;
+    gap: 9px;
+  }
+  .saa-section-divider svg {
+    width: 24px;
+    height: 24px;
+  }
+  .destinations-header .destinations-title,
+  .core-services .services-header .services-title,
+  .showcase-header .destinations-title,
+  .steps-section .sec-title .thick {
+    font-size: clamp(28px, 8vw, 36px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.035em !important;
+  }
+  .destinations-header,
+  .core-services .services-header,
+  .showcase-header,
+  .steps-section .sec-title {
+    margin-bottom: 30px !important;
+  }
+  .destinations-header > p,
+  .core-services .services-header > p,
+  .showcase-header > p {
+    margin-top: 6px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    padding-inline: 10px;
+  }
+}
+
+/* ===== R39 HOMEPAGE SECTION HEADER SYSTEM END ===== */

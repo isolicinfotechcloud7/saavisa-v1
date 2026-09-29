@@ -1,0 +1,121 @@
+/* ===== R47 HERO TRUST STRIP EXACT TARGET START ===== */
+
+/*
+  Match the approved reference:
+  - no outer card/glass box
+  - no dots/markers
+  - four clean inline metrics
+  - subtle vertical separators
+  - 7,500+ is the only blue value
+  - labels stay understated
+  - desktop only
+*/
+@media (min-width: 981px) {
+  .hero .stats.glass,
+  .hero .glass.stats,
+  .hero [class~="stats"][class~="glass"] {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: min(100%, 620px) !important;
+    margin-top: 28px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    overflow: visible !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .hero .stats.glass::before,
+  .hero .stats.glass::after,
+  .hero .glass.stats::before,
+  .hero .glass.stats::after,
+  .hero [class~="stats"][class~="glass"]::before,
+  .hero [class~="stats"][class~="glass"]::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .hero .stats.glass .stat,
+  .hero .glass.stats .stat,
+  .hero [class~="stats"][class~="glass"] .stat {
+    position: relative !important;
+    min-width: 0 !important;
+    min-height: 52px !important;
+    padding: 0 24px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .hero .stats.glass .stat:first-child,
+  .hero .glass.stats .stat:first-child,
+  .hero [class~="stats"][class~="glass"] .stat:first-child {
+    padding-left: 2px !important;
+  }
+
+  .hero .stats.glass .stat::before,
+  .hero .stats.glass .stat::after,
+  .hero .glass.stats .stat::before,
+  .hero .glass.stats .stat::after,
+  .hero [class~="stats"][class~="glass"] .stat::before,
+  .hero [class~="stats"][class~="glass"] .stat::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .hero .stats.glass .stat + .stat,
+  .hero .glass.stats .stat + .stat,
+  .hero [class~="stats"][class~="glass"] .stat + .stat {
+    border-left: 1px solid rgba(49,105,145,.22) !important;
+  }
+
+  .hero .stats.glass .stat strong,
+  .hero .glass.stats .stat strong,
+  .hero [class~="stats"][class~="glass"] .stat strong {
+    display: block !important;
+    margin: 0 0 6px !important;
+
+    font-family: var(--font) !important;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: -.025em !important;
+    color: #0A2540 !important;
+    white-space: nowrap !important;
+  }
+
+  .hero .stats.glass .stat:nth-child(2) strong,
+  .hero .glass.stats .stat:nth-child(2) strong,
+  .hero [class~="stats"][class~="glass"] .stat:nth-child(2) strong {
+    color: #0786C1 !important;
+  }
+
+  .hero .stats.glass .stat span,
+  .hero .glass.stats .stat span,
+  .hero [class~="stats"][class~="glass"] .stat span {
+    display: block !important;
+    margin: 0 !important;
+
+    font-family: var(--font) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+    color: #728095 !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ===== R47 HERO TRUST STRIP EXACT TARGET END ===== */

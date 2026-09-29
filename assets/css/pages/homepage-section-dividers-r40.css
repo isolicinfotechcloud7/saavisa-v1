@@ -1,0 +1,106 @@
+/* ===== R40 SECTION-AWARE SVG DIVIDERS START ===== */
+
+/*
+  R40 refines the R39 divider system:
+  - every section gets a semantic SVG icon
+  - light sections use brand blue
+  - dark sections use a light/sky treatment
+  - Registration/Licenses follows the same order:
+      divider -> heading -> subtext
+*/
+
+.saa-section-divider {
+  --saa-divider-icon: #2b83bd;
+  --saa-divider-line: #78b7df;
+  --saa-divider-dot: #3f91c6;
+  color: var(--saa-divider-icon);
+}
+
+.saa-section-divider .saa-section-divider-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.92) 38%,
+    var(--saa-divider-line) 100%
+  ) !important;
+}
+
+.saa-section-divider .saa-section-divider-line::after {
+  background: var(--saa-divider-dot) !important;
+}
+
+.saa-section-divider svg {
+  color: var(--saa-divider-icon);
+}
+
+/* Light-section semantic tones. */
+.saa-section-divider--countries,
+.saa-section-divider--services,
+.saa-section-divider--trust,
+.saa-section-divider--journey,
+.saa-section-divider--faq,
+.saa-section-divider--registration {
+  --saa-divider-icon: #2378b9;
+  --saa-divider-line: #75b8e3;
+  --saa-divider-dot: #2f88c2;
+}
+
+/* Dark-section treatment: visible but not loud. */
+.google-reviews-section .saa-section-divider--reviews,
+.saa-section-divider--dark {
+  --saa-divider-icon: #9bdcff;
+  --saa-divider-line: rgba(160,220,255,.86);
+  --saa-divider-dot: #c4ecff;
+}
+
+.google-reviews-section .saa-section-divider--reviews .saa-section-divider-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(88,142,185,.16) 38%,
+    rgba(155,220,255,.92) 100%
+  ) !important;
+}
+
+/* Registration now uses the same correct hierarchy as the other sections. */
+.registration-showcase .section-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.registration-showcase .section-intro > .saa-section-divider--registration {
+  order: 1;
+  width: min(380px, 70vw);
+  margin: 0 auto 12px !important;
+}
+
+.registration-showcase .section-intro > h2 {
+  order: 2;
+  margin: 0 !important;
+}
+
+.registration-showcase .section-intro > p {
+  order: 3;
+  margin: 7px auto 0 !important;
+}
+
+/* Keep all header gaps aligned with the reference implementation. */
+.destinations-header > .saa-section-divider,
+.core-services .services-header > .saa-section-divider,
+.why-choose-section .showcase-header > .saa-section-divider,
+.steps-section .sec-title > .saa-section-divider,
+.google-reviews-section .reviews-header > .saa-section-divider,
+.sa-faq-header > .saa-section-divider {
+  margin-bottom: 12px !important;
+}
+
+@media (max-width: 768px) {
+  .registration-showcase .section-intro > .saa-section-divider--registration {
+    width: min(290px, 76vw);
+    margin-bottom: 10px !important;
+  }
+}
+
+/* ===== R40 SECTION-AWARE SVG DIVIDERS END ===== */

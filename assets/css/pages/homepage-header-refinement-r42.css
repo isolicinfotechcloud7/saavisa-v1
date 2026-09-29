@@ -1,0 +1,78 @@
+/* ===== R42 HOMEPAGE HEADER REFINEMENT START ===== */
+
+/*
+  Local-only refinement of the section-header system:
+  - add semantic SVG dividers to Latest News and Our Community
+  - replace the Steps icon with a clear 4-step progress icon
+  - keep light-section dividers in brand blue
+  - preserve all existing section/card/background spacing from R41
+*/
+
+.saa-section-divider--news,
+.saa-section-divider--community,
+.saa-section-divider--steps {
+  --saa-divider-icon: #2378b9;
+  --saa-divider-line: #75b8e3;
+  --saa-divider-dot: #2f88c2;
+}
+
+/* Keep the new sections aligned with the existing SVG header system. */
+.news-section .team-header,
+.fb-community .fbp-head {
+  text-align: center;
+  margin-bottom: 36px !important;
+}
+
+.news-section .team-header > .saa-section-divider,
+.fb-community .fbp-head > .saa-section-divider,
+.steps-section .sec-title > .saa-section-divider--steps {
+  margin-bottom: 12px !important;
+}
+
+/* Accent words requested by the user. */
+.registration-showcase #registration-title .accent,
+.destinations-header .destinations-title .accent,
+.core-services .services-header .services-title .accent,
+.steps-section .sec-title .accent,
+.fb-community .fbp-head .accent {
+  color: #0295DA !important;
+}
+
+/* Keep section-title type on the existing site variable. */
+.news-section .team-title,
+.fb-community .fbp-head h2 {
+  font-family: var(--font) !important;
+}
+
+/* Compact, reference-style subtitle spacing. */
+.core-services .services-header > p,
+.steps-section .sec-title > p {
+  max-width: 760px;
+  margin: 7px auto 0 !important;
+  font-family: var(--font) !important;
+  color: #5f667c;
+  line-height: 1.55 !important;
+}
+
+/* Remove the old label spacing if old CSS still targets these classes. */
+.news-section .team-subtitle,
+.fb-community .fbp-label {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .news-section .team-header,
+  .fb-community .fbp-head {
+    margin-bottom: 28px !important;
+  }
+
+  .core-services .services-header > p,
+  .steps-section .sec-title > p {
+    margin-top: 6px !important;
+    padding-inline: 10px;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* ===== R42 HOMEPAGE HEADER REFINEMENT END ===== */

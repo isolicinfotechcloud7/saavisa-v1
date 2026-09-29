@@ -1,0 +1,225 @@
+/* ===== R41 SITE-WIDE SPACING NORMALIZATION START ===== */
+
+/*
+  R41 is spacing-only.
+  It intentionally avoids hero sections, CTA bands, cards, stats, typography,
+  image sizing, carousels and component internals.
+
+  Desktop rhythm:
+  - ordinary content sections: ~64-72px vertical padding
+  - homepage Registration: slightly tighter because the cards are very tall
+  - section header -> content: ~34-38px
+  - divider -> title -> subtitle remains compact
+
+  Mobile rhythm:
+  - ordinary content sections: ~46-52px vertical padding
+*/
+
+/* ---------- HOMEPAGE: high-confidence section spacing ---------- */
+
+.registration-showcase {
+  min-height: 0 !important;
+  padding-top: 44px !important;
+  padding-bottom: 34px !important;
+}
+
+.registration-showcase .section-intro > .saa-section-divider--registration {
+  margin-bottom: 10px !important;
+}
+
+.registration-showcase .section-intro > h2 {
+  margin-bottom: 0 !important;
+}
+
+.registration-showcase .section-intro > p {
+  margin-top: 7px !important;
+}
+
+.registration-showcase .registration-grid {
+  margin-top: 30px !important;
+}
+
+.destinations-section {
+  padding-top: 48px !important;
+  padding-bottom: 68px !important;
+}
+
+.core-services,
+.why-choose-section,
+.ceo-welcome-section,
+.google-reviews-section,
+.success-story-section,
+.team-v2-section,
+.news-section,
+.fb-community,
+.sa-faq-section,
+.members-section {
+  padding-top: 68px !important;
+  padding-bottom: 68px !important;
+}
+
+.steps-section.comm-section {
+  padding-top: 68px !important;
+  padding-bottom: 68px !important;
+}
+
+/* Standard homepage header -> content distance. */
+.destinations-header,
+.core-services .services-header,
+.why-choose-section .showcase-header,
+.google-reviews-section .reviews-header,
+.sa-faq-header {
+  margin-bottom: 36px !important;
+}
+
+.steps-section .sec-title {
+  margin-bottom: 36px !important;
+}
+
+.steps-section .steps-main-wrapper {
+  margin-top: 0 !important;
+}
+
+/* ---------- INNER PAGES: ordinary content sections ---------- */
+
+/* Generic content sections used heavily on country/legal pages. */
+body:not(.home) .section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* About */
+.about-block,
+.about-why,
+.about-members,
+.about-timeline,
+.about-founder,
+.about-how {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* Experts */
+.ex-people,
+.ex-certs,
+.ex-campus,
+.ex-conf,
+.ex-visitors,
+.ex-success,
+.experts-team-story {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* Services */
+.visa-service,
+.addons-section,
+.process-section {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* Contact */
+.contact-offices,
+.contact-map-section,
+.before-reach-out {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* Success stories */
+.stories {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* Country pages: content only; hero/facts/final CTA intentionally excluded. */
+.intakes-premium-section,
+.visa-premium-section {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/*
+  Keep common heading stacks compact. These selectors are deliberately limited
+  to header wrappers, not arbitrary card headings.
+*/
+.section-head,
+.section-header,
+.page-section-header {
+  margin-bottom: 36px !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  .registration-showcase {
+    padding-top: 38px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .registration-showcase .registration-grid {
+    margin-top: 24px !important;
+  }
+
+  .destinations-section {
+    padding-top: 42px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .core-services,
+  .why-choose-section,
+  .ceo-welcome-section,
+  .google-reviews-section,
+  .success-story-section,
+  .team-v2-section,
+  .news-section,
+  .fb-community,
+  .sa-faq-section,
+  .members-section,
+  .steps-section.comm-section,
+  .about-block,
+  .about-why,
+  .about-members,
+  .about-timeline,
+  .about-founder,
+  .about-how,
+  .ex-people,
+  .ex-certs,
+  .ex-campus,
+  .ex-conf,
+  .ex-visitors,
+  .ex-success,
+  .experts-team-story,
+  .visa-service,
+  .addons-section,
+  .process-section,
+  .contact-offices,
+  .contact-map-section,
+  .before-reach-out,
+  .stories,
+  .intakes-premium-section,
+  .visa-premium-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  body:not(.home) .section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .destinations-header,
+  .core-services .services-header,
+  .why-choose-section .showcase-header,
+  .google-reviews-section .reviews-header,
+  .sa-faq-header,
+  .steps-section .sec-title,
+  .section-head,
+  .section-header,
+  .page-section-header {
+    margin-bottom: 28px !important;
+  }
+}
+
+/* ===== R41 SITE-WIDE SPACING NORMALIZATION END ===== */
