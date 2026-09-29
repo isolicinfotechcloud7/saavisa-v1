@@ -1,0 +1,87 @@
+/* ===== R33 SCOPED TYPOGRAPHY FIX START ===== */
+
+/*
+  Typography normalization is deliberately narrow.
+
+  Use var(--font) for:
+  - page/section headings
+  - section intro/subhead copy
+  - ordinary controls
+
+  Do NOT globally override:
+  - stats / counters
+  - badges
+  - card metadata
+  - timeline years
+  - decorative serif numbers/quotes
+  - signatures
+  - other component-specific typography
+*/
+
+:root{
+  --font-family:var(--font);
+}
+
+html,
+body,
+.saa-page{
+  font-family:var(--font);
+}
+
+/* Headings are the main site-wide consistency rule. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family:var(--font)!important;
+}
+
+/* Section intro / subheading copy only. */
+.section-head p,
+.section-intro p,
+.hero-content > p,
+.hero-copy > p,
+.contact-hero-copy > p,
+.fbp-head > p,
+.services-hero p.lead,
+.section-subtitle,
+.section-description,
+.section-desc,
+.section-lead,
+.subheading,
+.sub-head{
+  font-family:var(--font)!important;
+}
+
+/* Section-level labels/kickers — not generic badges/tags. */
+.section-kicker,
+.section-label,
+.section-eyebrow,
+.section-head .label,
+.section-intro .label,
+.hero-kicker,
+.contact-hero-label,
+.fbp-label{
+  font-family:var(--font)!important;
+}
+
+/*
+  Registration Showcase previously shadowed the global --font with Inter.
+  Inherit the site's existing --font instead, without touching its stats/cards.
+*/
+.registration-showcase{
+  --font:inherit!important;
+  font-family:var(--font)!important;
+}
+
+/* Browser controls should follow their surrounding component. */
+button,
+input,
+select,
+textarea{
+  font-family:inherit;
+}
+
+/* ===== R33 SCOPED TYPOGRAPHY FIX END ===== */
