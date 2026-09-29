@@ -6587,8 +6587,7 @@ hr{
 .contact-offices {
   padding: 80px 20px 60px;
   background: linear-gradient(180deg, #e8f4fc 0%, #f0f7fc 100%);
-  margin-top: -40px;
-  position: relative;
+position: relative;
   z-index: 3;
 }
 
@@ -10944,3 +10943,76 @@ select.saa-modal-input {
   }
 }
 /* ===== MOBILE HERO PERSON SCALE V9 END ===== */
+
+/* ===== HOME HERO CTA CONSISTENCY R69 START =====
+   Root cause fixed:
+   .btn.primary + .cta-btn-primary were colliding on :hover.
+   The generic CTA hover changed the background to near-white while
+   the more-specific .btn.primary kept the text white.
+
+   Scope is intentionally limited to the homepage hero carousel.
+*/
+.hero .hero-ctas .btn{
+  min-height: 50px !important;
+  padding: 14px 28px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  transition:
+    background-color .18s ease,
+    border-color .18s ease,
+    color .18s ease,
+    box-shadow .18s ease,
+    transform .12s ease !important;
+}
+
+/* Primary: always readable; never white-on-white on hover. */
+.hero .hero-ctas .btn.primary.cta-btn-primary{
+  background: #0195D8 !important;
+  border-color: #0195D8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(1,149,216,.24) !important;
+}
+
+.hero .hero-ctas .btn.primary.cta-btn-primary:hover{
+  background: #087fb8 !important;
+  border-color: #087fb8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 30px rgba(1,149,216,.30) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Explore button: same pill geometry as the primary button. */
+.hero .hero-ctas .btn:not(.primary){
+  background: rgba(255,255,255,.90) !important;
+  border-color: rgba(15,23,42,.14) !important;
+  color: #172033 !important;
+  box-shadow: 0 8px 20px rgba(15,23,42,.06) !important;
+}
+
+.hero .hero-ctas .btn:not(.primary):hover{
+  background: #0195D8 !important;
+  border-color: #0195D8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(1,149,216,.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+.hero .hero-ctas .btn:active{
+  transform: translateY(0) !important;
+}
+
+.hero .hero-ctas .btn:focus-visible{
+  outline: 3px solid rgba(1,149,216,.24) !important;
+  outline-offset: 3px !important;
+}
+
+@media (max-width:720px){
+  .hero .hero-ctas .btn{
+    border-radius: 999px !important;
+    min-height: 51px !important;
+    padding: 12px 18px !important;
+  }
+}
+/* ===== HOME HERO CTA CONSISTENCY R69 END ===== */

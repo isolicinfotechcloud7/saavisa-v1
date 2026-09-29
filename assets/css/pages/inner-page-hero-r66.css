@@ -1,0 +1,182 @@
+/* ===== R66 CANONICAL INNER HERO SYSTEM =====
+   One markup contract. One geometry source. One title/subline source.
+   Page-specific CSS continues to own only each page's artwork/background layers.
+*/
+
+:root{
+  --saa-inner-hero-height: 320px;
+  --saa-inner-hero-title-size: clamp(44px, 3.2vw, 58px);
+  --saa-inner-hero-sub-size: 17px;
+  --saa-inner-hero-accent: #0195D8;
+}
+
+/* Canonical canvas: this selector intentionally outranks legacy page hero rules. */
+html body #main section.saa-inner-hero{
+  box-sizing: border-box !important;
+  inline-size: 100% !important;
+  block-size: var(--saa-inner-hero-height) !important;
+  height: var(--saa-inner-hero-height) !important;
+  min-block-size: var(--saa-inner-hero-height) !important;
+  max-block-size: var(--saa-inner-hero-height) !important;
+  min-height: var(--saa-inner-hero-height) !important;
+  max-height: var(--saa-inner-hero-height) !important;
+  padding-block: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-block: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* Exact same inner height on every page. */
+html body #main section.saa-inner-hero > .saa-inner-hero__inner{
+  box-sizing: border-box !important;
+  inline-size: 100% !important;
+  width: 100% !important;
+  block-size: 100% !important;
+  height: 100% !important;
+  min-block-size: 100% !important;
+  max-block-size: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  padding-block: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-block: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* One copy box on all ten pages. */
+html body #main section.saa-inner-hero .saa-inner-hero__copy{
+  box-sizing: border-box !important;
+  width: min(920px, calc(100% - 48px)) !important;
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  position: relative;
+  z-index: 3;
+}
+
+/* One H1 system. */
+html body #main section.saa-inner-hero .saa-inner-hero__title{
+  font-family: var(--font) !important;
+  font-size: var(--saa-inner-hero-title-size) !important;
+  font-weight: 800 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.04em !important;
+  color: #0f172a !important;
+  text-align: center !important;
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  display: block !important;
+  max-width: none !important;
+  white-space: normal !important;
+  text-shadow: none !important;
+}
+
+/* One subline system. */
+html body #main section.saa-inner-hero .saa-inner-hero__sub{
+  width: min(760px, 100%) !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  font-family: var(--font) !important;
+  font-size: var(--saa-inner-hero-sub-size) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #475569 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  text-shadow: none !important;
+}
+
+/* Approved blue focus + brush stroke, copied from the approved Services treatment. */
+html body #main section.saa-inner-hero .saa-inner-hero__accent{
+  position: relative !important;
+  display: inline-block !important;
+  color: var(--saa-inner-hero-accent) !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  white-space: nowrap !important;
+}
+
+html body #main section.saa-inner-hero .saa-inner-hero__accent::after{
+  content: "" !important;
+  position: absolute !important;
+  left: 8px !important;
+  right: 10px !important;
+  bottom: -1px !important;
+  height: 6px !important;
+  border-radius: 70% 35% 65% 40% / 55% 70% 35% 60% !important;
+  background:
+    radial-gradient(70% 120% at 18% 55%, rgba(1,149,216,.95) 0%, rgba(1,149,216,.82) 46%, transparent 76%),
+    linear-gradient(90deg,rgba(1,149,216,.92),rgba(1,149,216,.36) 72%,rgba(1,149,216,0)) !important;
+  transform: rotate(-1.2deg) skewX(-7deg) !important;
+  opacity: .92 !important;
+  filter: drop-shadow(0 2px 1px rgba(1,149,216,.08)) !important;
+  pointer-events: none !important;
+}
+
+/* Old kicker/eyebrow markup is removed by the patch. Defensive guard only. */
+html body #main section.saa-inner-hero [class*="hero-kicker"],
+html body #main section.saa-inner-hero .contact-hero-label{
+  display: none !important;
+}
+
+/* Preserve the approved mobile country readability treatment. */
+@media (max-width: 768px){
+  html body #main section.saa-inner-hero.country-hero .saa-inner-hero__title,
+  html body #main section.saa-inner-hero.country-hero .saa-inner-hero__sub{
+    text-shadow:
+      0 1px 1px rgba(255,255,255,.95),
+      0 2px 5px rgba(255,255,255,.70) !important;
+  }
+}
+
+@media (max-width: 900px){
+  :root{
+    --saa-inner-hero-height: 260px;
+    --saa-inner-hero-title-size: 42px;
+    --saa-inner-hero-sub-size: 15.5px;
+  }
+
+  html body #main section.saa-inner-hero .saa-inner-hero__copy{
+    width: min(820px, calc(100% - 36px)) !important;
+  }
+}
+
+@media (max-width: 560px){
+  :root{
+    --saa-inner-hero-height: 230px;
+    --saa-inner-hero-title-size: 36px;
+    --saa-inner-hero-sub-size: 14.5px;
+  }
+
+  html body #main section.saa-inner-hero .saa-inner-hero__copy{
+    width: calc(100% - 28px) !important;
+  }
+
+  html body #main section.saa-inner-hero .saa-inner-hero__title{
+    line-height: 1.08 !important;
+    margin-bottom: 13px !important;
+  }
+
+  html body #main section.saa-inner-hero .saa-inner-hero__sub{
+    line-height: 1.45 !important;
+  }
+
+  html body #main section.saa-inner-hero .saa-inner-hero__accent::after{
+    left: 5px !important;
+    right: 7px !important;
+    height: 5px !important;
+  }
+}
