@@ -1,0 +1,97 @@
+/* ===== R29 GLOBAL TYPOGRAPHY NORMALIZATION START ===== */
+
+/*
+  var(--font) remains the single typography source of truth.
+  This stylesheet is intentionally loaded last on every HTML page so page-level
+  CSS cannot accidentally introduce Inter/Poppins/Georgia/etc. into normal UI text.
+*/
+
+/* Backward compatibility for older blocks that still reference --font-family. */
+:root{
+  --font-family:var(--font);
+}
+
+html,
+body,
+.saa-page{
+  font-family:var(--font)!important;
+}
+
+/* All semantic headings use exactly the same family. */
+h1,h2,h3,h4,h5,h6,
+h1 *,h2 *,h3 *,h4 *,h5 *,h6 *{
+  font-family:var(--font)!important;
+}
+
+/* Standard reading/UI text. */
+p,
+a,
+li,
+dt,
+dd,
+label,
+legend,
+summary,
+figcaption,
+blockquote,
+th,
+td,
+caption{
+  font-family:var(--font)!important;
+}
+
+/* Native controls must inherit the site's typography instead of browser defaults. */
+button,
+input,
+select,
+textarea,
+option{
+  font-family:inherit!important;
+}
+
+/*
+  Common site text components that are frequently implemented as spans/divs rather
+  than semantic heading/paragraph elements.
+*/
+[class*="-title"],
+[class*="-heading"],
+[class*="-subtitle"],
+[class*="-kicker"],
+[class*="-eyebrow"],
+[class*="-label"],
+[class*="-badge"],
+[class*="-tag"],
+[class*="-name"],
+[class*="-handle"],
+[class*="-count"],
+[class*="-meta"],
+[class*="-copy"],
+[class*="-text"],
+[class*="-stat"],
+.button,
+.btn{
+  font-family:var(--font)!important;
+}
+
+/*
+  Preserve dedicated icon fonts. These must never inherit var(--font), otherwise
+  Font Awesome glyphs can render as squares/text.
+*/
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+[class^="fa-"],
+[class*=" fa-"]{
+  font-family:"Font Awesome 6 Free"!important;
+}
+
+.fa-brands,
+.fab{
+  font-family:"Font Awesome 6 Brands"!important;
+}
+
+/* ===== R29 GLOBAL TYPOGRAPHY NORMALIZATION END ===== */
