@@ -1,0 +1,46 @@
+/* ===== R36 UK HERO TONE MATCH START ===== */
+
+/*
+  UK background is naturally very pale/pink. Its previous treatment made the
+  slide feel washed out beside the other destination heroes.
+
+  Desktop only:
+  - keep the same UK image and crop
+  - keep the left text readability wash
+  - reduce the white wash through the middle/right
+  - add a small contrast/brightness correction
+  - do not touch person size/position or mobile hero behavior
+*/
+@media (min-width: 981px) {
+  .hero-slide[data-slide="uk"]::before {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,.90) 0%,
+        rgba(255,255,255,.72) 30%,
+        rgba(255,255,255,.14) 63%,
+        rgba(255,255,255,0) 88%
+      ),
+      url("../hero/uk-bg.jpg") !important;
+
+    background-position: center, center 34% !important;
+    background-size: cover, cover !important;
+    background-repeat: no-repeat, no-repeat !important;
+
+    filter:
+      brightness(.93)
+      contrast(1.055)
+      saturate(1.08) !important;
+  }
+
+  .hero-slide[data-slide="uk"]::after {
+    background:
+      radial-gradient(
+        660px 420px at 10% 20%,
+        rgba(1,149,216,.045),
+        transparent 68%
+      ) !important;
+  }
+}
+
+/* ===== R36 UK HERO TONE MATCH END ===== */
