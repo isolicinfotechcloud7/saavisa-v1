@@ -1,0 +1,80 @@
+/* ===== R57 UNIFY CANADA MOBILE VISA STATS START ===== */
+
+@media (max-width: 720px) {
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    gap: 10px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 15px 0 0 !important;
+    padding: 14px 0 0 !important;
+    justify-items: stretch !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats > div {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    grid-area: auto !important;
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 66px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 10px 9px !important;
+    column-gap: 8px !important;
+    row-gap: 2px !important;
+    align-items: center !important;
+    justify-self: stretch !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats > div::before {
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats small {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    align-self: end !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats strong {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    align-self: start !important;
+    font-size: 13.5px !important;
+    line-height: 1.18 !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+@media (max-width: 360px) {
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats {
+    gap: 8px !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats > div {
+    grid-template-columns: 25px minmax(0, 1fr) !important;
+    padding: 9px 7px !important;
+    column-gap: 6px !important;
+  }
+
+  html body main .visa-premium-section .visa-premium-panel .visa-detail-grid.saa-visa-stats strong {
+    font-size: 12.5px !important;
+  }
+}
+
+/* ===== R57 UNIFY CANADA MOBILE VISA STATS END ===== */
