@@ -1,0 +1,253 @@
+/* ===== R53 CANADA VISA CARDS MOBILE REFINEMENT START ===== */
+
+/*
+  Canada Visa Types — mobile only.
+  Goals:
+  - restore the missing detail icons
+  - remove the tall/list-like footer
+  - make each card compact and premium
+  - arrange footer details in a 2x2 grid
+  - keep desktop untouched
+*/
+
+@media (max-width: 720px) {
+  /* Strip the desktop panel shell so cards breathe naturally on mobile. */
+  .visa-premium-section .visa-premium-panel {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .visa-premium-section .visa-premium-left,
+  .visa-premium-section .visa-premium-right {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  /* One consistent card language. */
+  .visa-premium-section .visa-feature-card,
+  .visa-premium-section .visa-small-card,
+  .visa-premium-section .visa-small-card.wide {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 22px 18px 18px !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .visa-premium-section .visa-feature-card:not(.featured),
+  .visa-premium-section .visa-small-card:not(.blue-card) {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,252,255,.98)) !important;
+    border: 1px solid rgba(10,101,154,.12) !important;
+    box-shadow: 0 14px 34px rgba(11,78,118,.10) !important;
+  }
+
+  /* Featured SDS card: still branded, but more controlled than the giant blue slab. */
+  .visa-premium-section .visa-feature-card.featured,
+  .visa-premium-section .visa-small-card.blue-card {
+    background:
+      radial-gradient(120% 90% at 18% 0%, rgba(255,255,255,.12), transparent 55%),
+      linear-gradient(145deg, #079bd8 0%, #087fb5 56%, #0b5f88 100%) !important;
+    border: 1px solid rgba(255,255,255,.26) !important;
+    box-shadow: 0 16px 38px rgba(5,96,142,.20) !important;
+  }
+
+  /* Top icon — reliable, compact and centered. */
+  .visa-premium-section .visa-line-icon,
+  .visa-premium-section .visa-line-icon.small {
+    width: 52px !important;
+    height: 52px !important;
+    margin: 0 auto 16px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .visa-premium-section .visa-line-icon svg {
+    display: block !important;
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  .visa-premium-section .visa-feature-card > div:not(.visa-line-icon),
+  .visa-premium-section .visa-small-card > div:not(.visa-line-icon) {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .visa-premium-section .visa-feature-card h3,
+  .visa-premium-section .visa-small-card h3 {
+    margin: 0 0 10px !important;
+    font-size: 22px !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -.025em !important;
+  }
+
+  .visa-premium-section .visa-feature-card p,
+  .visa-premium-section .visa-small-card p {
+    max-width: 34ch !important;
+    margin: 0 auto !important;
+    font-size: 14.5px !important;
+    line-height: 1.52 !important;
+    text-align: center !important;
+  }
+
+  /*
+    Footer details: compact 2x2 information grid.
+    This replaces the long one-item-per-line stack that made the card huge.
+  */
+  .visa-premium-section .visa-detail-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(11,99,148,.12) !important;
+  }
+
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid {
+    border-top-color: rgba(255,255,255,.24) !important;
+  }
+
+  .visa-premium-section .visa-detail-grid > div {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 28px minmax(0,1fr) !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 9px !important;
+    row-gap: 2px !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    min-height: 66px !important;
+    padding: 11px 10px !important;
+    border-radius: 14px !important;
+    background: rgba(231,247,255,.68) !important;
+    border: 1px solid rgba(2,149,218,.10) !important;
+    box-sizing: border-box !important;
+  }
+
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid > div,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid > div {
+    background: rgba(255,255,255,.10) !important;
+    border-color: rgba(255,255,255,.16) !important;
+  }
+
+  /* Reliable detail icons. */
+  .visa-premium-section .visa-detail-grid > div::before {
+    content: "" !important;
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    width: 23px !important;
+    height: 23px !important;
+    align-self: center !important;
+    justify-self: center !important;
+    background-color: #0195D8 !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+    -webkit-mask-size: contain !important;
+    mask-size: contain !important;
+    opacity: 1 !important;
+  }
+
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid > div::before,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid > div::before {
+    background-color: #fff !important;
+  }
+
+  /* Processing / clock */
+  .visa-premium-section .visa-detail-grid > div:nth-child(1)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M12 7v5l3 2' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* Validity / calendar */
+  .visa-premium-section .visa-detail-grid > div:nth-child(2)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='5' width='16' height='15' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M8 3v4M16 3v4M4 9h16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='4' y='5' width='16' height='15' rx='2' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M8 3v4M16 3v4M4 9h16' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* IELTS / score bars */
+  .visa-premium-section .visa-detail-grid > div:nth-child(3)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 18v-5M10 18V8M15 18v-8M20 18V5' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M3 20h19' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 18v-5M10 18V8M15 18v-8M20 18V5' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M3 20h19' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  }
+
+  /* GIC / shield */
+  .visa-premium-section .visa-detail-grid > div:nth-child(4)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m9 12 2 2 4-4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='m9 12 2 2 4-4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  }
+
+  .visa-premium-section .visa-detail-grid small {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: block !important;
+    margin: 0 !important;
+    font-size: 9.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: .055em !important;
+    text-transform: uppercase !important;
+    color: #2D7FAE !important;
+  }
+
+  .visa-premium-section .visa-detail-grid strong {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    display: block !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    font-size: 13.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    color: #0A2540 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid small,
+  .visa-premium-section .visa-feature-card.featured .visa-detail-grid strong,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid small,
+  .visa-premium-section .visa-small-card.blue-card .visa-detail-grid strong {
+    color: #fff !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .visa-premium-section .visa-detail-grid {
+    gap: 8px !important;
+  }
+
+  .visa-premium-section .visa-detail-grid > div {
+    padding: 10px 8px !important;
+    grid-template-columns: 25px minmax(0,1fr) !important;
+    column-gap: 7px !important;
+  }
+
+  .visa-premium-section .visa-detail-grid > div::before {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .visa-premium-section .visa-detail-grid strong {
+    font-size: 12.5px !important;
+  }
+}
+
+/* ===== R53 CANADA VISA CARDS MOBILE REFINEMENT END ===== */
