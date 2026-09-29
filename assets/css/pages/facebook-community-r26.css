@@ -1,0 +1,39 @@
+/* R26 FACEBOOK TAG ABOVE BUTTON START */
+.fb-community .fbp-card .fbp-body{
+  display:flex!important;
+  flex-direction:column!important;
+}
+.fb-community .fbp-card .fbp-count{
+  margin-bottom:12px!important;
+}
+.fb-community .fbp-card .fbp-foot{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:12px!important;
+  margin-top:0!important;
+  width:100%!important;
+}
+.fb-community .fbp-card .fbp-tag{
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  left:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  order:1!important;
+  display:inline-flex!important;
+  align-self:flex-start!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  max-width:100%!important;
+  z-index:auto!important;
+}
+.fb-community .fbp-card .fbp-go{
+  order:2!important;
+  width:100%!important;
+  justify-content:center!important;
+  display:inline-flex!important;
+  margin:0!important;
+}
+/* R26 FACEBOOK TAG ABOVE BUTTON END */
