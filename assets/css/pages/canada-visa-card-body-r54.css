@@ -1,0 +1,99 @@
+/* ===== R54 CANADA VISA CARD BODY FIX START ===== */
+
+/*
+  R54 corrects the visual regression introduced by R53.
+  Keep R53's useful 2x2 footer stats + icons.
+  Fix only the upper/body area of each Canada visa card on mobile:
+  - consistent centered hierarchy
+  - smaller dead space
+  - tighter card padding
+  - centered heading/tag/description
+  - no giant floating icon block
+*/
+
+@media (max-width: 720px) {
+  .visa-premium-section .visa-feature-card,
+  .visa-premium-section .visa-small-card,
+  .visa-premium-section .visa-small-card.wide {
+    padding: 18px 16px 16px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Compact icon placement. */
+  .visa-premium-section .visa-line-icon,
+  .visa-premium-section .visa-line-icon.small {
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 auto 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .visa-premium-section .visa-line-icon svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* Make the card content area itself full width and centered. */
+  .visa-premium-section .visa-feature-card > div:not(.visa-line-icon),
+  .visa-premium-section .visa-small-card > div:not(.visa-line-icon) {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .visa-premium-section .visa-feature-card h3,
+  .visa-premium-section .visa-small-card h3 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 8px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1.22 !important;
+    letter-spacing: -.025em !important;
+  }
+
+  .visa-premium-section .visa-small-card .visa-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto 10px !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    line-height: 1 !important;
+  }
+
+  .visa-premium-section .visa-feature-card p,
+  .visa-premium-section .visa-small-card p {
+    width: 100% !important;
+    max-width: 31ch !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /*
+    Preserve R53 footer architecture but tighten the transition into it.
+  */
+  .visa-premium-section .visa-detail-grid {
+    margin-top: 15px !important;
+    padding-top: 14px !important;
+  }
+
+  .visa-premium-section .visa-detail-grid > div {
+    min-height: 62px !important;
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+  }
+}
+
+/* ===== R54 CANADA VISA CARD BODY FIX END ===== */
