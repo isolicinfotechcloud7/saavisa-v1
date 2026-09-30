@@ -1,0 +1,156 @@
+/* ===== HOMEPAGE ACTIONS R87 FINAL ===== */
+#main .showcase-action-footer .showcase-consult-link,
+#main a.big-btn,
+#main .saa-home-action-btn {
+  position:relative !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  min-height:52px !important;
+  padding:0 27px !important;
+  border:1px solid rgba(255,255,255,.72) !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+  color:#fff !important;
+  background:
+    radial-gradient(120% 180% at 10% 0%,rgba(255,255,255,.22),transparent 42%),
+    linear-gradient(135deg,#12abe4 0%,#078fd0 48%,#066eaa 100%) !important;
+  box-shadow:
+    0 15px 32px rgba(0,133,197,.24),
+    0 4px 10px rgba(4,67,103,.12),
+    inset 0 1px 0 rgba(255,255,255,.46) !important;
+  text-decoration:none !important;
+  font-size:14.5px !important;
+  line-height:1 !important;
+  font-weight:800 !important;
+  letter-spacing:-.012em !important;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,filter .2s ease !important;
+}
+
+#main .showcase-action-footer .showcase-consult-link::before,
+#main a.big-btn::before,
+#main .saa-home-action-btn::before {
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  background:linear-gradient(110deg,rgba(255,255,255,.20),transparent 34%,transparent 68%,rgba(255,255,255,.08)) !important;
+  opacity:.88 !important;
+}
+
+#main .showcase-action-footer .showcase-consult-link:hover,
+#main a.big-btn:hover,
+#main .saa-home-action-btn:hover {
+  transform:translateY(-2px) !important;
+  border-color:rgba(255,255,255,.94) !important;
+  box-shadow:
+    0 19px 38px rgba(0,133,197,.30),
+    0 6px 13px rgba(4,67,103,.13),
+    inset 0 1px 0 rgba(255,255,255,.58) !important;
+  filter:saturate(1.06) brightness(1.02) !important;
+}
+
+#main .saa-home-action-wrap {
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+}
+
+#main .saa-home-action-btn--compact {
+  min-height:44px !important;
+  padding:0 19px !important;
+  border-radius:12px !important;
+  font-size:13px !important;
+}
+
+#main .saa-home-action-btn--light {
+  color:#057fb9 !important;
+  border-color:rgba(5,143,205,.24) !important;
+  background:linear-gradient(180deg,#fff,#eef9fe) !important;
+  box-shadow:0 12px 26px rgba(16,107,151,.13),inset 0 1px 0 #fff !important;
+}
+
+#main .saa-home-action-btn--light:hover {
+  color:#046fa3 !important;
+  border-color:rgba(5,143,205,.40) !important;
+  box-shadow:0 16px 30px rgba(16,107,151,.18),inset 0 1px 0 #fff !important;
+}
+
+#main .team-v2-nav-row {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+  margin-top:18px !important;
+}
+
+#main .team-v2-nav-row .team-v2-dots {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  margin:0 !important;
+  padding:0 !important;
+  min-height:40px !important;
+}
+
+#main .team-v2-nav-row .saa-home-experts-inline {
+  min-height:40px !important;
+  padding:0 15px !important;
+  border-radius:11px !important;
+  font-size:12.5px !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.28) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.07)) !important;
+  box-shadow:0 9px 20px rgba(0,28,52,.18),inset 0 1px 0 rgba(255,255,255,.16) !important;
+  backdrop-filter:blur(11px) !important;
+  -webkit-backdrop-filter:blur(11px) !important;
+}
+
+#main .team-v2-nav-row .saa-home-experts-inline:hover {
+  background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.10)) !important;
+  border-color:rgba(255,255,255,.44) !important;
+}
+
+#main .news-section .team-title .saa-news-title-accent {
+  color:#0499da !important;
+}
+
+#main .news-section .saa-home-news-action {
+  margin-top:24px !important;
+}
+
+#main .news-section .saa-home-news-action .saa-home-action-btn {
+  min-height:46px !important;
+  padding:0 21px !important;
+  font-size:13.25px !important;
+}
+
+#main .saa-home-license-action .saa-home-action-btn {
+  min-height:48px !important;
+  padding:0 23px !important;
+  font-size:13.5px !important;
+}
+
+@media (max-width:640px) {
+  #main .showcase-action-footer .showcase-consult-link,
+  #main a.big-btn,
+  #main .saa-home-action-btn {
+    min-height:48px !important;
+    padding:0 20px !important;
+    font-size:13.5px !important;
+  }
+
+  #main .team-v2-nav-row {
+    gap:10px !important;
+    margin-top:16px !important;
+  }
+
+  #main .team-v2-nav-row .saa-home-experts-inline {
+    min-height:38px !important;
+    padding:0 13px !important;
+    font-size:11.75px !important;
+  }
+}
+/* ===== HOMEPAGE ACTIONS R87 FINAL END ===== */

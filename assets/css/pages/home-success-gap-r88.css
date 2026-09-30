@@ -1,0 +1,22 @@
+/* ===== HOME SUCCESS VIEW MORE SPACING R88 ===== */
+#main .success-story-section .tabs-content {
+  padding-bottom:12px !important;
+}
+#main .success-story-section .showcase-action-footer {
+  margin-top:10px !important;
+  padding-top:0 !important;
+  padding-bottom:18px !important;
+}
+#main .success-story-section .showcase-consult-link {
+  margin-top:0 !important;
+}
+@media (max-width:700px) {
+  #main .success-story-section .tabs-content {
+    padding-bottom:9px !important;
+  }
+  #main .success-story-section .showcase-action-footer {
+    margin-top:7px !important;
+    padding-bottom:14px !important;
+  }
+}
+/* ===== HOME SUCCESS VIEW MORE SPACING R88 END ===== */

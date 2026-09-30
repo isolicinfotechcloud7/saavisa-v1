@@ -1,0 +1,116 @@
+/* ===== HOMEPAGE ACTIONS R85 ===== */
+#main .showcase-action-footer {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:28px;
+}
+
+#main .showcase-action-footer .showcase-consult-link,
+#main a.big-btn,
+#main .saa-home-action-btn {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:48px;
+  padding:0 22px;
+  border:1px solid rgba(255,255,255,.74);
+  border-radius:14px;
+  overflow:hidden;
+  color:#fff !important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 48%),
+    linear-gradient(135deg,#0ba1dc 0%,#0788c7 52%,#056fa9 100%);
+  box-shadow:
+    0 12px 28px rgba(4,126,185,.22),
+    0 3px 8px rgba(6,72,108,.10),
+    inset 0 1px 0 rgba(255,255,255,.45);
+  text-decoration:none !important;
+  font-size:14px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.01em;
+  transition:transform .20s ease,box-shadow .20s ease,border-color .20s ease,filter .20s ease;
+}
+
+#main .showcase-action-footer .showcase-consult-link::before,
+#main a.big-btn::before,
+#main .saa-home-action-btn::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(105deg,rgba(255,255,255,.18),transparent 38%,transparent 70%,rgba(255,255,255,.08));
+  opacity:.78;
+}
+
+#main .showcase-action-footer .showcase-consult-link > *,
+#main a.big-btn > *,
+#main .saa-home-action-btn > * { position:relative; z-index:1; }
+
+#main .showcase-action-footer .showcase-consult-link:hover,
+#main a.big-btn:hover,
+#main .saa-home-action-btn:hover {
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.92);
+  box-shadow:0 16px 34px rgba(4,126,185,.28),0 5px 12px rgba(6,72,108,.11),inset 0 1px 0 rgba(255,255,255,.55);
+  filter:saturate(1.04);
+}
+
+#main .showcase-action-footer .showcase-consult-link:active,
+#main a.big-btn:active,
+#main .saa-home-action-btn:active { transform:translateY(0); }
+
+#main .saa-home-action-wrap {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+}
+
+#main .saa-home-action-btn--compact {
+  min-height:38px;
+  padding:0 15px;
+  border-radius:11px;
+  font-size:12.5px;
+  gap:7px;
+}
+
+#main .saa-home-action-btn--light {
+  color:#087fba !important;
+  border-color:rgba(8,143,204,.22);
+  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,252,255,.86));
+  box-shadow:0 8px 20px rgba(18,86,121,.10),inset 0 1px 0 #fff;
+}
+
+#main .saa-home-action-btn--light:hover {
+  border-color:rgba(8,143,204,.40);
+  box-shadow:0 11px 24px rgba(18,86,121,.14),inset 0 1px 0 #fff;
+}
+
+#main .team-v2-section .saa-home-action-wrap { margin-top:14px; }
+#main .team-v2-section .saa-home-action-btn {
+  color:#fff !important;
+  border-color:rgba(255,255,255,.25);
+  background:rgba(255,255,255,.09);
+  box-shadow:0 8px 20px rgba(0,31,58,.18),inset 0 1px 0 rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+#main .team-v2-section .saa-home-action-btn:hover { background:rgba(255,255,255,.15); border-color:rgba(255,255,255,.38); }
+#main .news-section .saa-home-action-wrap { margin-top:22px; }
+
+@media (max-width:640px) {
+  #main .showcase-action-footer .showcase-consult-link,
+  #main a.big-btn,
+  #main .saa-home-action-btn {
+    min-height:44px;
+    padding:0 18px;
+    border-radius:13px;
+    font-size:13px;
+  }
+  #main .saa-home-action-btn--compact { min-height:36px; padding:0 14px; font-size:12px; }
+}
+/* ===== HOMEPAGE ACTIONS R85 END ===== */
