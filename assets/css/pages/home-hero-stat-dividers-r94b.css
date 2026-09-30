@@ -1,0 +1,32 @@
+/* ===== HOME HERO STAT DIVIDERS R94B =====
+   Hard fix: uses a real border on stats 2–4 instead of ::after.
+   This avoids pseudo-element collisions from older homepage CSS.
+*/
+
+@media (min-width:701px) {
+  #main .stats.glass > .stat + .stat,
+  .hero .stats.glass > .stat + .stat,
+  .hero-slide .stats.glass > .stat + .stat {
+    border-left:1px solid rgba(124,170,198,.34) !important;
+    box-shadow:
+      inset 1px 0 0 rgba(255,255,255,.72) !important;
+  }
+}
+
+/* Cancel any old pseudo-divider implementations so only one separator exists. */
+#main .stats.glass > .stat::after,
+.hero .stats.glass > .stat::after,
+.hero-slide .stats.glass > .stat::after {
+  content:none !important;
+  display:none !important;
+}
+
+@media (max-width:700px) {
+  #main .stats.glass > .stat,
+  .hero .stats.glass > .stat,
+  .hero-slide .stats.glass > .stat {
+    border-left:0 !important;
+    box-shadow:none !important;
+  }
+}
+/* ===== HOME HERO STAT DIVIDERS R94B END ===== */
