@@ -1,0 +1,25 @@
+/* ===== SUCCESS STORIES HERO IMAGE R77 =====
+   Uses the user-approved Success Stories artwork exactly as supplied.
+   This stylesheet is loaded last on success-stories/index.html so it owns
+   only the hero background artwork; canonical R66 geometry remains untouched.
+*/
+
+html body #main section.saa-inner-hero,
+html body #main section.success-hero,
+html body #main .success-hero.saa-inner-hero {
+  background-image: url("/assets/localized/embedded/success-stories-hero-r77.webp") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center 49% !important;
+  background-color: #f6f5fb !important;
+}
+
+/* Keep the supplied artwork crisp and centered on smaller screens. */
+@media (max-width: 900px) {
+  html body #main section.saa-inner-hero,
+  html body #main section.success-hero,
+  html body #main .success-hero.saa-inner-hero {
+    background-position: center center !important;
+  }
+}
+/* ===== SUCCESS STORIES HERO IMAGE R77 END ===== */

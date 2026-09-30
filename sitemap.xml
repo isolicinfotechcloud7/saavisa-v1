@@ -128,4 +128,10 @@
 
   <url><loc>https://saavisa.com/success-stories/</loc></url>
   <url><loc>https://saavisa.com/experts/</loc></url>
+  <url>
+    <loc>https://saavisa.com/legal/sitemap.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
