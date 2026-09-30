@@ -1,0 +1,85 @@
+/* ===== EXPERTS CERTIFICATIONS COLLAPSE R92 =====
+   Markup-first: cards 7+ are hidden by CSS immediately.
+   JS only toggles the expanded state.
+*/
+
+#ex-certs .cert-grid > .cert-card:nth-child(n+7),
+section.ex-certs .cert-grid > .cert-card:nth-child(n+7) {
+  display:none !important;
+}
+
+#ex-certs.saa-cert-expanded .cert-grid > .cert-card:nth-child(n+7),
+section.ex-certs.saa-cert-expanded .cert-grid > .cert-card:nth-child(n+7) {
+  display:block !important;
+}
+
+#ex-certs .saa-cert-actions,
+section.ex-certs .saa-cert-actions {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:24px;
+}
+
+#ex-certs .saa-cert-toggle,
+section.ex-certs .saa-cert-toggle {
+  appearance:none;
+  -webkit-appearance:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:0 18px;
+  border:1px solid rgba(1,149,216,.26);
+  border-radius:12px;
+  background:linear-gradient(180deg,#fff 0%,#eef9fe 100%);
+  color:#057fb9;
+  font:inherit;
+  font-size:13px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:
+    0 10px 24px rgba(16,107,151,.12),
+    inset 0 1px 0 #fff;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+#ex-certs .saa-cert-toggle:hover,
+section.ex-certs .saa-cert-toggle:hover {
+  transform:translateY(-2px);
+  border-color:rgba(1,149,216,.44);
+  box-shadow:
+    0 14px 28px rgba(16,107,151,.17),
+    inset 0 1px 0 #fff;
+}
+
+#ex-certs .saa-cert-toggle svg,
+section.ex-certs .saa-cert-toggle svg {
+  width:15px;
+  height:15px;
+  transition:transform .2s ease;
+}
+
+#ex-certs .saa-cert-toggle[aria-expanded="true"] svg,
+section.ex-certs .saa-cert-toggle[aria-expanded="true"] svg {
+  transform:rotate(180deg);
+}
+
+@media (max-width:640px) {
+  #ex-certs .saa-cert-actions,
+  section.ex-certs .saa-cert-actions {
+    margin-top:18px;
+  }
+
+  #ex-certs .saa-cert-toggle,
+  section.ex-certs .saa-cert-toggle {
+    min-height:42px;
+    padding:0 16px;
+    font-size:12.5px;
+  }
+}
+/* ===== EXPERTS CERTIFICATIONS COLLAPSE R92 END ===== */
