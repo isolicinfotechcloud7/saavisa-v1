@@ -1,0 +1,40 @@
+/* ===== COUNTRY SINGLE SCROLL CONTEXT R83 =====
+   Country pages should use the browser/document as the only vertical
+   scrolling context. This prevents a nested page scrollbar beside the
+   browser scrollbar.
+*/
+
+html {
+  overflow-y: auto !important;
+}
+
+body:has(#main.saa-page) {
+  height: auto !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+#main.saa-page {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+/* Defensive: these page wrappers are layout containers, never scroll panes. */
+main.saa-page,
+.saa-page.saa-page-canada,
+.saa-page.saa-page-usa,
+.saa-page.saa-page-uk,
+.saa-page.saa-page-europe,
+.saa-page.saa-page-australia {
+  overflow-y: visible !important;
+  max-height: none !important;
+}
+
+/* Keep horizontal containment without creating a second vertical scroller. */
+body:has(#main.saa-page),
+#main.saa-page {
+  overflow-x: clip !important;
+}

@@ -10852,7 +10852,7 @@ select.saa-modal-input {
 
   .hero-slide[data-slide="canada"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/canada-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/canada-student.webp");
+    --saa-mobile-person: url("/assets/hero/canada-student-r82-20260930.webp");
   }
 
   .hero-slide[data-slide="usa"] .mobile-hero-visual {
@@ -10862,12 +10862,12 @@ select.saa-modal-input {
 
   .hero-slide[data-slide="uk"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/uk-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/uk-student-r35-20260929.webp");
+    --saa-mobile-person: url("/assets/hero/uk-student-r82-20260930.webp");
   }
 
   .hero-slide[data-slide="europe"] .mobile-hero-visual {
     --saa-mobile-bg: url("../hero/europe-bg.jpg");
-    --saa-mobile-person: url("/assets/hero/europe-student.webp");
+    --saa-mobile-person: url("/assets/hero/europe-student-r82-20260930.webp");
   }
 
   .hero-slide[data-slide="australia"] .mobile-hero-visual {
