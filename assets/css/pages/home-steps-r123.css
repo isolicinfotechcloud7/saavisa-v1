@@ -1,0 +1,515 @@
+/* ============================================================
+   SA ASSOCIATES — STEPS R123
+   REVERSE-SAFE STICKY STACK + CLEAN COLLAPSED LABELS
+
+   Preserves:
+   - R103 approved default visual design
+   - R105 taller image rhythm
+   - 70px exposed stack geometry
+   - Step 4 full card + full image
+   - native sticky section behavior from R116
+
+   Fixes only:
+   1) collapsed 01 / 02 / 03 labels are rendered in one dedicated
+      overlay above the card stack, so numbers cannot disappear and
+      old card titles cannot bleed through underneath;
+   2) the outer scroll-scene height is fixed for the whole pass.
+      It no longer changes while scrolling, so returning upward from
+      Google Reviews does not reflow the page or produce the R116
+      reverse-scroll geometry glitch.
+   ============================================================ */
+
+@media (min-width:835px) {
+  .saa-steps-scroll-scene {
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+    overflow:visible !important;
+    contain:none !important;
+    isolation:isolate !important;
+  }
+
+  html.saa-r123-ready #main .saa-steps-scroll-scene > .steps-section {
+    position:sticky !important;
+    top:var(--saa-r123-pin-top,70px) !important;
+    z-index:5 !important;
+    margin:0 !important;
+    padding-bottom:var(--saa-r123-section-pad,82px) !important;
+    overflow:visible !important;
+  }
+
+  /* R123 owns row movement; disable the historical child stickies. */
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card,
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img {
+    position:relative !important;
+    top:auto !important;
+    translate:0 var(--saa-r123-shift,0px) !important;
+    will-change:translate !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap,
+  html.saa-r123-ready #main .steps-section .steps-img-wrap {
+    padding-bottom:0 !important;
+    overflow:visible !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap {
+    height:var(--saa-r123-card-wrap-height,auto) !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-img-wrap {
+    height:var(--saa-r123-image-wrap-height,auto) !important;
+  }
+
+  /* Later rows continue to cover earlier rows exactly as before. */
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(1),
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(1) {
+    z-index:1 !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(2),
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(2) {
+    z-index:2 !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(3),
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(3) {
+    z-index:3 !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(4),
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(4) {
+    z-index:4 !important;
+  }
+
+  /*
+    R105/R116 card-local captions are intentionally suppressed while
+    R123 is active. They sit inside lower card stacking contexts and
+    are the reason the old titles could show while the serials vanished.
+  */
+  html.saa-r123-ready #main .steps-section .saa-stack-caption {
+    display:none !important;
+  }
+
+  /* ==========================================================
+     R123 STACK LABEL OVERLAY
+     One layer above ALL four cards. It only paints the first
+     three 70px strips, leaving Step 4 completely untouched.
+     ========================================================== */
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap {
+    isolation:isolate !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-overlay {
+    position:absolute !important;
+    z-index:40 !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    height:210px !important;
+    pointer-events:none !important;
+    overflow:visible !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-label {
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+
+    display:grid !important;
+    grid-template-columns:52px minmax(0,1fr) !important;
+    align-items:center !important;
+    column-gap:12px !important;
+
+    height:70px !important;
+    min-height:70px !important;
+    padding:0 22px !important;
+
+    border:1px solid rgba(214,229,241,.92) !important;
+    border-radius:21px 21px 0 0 !important;
+
+    background:
+      radial-gradient(100% 145% at 0 0,rgba(255,255,255,.995),transparent 53%),
+      linear-gradient(110deg,rgba(255,255,255,.995),rgba(248,252,255,.988)) !important;
+
+    box-shadow:
+      0 8px 19px rgba(38,89,127,.055),
+      inset 0 1px 0 rgba(255,255,255,.99) !important;
+
+    opacity:var(--saa-r123-label-opacity,0) !important;
+    visibility:visible !important;
+    transform:translateY(var(--saa-r123-label-y,-4px)) !important;
+    will-change:opacity,transform !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-label[data-step="1"] {
+    top:0 !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-label[data-step="2"] {
+    top:70px !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-label[data-step="3"] {
+    top:140px !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-number {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    width:52px !important;
+    min-width:52px !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:0 !important;
+    line-height:1 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* CSS-generated serial is a hard fallback: 01/02/03 cannot disappear. */
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-number::before {
+    content:attr(data-number) !important;
+    display:block !important;
+    color:#078fe6 !important;
+    -webkit-text-fill-color:#078fe6 !important;
+    font-size:24px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    font-variant-numeric:tabular-nums !important;
+    letter-spacing:-.035em !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-title {
+    display:flex !important;
+    align-items:center !important;
+    min-width:0 !important;
+    height:70px !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:#0b1734 !important;
+    -webkit-text-fill-color:#0b1734 !important;
+
+    font-size:17px !important;
+    line-height:1.1 !important;
+    font-weight:800 !important;
+    letter-spacing:-.018em !important;
+
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* Step 4 is deliberately not represented in this overlay. */
+}
+
+@media (max-width:834px) {
+  .saa-steps-scroll-scene {
+    height:auto !important;
+  }
+
+  html.saa-r123-ready #main .saa-steps-scroll-scene > .steps-section {
+    position:relative !important;
+    top:auto !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .steps-card-wrap > .steps-card,
+  html.saa-r123-ready #main .steps-section .steps-img-wrap > .steps-img {
+    translate:none !important;
+  }
+
+  html.saa-r123-ready #main .steps-section .saa-r123-stack-overlay {
+    display:none !important;
+  }
+}
+/* ===== R123 END ===== */
+
+
+
+
+/* ============================================================
+   R123 STABLE SCENE BACKGROUND
+
+   The stack intentionally reduces the Steps section's layout height.
+   The background must NOT reduce with it: otherwise transformed rows
+   can appear over the page's white body and the background looks cut.
+
+   R123 therefore lets the OUTER scroll scene own the exact R103
+   background while the inner sticky Steps section stays transparent.
+   The scene ends exactly where Google Reviews begins, so the dark
+   Reviews background can follow the final Step 4 with no overlap.
+   ============================================================ */
+@media (min-width:835px) {
+  html.saa-r123-ready #main .saa-steps-scroll-scene {
+    background:
+      radial-gradient(circle at -2% 5%,rgba(55,151,239,.07) 0 108px,transparent 109px),
+      radial-gradient(circle at 103% 76%,rgba(55,151,239,.065) 0 120px,transparent 121px),
+      linear-gradient(180deg,#fbfdff 0%,#f5faff 48%,#fbfdff 100%) !important;
+    background-attachment:fixed,fixed,fixed !important;
+    background-repeat:no-repeat,no-repeat,no-repeat !important;
+  }
+
+  html.saa-r123-ready #main .saa-steps-scroll-scene > .steps-section {
+    background:none !important;
+    background-image:none !important;
+  }
+}
+/* ===== R123 STABLE SCENE BACKGROUND END ===== */
+
+
+
+/* ============================================================
+   R123 MOBILE SMART STEP CARDS
+
+   Mobile keeps the desktop/tablet layer untouched, but renders a
+   dedicated one-image + one-card stack using cloned content so:
+   - each image stays paired with the correct card
+   - Step 4 cannot inherit the wrong title/icon/number
+   - cards fit the viewport more intelligently on phones
+   ============================================================ */
+@media (max-width:834px) {
+  #main .steps-section .saa-mobile-steps-stack {
+    display:none !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .steps-main-wrapper {
+    display:none !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-steps-stack {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:16px !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:28px 0 0 !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:14px !important;
+    width:100% !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-image {
+    width:100% !important;
+    height:220px !important;
+    min-height:220px !important;
+    border-radius:20px !important;
+    overflow:hidden !important;
+    background:#edf5fb !important;
+    box-shadow:0 12px 30px rgba(35,78,113,.09) !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-image img {
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card {
+    display:grid !important;
+    grid-template-columns:64px 46px minmax(0,1fr) !important;
+    grid-template-areas:
+      'num icon title'
+      'num icon text'
+      '.   .    cta' !important;
+    column-gap:12px !important;
+    row-gap:10px !important;
+
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:16px 16px 14px !important;
+
+    border:1px solid rgba(214,229,241,.92) !important;
+    border-radius:20px !important;
+    background:
+      radial-gradient(100% 145% at 0 0,rgba(255,255,255,.98),transparent 53%),
+      linear-gradient(110deg,rgba(255,255,255,.96),rgba(248,252,255,.93)) !important;
+    box-shadow:
+      0 12px 30px rgba(35,78,113,.075),
+      inset 0 1px 0 rgba(255,255,255,.99) !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__number {
+    grid-area:num !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:64px !important;
+    height:64px !important;
+    border:1px solid rgba(255,255,255,.98) !important;
+    border-radius:18px !important;
+    background:linear-gradient(145deg,rgba(248,252,255,.99),rgba(234,246,255,.95)) !important;
+    box-shadow:
+      0 13px 28px rgba(53,122,176,.10),
+      inset 0 1px 0 #fff,
+      0 0 0 1px rgba(181,214,238,.22) !important;
+    color:#078fe6 !important;
+    font-size:20px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    letter-spacing:-.04em !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__icon {
+    grid-area:icon !important;
+    align-self:start !important;
+    display:block !important;
+    width:46px !important;
+    height:46px !important;
+    border:1px solid rgba(130,193,235,.20) !important;
+    border-radius:50% !important;
+    background-color:rgba(246,251,255,.98) !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:24px 24px !important;
+    box-shadow:
+      0 8px 22px rgba(0,126,211,.075),
+      inset 0 1px 0 rgba(255,255,255,.98) !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card[data-step='1'] .saa-mobile-step-card__icon {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card[data-step='2'] .saa-mobile-step-card__icon {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='8' y1='13' x2='16' y2='13'/%3E%3Cline x1='8' y1='17' x2='13' y2='17'/%3E%3C/svg%3E") !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card[data-step='3'] .saa-mobile-step-card__icon {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card[data-step='4'] .saa-mobile-step-card__icon {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 15 22l-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E") !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__title {
+    grid-area:title !important;
+    margin:0 !important;
+    color:#0b1734 !important;
+    font-size:17px !important;
+    line-height:1.2 !important;
+    font-weight:800 !important;
+    letter-spacing:-.02em !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__text {
+    grid-area:text !important;
+    margin:0 !important;
+    color:#63728b !important;
+    font-size:12.8px !important;
+    line-height:1.5 !important;
+    font-weight:400 !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__cta {
+    position:relative !important;
+    grid-area:cta !important;
+    justify-self:start !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+    min-height:42px !important;
+    margin:2px 0 0 !important;
+    padding:0 !important;
+
+    border:1px solid rgba(204,225,241,.9) !important;
+    border-radius:50% !important;
+    overflow:hidden !important;
+
+    color:transparent !important;
+    -webkit-text-fill-color:transparent !important;
+    font-size:0 !important;
+    line-height:0 !important;
+
+    background:linear-gradient(145deg,#fff,#f4faff) !important;
+    box-shadow:
+      0 9px 22px rgba(43,105,153,.09),
+      inset 0 1px 0 rgba(255,255,255,.98) !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__cta::before {
+    content:'→' !important;
+    position:absolute !important;
+    inset:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    color:#078fe6 !important;
+    -webkit-text-fill-color:#078fe6 !important;
+    font-family:Arial,sans-serif !important;
+    font-size:27px !important;
+    line-height:1 !important;
+    font-weight:400 !important;
+    transform:translateY(-1px) !important;
+  }
+}
+
+@media (max-width:480px) {
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-steps-stack {
+    gap:14px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-image {
+    height:185px !important;
+    min-height:185px !important;
+    border-radius:18px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card {
+    grid-template-columns:56px 40px minmax(0,1fr) !important;
+    column-gap:10px !important;
+    row-gap:8px !important;
+    padding:14px 12px 12px !important;
+    border-radius:18px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__number {
+    width:56px !important;
+    height:56px !important;
+    border-radius:15px !important;
+    font-size:18px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__icon {
+    width:40px !important;
+    height:40px !important;
+    background-size:20px 20px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__title {
+    font-size:16px !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__text {
+    font-size:12px !important;
+    line-height:1.48 !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-card__cta {
+    width:38px !important;
+    min-width:38px !important;
+    height:38px !important;
+    min-height:38px !important;
+  }
+}
+/* ===== R123 MOBILE SMART STEP CARDS END ===== */
