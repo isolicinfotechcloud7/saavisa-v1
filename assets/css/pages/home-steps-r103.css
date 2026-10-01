@@ -1,0 +1,696 @@
+/* ============================================================
+   SA ASSOCIATES — 4 SIMPLE STEPS — R103
+
+   IMPORTANT:
+   The original two-column DOM and original sticky stacking model are kept.
+   No display:contents.
+   No grid re-parenting.
+   No JS changes.
+   No data-aos changes.
+   No GSAP / ScrollTrigger changes.
+
+   Original stack geometry restored:
+   cards:  80 / 150 / 220 / 290px
+   images: 80 / 150 / 220 / 290px
+   ============================================================ */
+
+#main .steps-section {
+  position:relative !important;
+  isolation:isolate;
+  overflow:visible !important;
+  padding-top:72px !important;
+  padding-bottom:82px !important;
+  background:
+    radial-gradient(circle at -2% 5%,rgba(55,151,239,.07) 0 108px,transparent 109px),
+    radial-gradient(circle at 103% 76%,rgba(55,151,239,.065) 0 120px,transparent 121px),
+    linear-gradient(180deg,#fbfdff 0%,#f5faff 48%,#fbfdff 100%) !important;
+}
+
+#main .steps-section::before {
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  inset:80px 2.5% 50px !important;
+  pointer-events:none !important;
+  opacity:.16 !important;
+  background:
+    radial-gradient(circle,rgba(47,151,236,.5) 1.2px,transparent 1.4px) 0 0/10px 10px !important;
+  -webkit-mask-image:
+    radial-gradient(ellipse at 8% 38%,#000 0 13%,transparent 36%),
+    radial-gradient(ellipse at 93% 37%,#000 0 13%,transparent 36%) !important;
+  mask-image:
+    radial-gradient(ellipse at 8% 38%,#000 0 13%,transparent 36%),
+    radial-gradient(ellipse at 93% 37%,#000 0 13%,transparent 36%) !important;
+}
+
+#main .steps-section > .container {
+  position:relative !important;
+  z-index:1 !important;
+}
+
+/* Header stays exactly as current site markup/text. */
+#main .steps-section .sec-title {
+  margin-bottom:0 !important;
+}
+
+/* ------------------------------------------------------------
+   ORIGINAL TWO-COLUMN STRUCTURE — REQUIRED FOR STICKY STACKING
+   ------------------------------------------------------------ */
+#main .steps-section .steps-main-wrapper {
+  position:relative !important;
+  display:flex !important;
+  flex-direction:row !important;
+  justify-content:space-between !important;
+  align-items:flex-start !important;
+  gap:18px !important;
+  width:100% !important;
+  max-width:1260px !important;
+  margin:42px auto 0 !important;
+  padding:0 0 0 48px !important;
+}
+
+/* Left lane */
+#main .steps-section .steps-card-wrap {
+  position:relative !important;
+  display:flex !important;
+  flex:1 1 58% !important;
+  flex-direction:column !important;
+  gap:16px !important;
+  min-width:0 !important;
+}
+
+/* Reference-style timeline */
+#main .steps-section .steps-card-wrap::before {
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  left:-30px !important;
+  top:80px !important;
+  bottom:80px !important;
+  width:0 !important;
+  border-left:1.5px dashed rgba(22,142,235,.52) !important;
+  pointer-events:none !important;
+}
+
+/* Right lane */
+#main .steps-section .steps-img-wrap {
+  position:relative !important;
+  display:flex !important;
+  flex:0 1 42% !important;
+  flex-direction:column !important;
+  gap:16px !important;
+  width:100% !important;
+  max-width:500px !important;
+  min-width:340px !important;
+}
+
+/* ------------------------------------------------------------
+   STICKY STACK — THIS IS THE ORIGINAL SCROLL TRANSITION
+   ------------------------------------------------------------ */
+#main .steps-section .steps-card-wrap > .steps-card {
+  position:sticky !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(1) {
+  top:80px !important;
+  z-index:1 !important;
+}
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(2) {
+  top:150px !important;
+  z-index:2 !important;
+}
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(3) {
+  top:220px !important;
+  z-index:3 !important;
+}
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(4) {
+  top:290px !important;
+  z-index:4 !important;
+}
+
+#main .steps-section .steps-img-wrap > .steps-img {
+  position:sticky !important;
+}
+
+#main .steps-section .steps-img-wrap > .steps-img:nth-child(1),
+#main .steps-section .steps-img-wrap > .steps-img-1 {
+  top:80px !important;
+  z-index:1 !important;
+}
+#main .steps-section .steps-img-wrap > .steps-img:nth-child(2),
+#main .steps-section .steps-img-wrap > .steps-img-2 {
+  top:150px !important;
+  z-index:2 !important;
+}
+#main .steps-section .steps-img-wrap > .steps-img:nth-child(3),
+#main .steps-section .steps-img-wrap > .steps-img-3 {
+  top:220px !important;
+  z-index:3 !important;
+}
+#main .steps-section .steps-img-wrap > .steps-img:nth-child(4),
+#main .steps-section .steps-img-wrap > .steps-img-4 {
+  top:290px !important;
+  z-index:4 !important;
+}
+
+/* ------------------------------------------------------------
+   APPROVED REFERENCE VISUAL LANGUAGE
+   ------------------------------------------------------------ */
+#main .steps-section .steps-card-wrap > .steps-card {
+  --saa-step-icon:none;
+
+  display:grid !important;
+  grid-template-columns:82px 58px minmax(0,1fr) !important;
+  align-items:center !important;
+  gap:16px !important;
+
+  min-width:0 !important;
+  min-height:166px !important;
+  height:166px !important;
+
+  margin:0 !important;
+  padding:20px 20px 20px 16px !important;
+
+  border:1px solid rgba(214,229,241,.9) !important;
+  border-radius:22px !important;
+
+  background:
+    radial-gradient(100% 145% at 0 0,rgba(255,255,255,.98),transparent 53%),
+    linear-gradient(110deg,rgba(255,255,255,.96),rgba(248,252,255,.93)) !important;
+
+  box-shadow:
+    0 12px 30px rgba(35,78,113,.075),
+    inset 0 1px 0 rgba(255,255,255,.99) !important;
+
+  overflow:visible !important;
+
+  transition:
+    border-color .28s ease,
+    box-shadow .28s ease !important;
+}
+
+/* Timeline node travels with the sticky card — keeps the stack legible. */
+#main .steps-section .steps-card-wrap > .steps-card::after {
+  content:"" !important;
+  position:absolute !important;
+  z-index:5 !important;
+  left:-37px !important;
+  top:50% !important;
+
+  width:14px !important;
+  height:14px !important;
+
+  border:4px solid #168eeb !important;
+  border-radius:50% !important;
+  background:#f8fcff !important;
+
+  box-shadow:0 0 0 3px rgba(22,142,235,.07) !important;
+  transform:translateY(-50%) !important;
+  pointer-events:none !important;
+}
+
+/* Four line icons, generated in CSS so current HTML stays untouched. */
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(1) {
+  --saa-step-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E");
+}
+
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(2) {
+  --saa-step-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='8' y1='13' x2='16' y2='13'/%3E%3Cline x1='8' y1='17' x2='13' y2='17'/%3E%3C/svg%3E");
+}
+
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(3) {
+  --saa-step-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+}
+
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(4) {
+  --saa-step-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 24 24' fill='none' stroke='%23058fe5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 15 22l-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E");
+}
+
+/* Icon disc */
+#main .steps-section .steps-card-wrap > .steps-card::before {
+  content:"" !important;
+  position:static !important;
+
+  grid-column:2 !important;
+  grid-row:1 !important;
+
+  display:block !important;
+  width:56px !important;
+  height:56px !important;
+
+  border:1px solid rgba(130,193,235,.20) !important;
+  border-radius:50% !important;
+
+  background-color:rgba(246,251,255,.98) !important;
+  background-image:var(--saa-step-icon) !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+  background-size:29px 29px !important;
+
+  box-shadow:
+    0 8px 22px rgba(0,126,211,.075),
+    inset 0 1px 0 rgba(255,255,255,.98) !important;
+
+  opacity:1 !important;
+  transform:none !important;
+  pointer-events:none !important;
+}
+
+/* 01 / 02 / 03 / 04 tile */
+#main .steps-section .steps-card-wrap > .steps-card .numbers {
+  position:static !important;
+  inset:auto !important;
+
+  grid-column:1 !important;
+  grid-row:1 !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  width:80px !important;
+  height:80px !important;
+  min-width:80px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  border:1px solid rgba(255,255,255,.98) !important;
+  border-radius:20px !important;
+
+  color:transparent !important;
+  font-size:0 !important;
+
+  background:
+    linear-gradient(145deg,rgba(248,252,255,.99),rgba(234,246,255,.95)) !important;
+
+  box-shadow:
+    0 13px 28px rgba(53,122,176,.10),
+    inset 0 1px 0 #fff,
+    0 0 0 1px rgba(181,214,238,.22) !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .numbers::before {
+  display:block !important;
+  color:#078fe6 !important;
+  font-size:27px !important;
+  line-height:1 !important;
+  font-weight:800 !important;
+  letter-spacing:-.045em !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(1) .numbers::before { content:"01"; }
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(2) .numbers::before { content:"02"; }
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(3) .numbers::before { content:"03"; }
+#main .steps-section .steps-card-wrap > .steps-card:nth-child(4) .numbers::before { content:"04"; }
+
+/* Current text + current action remain inside the existing content wrapper. */
+#main .steps-section .steps-card-wrap > .steps-card .card-content-wrap {
+  grid-column:3 !important;
+  grid-row:1 !important;
+
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 50px !important;
+  grid-template-rows:auto auto !important;
+  column-gap:14px !important;
+  row-gap:7px !important;
+  align-items:center !important;
+
+  width:100% !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  padding:0 !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .comm-card-hdn {
+  grid-column:1 !important;
+  grid-row:1 !important;
+  align-self:end !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  color:#0b1734 !important;
+  font-size:19px !important;
+  line-height:1.18 !important;
+  font-weight:800 !important;
+  letter-spacing:-.02em !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .comm-para {
+  grid-column:1 !important;
+  grid-row:2 !important;
+
+  width:100% !important;
+  min-width:0 !important;
+
+  margin:0 !important;
+  padding:0 !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .comm-para p {
+  margin:0 !important;
+  padding:0 !important;
+
+  color:#63728b !important;
+  font-size:13px !important;
+  line-height:1.45 !important;
+  font-weight:400 !important;
+}
+
+/* Existing Book Free Consultation link becomes the approved circular arrow.
+   The original href, classes and modal/event behavior are NOT removed. */
+#main .steps-section .steps-card-wrap > .steps-card .card-btn,
+#main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn {
+  position:relative !important;
+
+  grid-column:2 !important;
+  grid-row:1 / span 2 !important;
+  align-self:center !important;
+  justify-self:end !important;
+
+  width:48px !important;
+  min-width:48px !important;
+  height:48px !important;
+  min-height:48px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  border:1px solid rgba(204,225,241,.9) !important;
+  border-radius:50% !important;
+
+  overflow:hidden !important;
+
+  color:transparent !important;
+  -webkit-text-fill-color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+
+  background:linear-gradient(145deg,#fff,#f4faff) !important;
+
+  box-shadow:
+    0 9px 22px rgba(43,105,153,.09),
+    inset 0 1px 0 rgba(255,255,255,.98) !important;
+
+  transform:none !important;
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .card-btn i,
+#main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn i {
+  display:none !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .card-btn::before,
+#main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn::before {
+  content:"→" !important;
+  position:absolute !important;
+  inset:0 !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  color:#078fe6 !important;
+  -webkit-text-fill-color:#078fe6 !important;
+
+  font-family:Arial,sans-serif !important;
+  font-size:29px !important;
+  line-height:1 !important;
+  font-weight:400 !important;
+
+  background:none !important;
+  opacity:1 !important;
+  z-index:2 !important;
+
+  transform:translateY(-1px) !important;
+}
+
+#main .steps-section .steps-card-wrap > .steps-card .card-btn:hover,
+#main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn:hover {
+  border-color:rgba(7,143,230,.36) !important;
+
+  box-shadow:
+    0 13px 28px rgba(25,125,194,.15),
+    0 0 0 5px rgba(7,143,230,.04) !important;
+
+  transform:translateX(3px) !important;
+}
+
+/* Right images: same compact row rhythm as the approved reference,
+   but remain sticky so they stack with the cards during scrolling. */
+#main .steps-section .steps-img-wrap > .steps-img {
+  width:100% !important;
+  height:166px !important;
+  min-height:166px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  border:0 !important;
+  border-radius:22px !important;
+
+  overflow:hidden !important;
+  background:#edf5fb !important;
+
+  box-shadow:0 12px 30px rgba(35,78,113,.09) !important;
+  transform-origin:center center !important;
+}
+
+#main .steps-section .steps-img-wrap > .steps-img img {
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:166px !important;
+
+  object-fit:cover !important;
+  object-position:center !important;
+
+  border-radius:inherit !important;
+}
+
+/* The existing ScrollTrigger writes inline borderColor/boxShadow.
+   Do not use !important on those active properties beyond base design. */
+#main .steps-section .steps-card-wrap > .steps-card:hover {
+  box-shadow:
+    0 15px 36px rgba(35,78,113,.10),
+    inset 0 1px 0 rgba(255,255,255,.99) !important;
+}
+
+/* Tablet — sticky stack still ON. */
+@media (max-width:1024px) and (min-width:835px) {
+  #main .steps-section .steps-main-wrapper {
+    gap:14px !important;
+    padding-left:42px !important;
+  }
+
+  #main .steps-section .steps-card-wrap {
+    flex-basis:60% !important;
+  }
+
+  #main .steps-section .steps-img-wrap {
+    flex-basis:40% !important;
+    min-width:290px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card {
+    grid-template-columns:68px 50px minmax(0,1fr) !important;
+    gap:12px !important;
+    height:154px !important;
+    min-height:154px !important;
+    padding:17px 15px !important;
+    border-radius:19px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card::before {
+    width:48px !important;
+    height:48px !important;
+    background-size:25px 25px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers {
+    width:66px !important;
+    height:66px !important;
+    min-width:66px !important;
+    border-radius:17px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers::before {
+    font-size:23px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .comm-card-hdn {
+    font-size:17px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .comm-para p {
+    font-size:12px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .card-content-wrap {
+    grid-template-columns:minmax(0,1fr) 44px !important;
+    column-gap:10px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .card-btn,
+  #main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn {
+    width:43px !important;
+    min-width:43px !important;
+    height:43px !important;
+    min-height:43px !important;
+  }
+
+  #main .steps-section .steps-img-wrap > .steps-img,
+  #main .steps-section .steps-img-wrap > .steps-img img {
+    height:154px !important;
+    min-height:154px !important;
+    border-radius:19px !important;
+  }
+}
+
+/* Original site disables sticky below ~834px. Preserve that mobile behavior. */
+@media (max-width:834px) {
+  #main .steps-section {
+    overflow:hidden !important;
+    padding-top:52px !important;
+    padding-bottom:54px !important;
+  }
+
+  #main .steps-section .steps-main-wrapper {
+    flex-direction:column-reverse !important;
+    gap:18px !important;
+    margin-top:28px !important;
+    padding-left:0 !important;
+  }
+
+  #main .steps-section .steps-card-wrap,
+  #main .steps-section .steps-img-wrap {
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    flex-basis:auto !important;
+  }
+
+  #main .steps-section .steps-card-wrap::before {
+    display:none !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card,
+  #main .steps-section .steps-img-wrap > .steps-img {
+    position:relative !important;
+    top:0 !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card {
+    grid-template-columns:64px 48px minmax(0,1fr) !important;
+    gap:11px !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:150px !important;
+    padding:16px 14px !important;
+    border-radius:18px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card::after {
+    display:none !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card::before {
+    width:46px !important;
+    height:46px !important;
+    background-size:24px 24px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers {
+    width:62px !important;
+    height:62px !important;
+    min-width:62px !important;
+    border-radius:16px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers::before {
+    font-size:21px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .comm-card-hdn {
+    font-size:17px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .comm-para p {
+    font-size:12.5px !important;
+    line-height:1.45 !important;
+  }
+
+  #main .steps-section .steps-img-wrap > .steps-img,
+  #main .steps-section .steps-img-wrap > .steps-img img {
+    width:100% !important;
+    height:220px !important;
+    min-height:220px !important;
+    border-radius:18px !important;
+  }
+}
+
+@media (max-width:480px) {
+  #main .steps-section .steps-card-wrap > .steps-card {
+    grid-template-columns:52px 40px minmax(0,1fr) !important;
+    gap:8px !important;
+    min-height:0 !important;
+    padding:13px 11px !important;
+    border-radius:16px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card::before {
+    width:38px !important;
+    height:38px !important;
+    background-size:20px 20px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers {
+    width:50px !important;
+    height:50px !important;
+    min-width:50px !important;
+    border-radius:13px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .numbers::before {
+    font-size:18px !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .card-content-wrap {
+    grid-template-columns:1fr !important;
+  }
+
+  #main .steps-section .steps-card-wrap > .steps-card .card-btn,
+  #main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn {
+    grid-column:1 !important;
+    grid-row:3 !important;
+    justify-self:start !important;
+
+    width:38px !important;
+    min-width:38px !important;
+    height:38px !important;
+    min-height:38px !important;
+
+    margin-top:3px !important;
+  }
+
+  #main .steps-section .steps-img-wrap > .steps-img,
+  #main .steps-section .steps-img-wrap > .steps-img img {
+    height:185px !important;
+    min-height:185px !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  #main .steps-section .steps-card-wrap > .steps-card,
+  #main .steps-section .steps-card-wrap > .steps-card .card-btn,
+  #main .steps-section .steps-card-wrap > .steps-card .saa-canonical-section-btn {
+    transition:none !important;
+  }
+}
+/* ===== R103 END ===== */
