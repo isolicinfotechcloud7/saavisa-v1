@@ -1,0 +1,324 @@
+/* ============================================================
+   SA ASSOCIATES — STEPS R122
+   REVERSE-SAFE STICKY STACK + CLEAN COLLAPSED LABELS
+
+   Preserves:
+   - R103 approved default visual design
+   - R105 taller image rhythm
+   - 70px exposed stack geometry
+   - Step 4 full card + full image
+   - native sticky section behavior from R116
+
+   Fixes only:
+   1) collapsed 01 / 02 / 03 labels are rendered in one dedicated
+      overlay above the card stack, so numbers cannot disappear and
+      old card titles cannot bleed through underneath;
+   2) the outer scroll-scene height is fixed for the whole pass.
+      It no longer changes while scrolling, so returning upward from
+      Google Reviews does not reflow the page or produce the R116
+      reverse-scroll geometry glitch.
+   ============================================================ */
+
+@media (min-width:835px) {
+  .saa-steps-scroll-scene {
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+    overflow:visible !important;
+    contain:none !important;
+    isolation:isolate !important;
+  }
+
+  html.saa-r122-ready #main .saa-steps-scroll-scene > .steps-section {
+    position:sticky !important;
+    top:var(--saa-r122-pin-top,70px) !important;
+    z-index:5 !important;
+    margin:0 !important;
+    padding-bottom:var(--saa-r122-section-pad,82px) !important;
+    overflow:visible !important;
+  }
+
+  /* R122 owns row movement; disable the historical child stickies. */
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card,
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img {
+    position:relative !important;
+    top:auto !important;
+    translate:0 var(--saa-r122-shift,0px) !important;
+    will-change:translate !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap,
+  html.saa-r122-ready #main .steps-section .steps-img-wrap {
+    padding-bottom:0 !important;
+    overflow:visible !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap {
+    height:var(--saa-r122-card-wrap-height,auto) !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-img-wrap {
+    height:var(--saa-r122-image-wrap-height,auto) !important;
+  }
+
+  /* Later rows continue to cover earlier rows exactly as before. */
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(1),
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(1) {
+    z-index:1 !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(2),
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(2) {
+    z-index:2 !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(3),
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(3) {
+    z-index:3 !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card:nth-child(4),
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img:nth-child(4) {
+    z-index:4 !important;
+  }
+
+  /*
+    R105/R116 card-local captions are intentionally suppressed while
+    R122 is active. They sit inside lower card stacking contexts and
+    are the reason the old titles could show while the serials vanished.
+  */
+  html.saa-r122-ready #main .steps-section .saa-stack-caption {
+    display:none !important;
+  }
+
+  /* ==========================================================
+     R122 STACK LABEL OVERLAY
+     One layer above ALL four cards. It only paints the first
+     three 70px strips, leaving Step 4 completely untouched.
+     ========================================================== */
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap {
+    isolation:isolate !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-overlay {
+    position:absolute !important;
+    z-index:40 !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    height:210px !important;
+    pointer-events:none !important;
+    overflow:visible !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-label {
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+
+    display:grid !important;
+    grid-template-columns:52px minmax(0,1fr) !important;
+    align-items:center !important;
+    column-gap:12px !important;
+
+    height:70px !important;
+    min-height:70px !important;
+    padding:0 22px !important;
+
+    border:1px solid rgba(214,229,241,.92) !important;
+    border-radius:21px 21px 0 0 !important;
+
+    background:
+      radial-gradient(100% 145% at 0 0,rgba(255,255,255,.995),transparent 53%),
+      linear-gradient(110deg,rgba(255,255,255,.995),rgba(248,252,255,.988)) !important;
+
+    box-shadow:
+      0 8px 19px rgba(38,89,127,.055),
+      inset 0 1px 0 rgba(255,255,255,.99) !important;
+
+    opacity:var(--saa-r122-label-opacity,0) !important;
+    visibility:visible !important;
+    transform:translateY(var(--saa-r122-label-y,-4px)) !important;
+    will-change:opacity,transform !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-label[data-step="1"] {
+    top:0 !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-label[data-step="2"] {
+    top:70px !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-label[data-step="3"] {
+    top:140px !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-number {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    width:52px !important;
+    min-width:52px !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:0 !important;
+    line-height:1 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* CSS-generated serial is a hard fallback: 01/02/03 cannot disappear. */
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-number::before {
+    content:attr(data-number) !important;
+    display:block !important;
+    color:#078fe6 !important;
+    -webkit-text-fill-color:#078fe6 !important;
+    font-size:24px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    font-variant-numeric:tabular-nums !important;
+    letter-spacing:-.035em !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-title {
+    display:flex !important;
+    align-items:center !important;
+    min-width:0 !important;
+    height:70px !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:#0b1734 !important;
+    -webkit-text-fill-color:#0b1734 !important;
+
+    font-size:17px !important;
+    line-height:1.1 !important;
+    font-weight:800 !important;
+    letter-spacing:-.018em !important;
+
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* Step 4 is deliberately not represented in this overlay. */
+}
+
+@media (max-width:834px) {
+  .saa-steps-scroll-scene {
+    height:auto !important;
+  }
+
+  html.saa-r122-ready #main .saa-steps-scroll-scene > .steps-section {
+    position:relative !important;
+    top:auto !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .steps-card-wrap > .steps-card,
+  html.saa-r122-ready #main .steps-section .steps-img-wrap > .steps-img {
+    translate:none !important;
+  }
+
+  html.saa-r122-ready #main .steps-section .saa-r122-stack-overlay {
+    display:none !important;
+  }
+}
+/* ===== R122 END ===== */
+
+
+
+
+/* ============================================================
+   R122 STABLE SCENE BACKGROUND
+
+   The stack intentionally reduces the Steps section's layout height.
+   The background must NOT reduce with it: otherwise transformed rows
+   can appear over the page's white body and the background looks cut.
+
+   R122 therefore lets the OUTER scroll scene own the exact R103
+   background while the inner sticky Steps section stays transparent.
+   The scene ends exactly where Google Reviews begins, so the dark
+   Reviews background can follow the final Step 4 with no overlap.
+   ============================================================ */
+@media (min-width:835px) {
+  html.saa-r122-ready #main .saa-steps-scroll-scene {
+    background:
+      radial-gradient(circle at -2% 5%,rgba(55,151,239,.07) 0 108px,transparent 109px),
+      radial-gradient(circle at 103% 76%,rgba(55,151,239,.065) 0 120px,transparent 121px),
+      linear-gradient(180deg,#fbfdff 0%,#f5faff 48%,#fbfdff 100%) !important;
+    background-attachment:fixed,fixed,fixed !important;
+    background-repeat:no-repeat,no-repeat,no-repeat !important;
+  }
+
+  html.saa-r122-ready #main .saa-steps-scroll-scene > .steps-section {
+    background:none !important;
+    background-image:none !important;
+  }
+}
+/* ===== R122 STABLE SCENE BACKGROUND END ===== */
+
+
+/* ============================================================
+   R122 MOBILE SEQUENTIAL STEP PAIRS
+
+   Mobile should NOT show one big image group followed by one big card group.
+   Instead, render the Steps section as:
+     image 1 -> card 1 -> image 2 -> card 2 -> image 3 -> card 3 -> image 4 -> card 4
+
+   Desktop / tablet sticky stacking remains untouched.
+   ============================================================ */
+@media (max-width:834px) {
+  #main .steps-section .saa-mobile-steps-stack {
+    display:none !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .steps-main-wrapper {
+    display:none !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-steps-stack {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:28px 0 0 !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+    width:100% !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair .steps-img-wrap,
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair .steps-card-wrap {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair .steps-img-wrap > .steps-img,
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair .steps-card-wrap > .steps-card {
+    margin:0 !important;
+  }
+}
+
+@media (max-width:480px) {
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-steps-stack,
+  #main .steps-section.saa-mobile-pairs-active .saa-mobile-step-pair {
+    gap:14px !important;
+  }
+}
+/* ===== R122 MOBILE SEQUENTIAL STEP PAIRS END ===== */
