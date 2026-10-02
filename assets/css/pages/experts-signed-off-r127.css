@@ -1,0 +1,219 @@
+/* ============================================================
+   R127 SIGNED-OFF BADGE PREMIUM UPGRADE
+   - premium badge treatment based on approved concept
+   - keeps strategic placement
+   - uses var(--brand)
+   ============================================================ */
+.saa-experts-page .signed-off-item{
+  --so-top:auto;
+  --so-right:auto;
+  --so-bottom:12px;
+  --so-left:12px;
+  --so-width:112px;
+  --so-pad-top:9px;
+  --so-pad-right:12px;
+  --so-pad-bottom:9px;
+  --so-pad-left:44px;
+  --so-radius:16px;
+  --so-shift:translate3d(0,0,0);
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat{
+  position:absolute!important;
+  top:var(--so-top)!important;
+  right:var(--so-right)!important;
+  bottom:var(--so-bottom)!important;
+  left:var(--so-left)!important;
+  z-index:5!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:3px!important;
+  width:var(--so-width)!important;
+  max-width:calc(100% - 24px)!important;
+  min-height:54px!important;
+  padding:var(--so-pad-top) var(--so-pad-right) var(--so-pad-bottom) var(--so-pad-left)!important;
+  border-radius:var(--so-radius)!important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,0)) ,
+    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,0)) ,
+    var(--brand)!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  box-shadow:
+    0 14px 28px rgba(7,59,95,.22),
+    0 6px 12px rgba(7,59,95,.12),
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -1px 0 rgba(0,0,0,.08)!important;
+  transform:var(--so-shift)!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  pointer-events:none!important;
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:50%;
+  width:22px;
+  height:26px;
+  transform:translateY(-50%);
+  border-radius:7px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6.5' y='3.5' width='11' height='17' rx='2' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Cpath d='M9 9h6M9 12h6M9 15h4' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/13px 15px no-repeat,
+    rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -1px 0 rgba(0,0,0,.06);
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:calc(var(--so-radius) - 1px);
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 42%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat strong{
+  display:block!important;
+  font-size:21px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  letter-spacing:-.04em!important;
+  color:#fff!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.07);
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat span{
+  display:block!important;
+  font-size:8.5px!important;
+  line-height:1.08!important;
+  font-weight:850!important;
+  letter-spacing:.06em!important;
+  text-transform:uppercase!important;
+  color:rgba(255,255,255,.96)!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.06);
+}
+
+/* strategic placement per image */
+.saa-experts-page .signed-off-item--01{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:108px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--02{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:108px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--03{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:auto;
+  --so-right:14px;
+  --so-width:104px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--04{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:108px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--05{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:104px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--06{
+  --so-top:50%;
+  --so-bottom:auto;
+  --so-left:auto;
+  --so-right:14px;
+  --so-width:104px;
+  --so-radius:17px;
+  --so-shift:translate3d(0,-50%,0);
+}
+
+.saa-experts-page .signed-off-item--07{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:104px;
+  --so-radius:17px;
+}
+
+.saa-experts-page .signed-off-item--08{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:132px;
+  --so-radius:17px;
+}
+
+@media (max-width: 560px){
+  .saa-experts-page .signed-off-item{
+    --so-left:10px;
+    --so-right:10px;
+    --so-bottom:10px;
+    --so-width:98px;
+    --so-pad-top:8px;
+    --so-pad-right:10px;
+    --so-pad-bottom:8px;
+    --so-pad-left:40px;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat{
+    min-height:48px!important;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat::before{
+    left:9px;
+    width:20px;
+    height:24px;
+    background-size:12px 14px, auto;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat strong{
+    font-size:18px!important;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat span{
+    font-size:7.5px!important;
+  }
+
+  .saa-experts-page .signed-off-item--01,
+  .saa-experts-page .signed-off-item--02,
+  .saa-experts-page .signed-off-item--04{
+    --so-top:10px;
+    --so-bottom:auto;
+  }
+
+  .saa-experts-page .signed-off-item--03,
+  .saa-experts-page .signed-off-item--06{
+    --so-right:10px;
+  }
+
+  .saa-experts-page .signed-off-item--08{
+    --so-width:120px;
+  }
+}
