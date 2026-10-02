@@ -1,0 +1,49 @@
+/* ============================================================
+   R128 SIGNED-OFF BADGE POSITION TUNE
+   Keeps the complete R127 badge design intact.
+   Only repositions the 3 annotated badges.
+   ============================================================ */
+
+/* Card 4 — 3 passports: bottom-right */
+.saa-experts-page .signed-off-item--04{
+  --so-top:auto!important;
+  --so-bottom:14px!important;
+  --so-left:auto!important;
+  --so-right:14px!important;
+  --so-shift:translate3d(0,0,0)!important;
+}
+
+/* Card 6 — 9 visas: bottom-left */
+.saa-experts-page .signed-off-item--06{
+  --so-top:auto!important;
+  --so-bottom:14px!important;
+  --so-left:14px!important;
+  --so-right:auto!important;
+  --so-shift:translate3d(0,0,0)!important;
+}
+
+/* Card 7 — 7 passports: top-left */
+.saa-experts-page .signed-off-item--07{
+  --so-top:14px!important;
+  --so-bottom:auto!important;
+  --so-left:14px!important;
+  --so-right:auto!important;
+  --so-shift:translate3d(0,0,0)!important;
+}
+
+@media (max-width:560px){
+  .saa-experts-page .signed-off-item--04{
+    --so-bottom:10px!important;
+    --so-right:10px!important;
+  }
+
+  .saa-experts-page .signed-off-item--06{
+    --so-bottom:10px!important;
+    --so-left:10px!important;
+  }
+
+  .saa-experts-page .signed-off-item--07{
+    --so-top:10px!important;
+    --so-left:10px!important;
+  }
+}
