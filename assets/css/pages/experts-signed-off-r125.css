@@ -1,0 +1,160 @@
+/* ============================================================
+   R125 SIGNED-OFF LABEL REFINEMENT
+   - strategic badge placement per image
+   - uses var(--brand)
+   - preserves badge font sizes
+   ============================================================ */
+.saa-experts-page .signed-off-item{
+  --so-top:auto;
+  --so-right:auto;
+  --so-bottom:12px;
+  --so-left:12px;
+  --so-width:108px;
+  --so-pad:10px 12px 11px;
+  --so-radius:24px 24px 24px 12px;
+  --so-shift:translate3d(0,0,0);
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat{
+  position:absolute!important;
+  top:var(--so-top)!important;
+  right:var(--so-right)!important;
+  bottom:var(--so-bottom)!important;
+  left:var(--so-left)!important;
+  z-index:4!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  width:var(--so-width)!important;
+  max-width:calc(100% - 24px)!important;
+  padding:var(--so-pad)!important;
+  border-radius:var(--so-radius)!important;
+  background:var(--brand)!important;
+  box-shadow:0 14px 28px rgba(5,66,116,.22)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  transform:var(--so-shift)!important;
+  pointer-events:none!important;
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat strong{
+  display:block!important;
+  font-size:21px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  letter-spacing:-.04em!important;
+  color:#fff!important;
+}
+
+.saa-experts-page .signed-off-item .signed-off-stat span{
+  display:block!important;
+  font-size:8.5px!important;
+  line-height:1.08!important;
+  font-weight:850!important;
+  letter-spacing:.06em!important;
+  text-transform:uppercase!important;
+  color:rgba(255,255,255,.96)!important;
+}
+
+.saa-experts-page .signed-off-item--01{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:114px;
+  --so-radius:28px 28px 28px 14px;
+}
+
+.saa-experts-page .signed-off-item--02{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:112px;
+  --so-radius:28px 28px 28px 14px;
+}
+
+.saa-experts-page .signed-off-item--03{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:auto;
+  --so-right:14px;
+  --so-width:106px;
+  --so-radius:24px 24px 14px 24px;
+}
+
+.saa-experts-page .signed-off-item--04{
+  --so-top:14px;
+  --so-bottom:auto;
+  --so-left:14px;
+  --so-width:104px;
+  --so-radius:26px 26px 26px 14px;
+}
+
+.saa-experts-page .signed-off-item--05{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:108px;
+  --so-radius:24px 24px 24px 14px;
+}
+
+.saa-experts-page .signed-off-item--06{
+  --so-top:50%;
+  --so-bottom:auto;
+  --so-left:auto;
+  --so-right:14px;
+  --so-width:110px;
+  --so-radius:24px 26px 14px 24px;
+  --so-shift:translate3d(0,-50%,0);
+}
+
+.saa-experts-page .signed-off-item--07{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:104px;
+  --so-radius:28px 24px 24px 14px;
+}
+
+.saa-experts-page .signed-off-item--08{
+  --so-top:auto;
+  --so-bottom:14px;
+  --so-left:14px;
+  --so-width:118px;
+  --so-radius:22px 22px 22px 12px;
+}
+
+@media (max-width: 560px){
+  .saa-experts-page .signed-off-item{
+    --so-left:10px;
+    --so-right:10px;
+    --so-bottom:10px;
+    --so-width:96px;
+    --so-pad:8px 10px 9px;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat strong{
+    font-size:18px!important;
+  }
+
+  .saa-experts-page .signed-off-item .signed-off-stat span{
+    font-size:7.5px!important;
+  }
+
+  .saa-experts-page .signed-off-item--01,
+  .saa-experts-page .signed-off-item--02,
+  .saa-experts-page .signed-off-item--04{
+    --so-top:10px;
+    --so-bottom:auto;
+  }
+
+  .saa-experts-page .signed-off-item--03,
+  .saa-experts-page .signed-off-item--06{
+    --so-right:10px;
+  }
+
+  .saa-experts-page .signed-off-item--08{
+    --so-width:110px;
+  }
+}
